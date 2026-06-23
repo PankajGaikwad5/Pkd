@@ -14,6 +14,8 @@ import FeaturedSection from './sections/FeaturedSection';
 import ArchitectureSection from './sections/ArchitectureSection';
 import TypographySection from './sections/TypographySection';
 import CraftingSection from './sections/CraftingSection';
+import TeamSection from './sections/TeamSection';
+import TeamCarouselSection from './sections/TeamCarouselSection';
 import FooterSection from './sections/FooterSection';
 
 export default function HomeClient() {
@@ -51,6 +53,8 @@ export default function HomeClient() {
          <ArchitectureSection />
          <TypographySection />
          <CraftingSection />
+         <TeamSection />
+         <TeamCarouselSection />
       </main>
 
       <FooterSection />

@@ -1,64 +1,125 @@
+'use client';
+import { motion } from 'motion/react';
 import { FadeIn } from '../Animations';
+import Link from 'next/link';
+
+const logoLetters = ['Λ', 'R', 'C', 'C', 'Λ'];
+
+function AnimatedLogo() {
+  return (
+    <div className="flex justify-between items-center w-full select-none pb-6">
+      {logoLetters.map((char, index) => (
+        <div key={index} className="overflow-hidden py-1 px-1">
+          <motion.span
+            initial={{ y: '100%', opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 1.4,
+              delay: 0.1 + index * 0.12,
+              ease: [0.19, 1, 0.22, 1],
+            }}
+            className="block font-serif text-[clamp(3.5rem,8vw,8.5rem)] font-light leading-none text-[#D6CBBC] tracking-normal"
+          >
+            {char}
+          </motion.span>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function FooterSection() {
   return (
-    <footer className="w-full bg-[#2E2824] text-[#E6DFD4] py-24 px-12 md:px-24 flex flex-col md:flex-row gap-20 items-stretch">
-      <div className="md:w-1/2 flex flex-col justify-between">
-        <nav className="flex flex-col gap-6 text-4xl lg:text-5xl font-light">
-           <FadeIn delay={0.1}><a href="#" className="hover:opacity-70 transition-opacity">ABOUT US</a></FadeIn>
-           <FadeIn delay={0.2}><a href="#" className="hover:opacity-70 transition-opacity">VISION</a></FadeIn>
-           <FadeIn delay={0.3}><a href="#" className="hover:opacity-70 transition-opacity">TEAM</a></FadeIn>
-           <FadeIn delay={0.4}><a href="#" className="hover:opacity-70 transition-opacity">SERVICES</a></FadeIn>
-           <FadeIn delay={0.5}><a href="#" className="hover:opacity-70 transition-opacity">PROJECTS</a></FadeIn>
-           <FadeIn delay={0.6}><a href="#" className="hover:opacity-70 transition-opacity">CONTACT</a></FadeIn>
+    <footer className="w-full bg-[#332820] text-[#D6CBBC] py-24 px-8 md:px-16 lg:px-24 flex flex-col lg:flex-row justify-between items-stretch gap-16 lg:gap-8">
+      {/* Left container - Navigation Menu */}
+      <div className="w-full lg:w-[30%] flex flex-col justify-start">
+        <nav className="flex flex-col gap-4 text-4xl sm:text-5xl lg:text-[3.2rem] font-light leading-tight">
+          <FadeIn delay={0.05}><Link href="/" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">HOME</Link></FadeIn>
+          <FadeIn delay={0.1}><Link href="/about-us" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">ABOUT US</Link></FadeIn>
+          <FadeIn delay={0.15}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">VISION</a></FadeIn>
+          <FadeIn delay={0.2}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">TEAM</a></FadeIn>
+          <FadeIn delay={0.25}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">SERVICES</a></FadeIn>
+          <FadeIn delay={0.3}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">PROJECTS</a></FadeIn>
+          <FadeIn delay={0.35}><Link href="/contact" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">CONTACT</Link></FadeIn>
         </nav>
       </div>
 
-      <div className="md:w-1/2 flex flex-col justify-between pt-4 relative">
-         <FadeIn delay={0.4} className="absolute right-0 -top-8 -mt-20 opacity-90 hidden lg:block pointer-events-none w-full max-w-2xl blur-[14px]">
-            {/* The blurry huge text behind */}
-             <h2 className="font-heading text-[12rem] tracking-[0.2em] leading-none whitespace-nowrap overflow-hidden">
-                ARCCA
-             </h2>
-         </FadeIn>
+      {/* Middle Separator - Vertical centering circle */}
+      <div className="hidden lg:flex items-center justify-center px-4 self-stretch">
+        <div className="w-2 h-2 rounded-full border border-[#D6CBBC]/30" />
+      </div>
 
-         <FadeIn delay={0.4} className="absolute right-0 -top-8 -mt-20 opacity-90 hidden lg:block pointer-events-none">
-             <h2 className="font-heading text-[8rem] tracking-[0.2em] leading-none">
-                ARCCA
-             </h2>
-         </FadeIn>
+      {/* Right container - Brand & Columns */}
+      <div className="w-full lg:w-[60%] flex flex-col justify-start pt-2">
+        <AnimatedLogo />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 font-sans text-xs tracking-widest uppercase opacity-80 mt-auto pt-24 z-10 relative">
-          <FadeIn delay={0.7}>
-            <p className="mb-4 text-[#E6DFD4]/50">Address</p>
-            <p className="leading-relaxed normal-case">194 Isla Dorada Blvd,<br/>Coral Gables, FL, 33143</p>
-          </FadeIn>
+        {/* Info Columns */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-16 mt-8 w-full">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-10">
+            <FadeIn delay={0.4}>
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">ADDRESS</h4>
+                <p className="text-[13px] text-[#D6CBBC]/90 font-light leading-relaxed normal-case font-sans">
+                  194 Isla Dorada Blvd,<br />
+                  Coral Gables, FL, 33143
+                </p>
+              </div>
+            </FadeIn>
 
-          <FadeIn delay={0.8}>
-            <p className="mb-4 text-[#E6DFD4]/50">Email</p>
-            <p className="normal-case">info@arccagroup.us</p>
-          </FadeIn>
+            <FadeIn delay={0.5}>
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">PHONE</h4>
+                <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
+                  786 901 1622
+                </p>
+              </div>
+            </FadeIn>
 
-          <FadeIn delay={0.9}>
-            <p className="mb-4 text-[#E6DFD4]/50">Phone</p>
-            <p>786 901 1622</p>
-            <p className="mt-8 mb-4 text-[#E6DFD4]/50 normal-case tracking-normal">Monday to Friday:<br/>9:00 AM - 6:00 PM</p>
-          </FadeIn>
+            <FadeIn delay={0.6}>
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">FOLLOW US</h4>
+                <ul className="space-y-2 text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
+                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Instagram</a></li>
+                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Facebook</a></li>
+                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">LinkedIn</a></li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
 
-          <FadeIn delay={1.0}>
-             <p className="mb-4 text-[#E6DFD4]/50">Follow Us</p>
-             <ul className="space-y-2 normal-case">
-               <li><a href="#" className="hover:underline">Instagram</a></li>
-               <li><a href="#" className="hover:underline">Facebook</a></li>
-               <li><a href="#" className="hover:underline">LinkedIn</a></li>
-             </ul>
+          {/* Column 2 */}
+          <div className="flex flex-col gap-10">
+            <FadeIn delay={0.45}>
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">EMAIL</h4>
+                <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
+                  <a href="mailto:info@arccagp.com" className="hover:opacity-60 transition-opacity duration-300">info@arccagp.com</a>
+                </p>
+              </div>
+            </FadeIn>
 
-             <div className="mt-12 space-y-2 normal-case opacity-70 border-t border-white/20 pt-4">
-                <a href="#" className="block hover:underline">Terms & Conditions</a>
-                <a href="#" className="block hover:underline">Privacy Policy</a>
-                <a href="#" className="block hover:underline">Accessibility Policy</a>
-             </div>
-          </FadeIn>
+            <FadeIn delay={0.55}>
+              <div>
+                <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case leading-relaxed font-sans">
+                  Monday to Friday:<br />
+                  9:00 AM - 6:00 PM
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.65}>
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">LEGAL</h4>
+                <ul className="space-y-2 text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
+                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Terms & Conditions</a></li>
+                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Privacy Policy</a></li>
+                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Accessibility Policy</a></li>
+                </ul>
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </div>
     </footer>

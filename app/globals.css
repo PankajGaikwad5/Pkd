@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: 'Cormorant Garamond', serif;
+}
 
 html {
   --font-heading: var(--font-sans);
@@ -7,6 +12,9 @@ html {
 @layer utilities {
   .font-heading {
     font-family: var(--font-heading);
+  }
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
   }
 }
 
