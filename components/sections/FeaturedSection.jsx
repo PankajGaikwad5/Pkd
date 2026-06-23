@@ -1,0 +1,126 @@
+'use client';
+
+import { useRef } from 'react';
+import { useScroll, useTransform, motion } from 'motion/react';
+import { FadeIn } from '../Animations';
+
+const PROJECTS = [
+  {
+    id: 1,
+    titleLine1: "CASA",
+    titleLine2: "DOHA",
+    image: "/images/featured_doha.png",
+    num: "1 / 3"
+  },
+  {
+    id: 2,
+    titleLine1: "CASA",
+    titleLine2: "ANTIBES",
+    image: "/images/featured_antibes.png",
+    num: "2 / 3"
+  },
+  {
+    id: 3,
+    titleLine1: "CASA",
+    titleLine2: "FERRARA",
+    image: "/images/featured_ferrara.png",
+    num: "3 / 3"
+  }
+];
+
+function StackingCard({ project, index }) {
+  const cardRef = useRef(null);
+  
+  // Track scroll position of this card relative to the viewport
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ["start end", "end start"]
+  });
+
+  // Parallax effect on the background image
+  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+
+  // Calculate sticky top offset: e.g. 60px for each subsequent card to stack like files
+  const topOffset = index * 60;
+
+  return (
+    <div 
+      ref={cardRef} 
+      className="sticky w-full h-[85vh] overflow-hidden flex items-center justify-center bg-[#1C1816] border-t border-[#E6DFD4]/10 shadow-[0_-30px_60px_rgba(0,0,0,0.5)]"
+      style={{
+        top: `${topOffset}px`,
+        zIndex: index + 1,
+      }}
+    >
+      {/* Background Image with Parallax */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <motion.img 
+          src={project.image} 
+          alt={`${project.titleLine1} ${project.titleLine2}`}
+          style={{ y, scale: 1.2 }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Dark overlays for readability */}
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-transparent to-black/65" />
+      </div>
+
+      {/* Content Area */}
+      <div className="relative w-full h-full max-w-7xl mx-auto px-6 sm:px-12 md:px-24 flex items-center justify-between text-[#E6DFD4] z-10">
+        {/* Left Column: Title Info */}
+        <div className="flex flex-col justify-center select-none">
+          <FadeIn y={30} delay={0.1}>
+            <span className="text-xs md:text-sm tracking-[0.3em] uppercase mb-4 block font-light text-[#E6DFD4]/80">
+              FEATURED PROJECT
+            </span>
+          </FadeIn>
+          <FadeIn y={40} delay={0.2}>
+            <h2 className="font-heading text-6xl sm:text-8xl md:text-9xl leading-[0.85] tracking-tight font-light text-[#E6DFD4]">
+              {project.titleLine1}
+              <br />
+              {project.titleLine2}
+            </h2>
+          </FadeIn>
+        </div>
+
+        {/* Right Column: Counter & View Button */}
+        <div className="flex flex-col items-end justify-center gap-12 md:gap-20 h-full pt-16">
+          {/* Slide Number */}
+          <div className="text-[#E6DFD4] font-light text-4xl sm:text-5xl md:text-6xl tracking-[0.1em] select-none flex items-center gap-4">
+            <FadeIn y={20} delay={0.3} className="flex items-center gap-3">
+              <span>{project.num}</span>
+              {/* Optional small circle matching reference screenshot */}
+              <span className="inline-block w-2.5 h-2.5 rounded-full border border-white/50 opacity-60" />
+            </FadeIn>
+          </div>
+
+          {/* View Button */}
+          <div>
+            <FadeIn y={20} delay={0.4}>
+              <a 
+                href="#"
+                className="px-10 py-3.5 border border-[#E6DFD4]/30 rounded-full text-[#E6DFD4] text-xs sm:text-sm uppercase tracking-[0.2em] bg-black/20 backdrop-blur-sm hover:bg-[#E6DFD4] hover:text-[#2E2824] hover:border-white transition-all duration-500 block text-center"
+              >
+                VIEW
+              </a>
+            </FadeIn>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function FeaturedSection() {
+  return (
+    <section className="relative w-full bg-[#1C1816] flex flex-col">
+      {PROJECTS.map((project, idx) => (
+        <StackingCard 
+          key={project.id} 
+          project={project} 
+          index={idx} 
+        />
+      ))}
+    </section>
+  );
+}

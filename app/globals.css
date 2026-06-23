@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+html {
+  --font-heading: var(--font-sans);
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
+
+body {
+  background-color: #D6CBBC;
+  color: #332820;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #A0988A;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #332820;
+}
+
+::selection {
+  background-color: #332820;
+  color: #D6CBBC;
+}

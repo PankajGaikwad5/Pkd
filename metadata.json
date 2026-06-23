@@ -1,0 +1,6 @@
+{
+  "name": "Arcca Group Clone",
+  "description": "A luxury architecture and design portfolio clone built with Next.js and Framer Motion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
