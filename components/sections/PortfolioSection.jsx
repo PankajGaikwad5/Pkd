@@ -2,6 +2,7 @@ import { FadeIn } from "../Animations";
 import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const maskTransition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
 
@@ -257,9 +258,9 @@ export default function PortfolioSection() {
         </div>
 
         <div>
-          <button className="px-10 py-[14px] w-max bg-[#352D26] text-[#E6DFD4] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#201b17] transition-colors">
+          <Link href="/projects" className="inline-block px-10 py-[14px] w-max bg-[#352D26] text-[#E6DFD4] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#201b17] transition-colors text-center">
             VIEW ALL
-          </button>
+          </Link>
         </div>
       </div>
 

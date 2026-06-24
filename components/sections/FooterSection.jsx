@@ -40,7 +40,7 @@ export default function FooterSection() {
           <FadeIn delay={0.15}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">VISION</a></FadeIn>
           <FadeIn delay={0.2}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">TEAM</a></FadeIn>
           <FadeIn delay={0.25}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">SERVICES</a></FadeIn>
-          <FadeIn delay={0.3}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">PROJECTS</a></FadeIn>
+          <FadeIn delay={0.3}><Link href="/projects" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">PROJECTS</Link></FadeIn>
           <FadeIn delay={0.35}><Link href="/contact" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">CONTACT</Link></FadeIn>
         </nav>
       </div>

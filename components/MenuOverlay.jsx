@@ -8,7 +8,7 @@ const MotionLink = motion(Link);
 function MenuItem({ item, i, onClose }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  const href = item === 'HOME' ? '/' : item === 'ABOUT US' ? '/about-us' : item === 'CONTACT' ? '/contact' : '#';
+  const href = item === 'HOME' ? '/' : item === 'ABOUT US' ? '/about-us' : item === 'CONTACT' ? '/contact' : item === 'PROJECTS' ? '/projects' : '#';
 
   return (
     <MotionLink

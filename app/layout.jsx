@@ -1,4 +1,5 @@
 import localFont from 'next/font/local';
+import { LenisProvider } from '@/components/LenisProvider';
 import './globals.css';
 
 const centuryGothic = localFont({
@@ -28,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${centuryGothic.variable}`}>
       <body suppressHydrationWarning className="bg-[#D6CBBC] text-[#332820] antialiased overflow-x-hidden">
-        {children}
+        <LenisProvider>
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );

@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import Loader from './Loader';
+import { motion } from 'motion/react';
 import Navbar from './Navbar';
 import MenuOverlay from './MenuOverlay';
 
@@ -15,27 +14,18 @@ import AboutJoinUsSection from './sections/AboutJoinUsSection';
 import FooterSection from './sections/FooterSection';
 
 export default function AboutClient() {
-  const [loading, setLoading] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    if (loading || menuOpen) {
+    if (menuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
     }
-  }, [loading, menuOpen]);
-
-  useEffect(() => {
-    const t = setTimeout(() => setLoading(false), 2400);
-    return () => clearTimeout(t);
-  }, []);
+  }, [menuOpen]);
 
   return (
     <>
-      <AnimatePresence mode="wait">
-        {loading && <Loader key="loader" />}
-      </AnimatePresence>
 
       <Navbar onMenuClick={() => setMenuOpen(true)} />
       <MenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
