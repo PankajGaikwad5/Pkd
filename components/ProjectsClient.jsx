@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import Navbar from './Navbar';
 import MenuOverlay from './MenuOverlay';
 import FooterSection from './sections/FooterSection';
@@ -41,11 +41,67 @@ const projects = [
   }
 ];
 
+const gridProjects = [
+  {
+    id: 1,
+    title: "CASA LUME",
+    category: "In development",
+    loc: "Coral Gables",
+    img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80",
+    href: "/"
+  },
+  {
+    id: 2,
+    title: "CASA 88",
+    category: "In development",
+    loc: "Miami Dade",
+    img: "https://images.unsplash.com/photo-1600607688969-a5bfcd64bd11?q=80",
+    href: "/"
+  },
+  {
+    id: 3,
+    title: "CASA MARSI",
+    category: "Current projects",
+    loc: "In the heart of Pinecrest",
+    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80",
+    href: "/"
+  },
+  {
+    id: 4,
+    title: "CASA MALTA",
+    category: "Current projects",
+    loc: "Miami",
+    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80",
+    href: "/"
+  },
+  {
+    id: 5,
+    title: "CASA ALMERIA",
+    category: "Sold",
+    loc: "Coral Gables",
+    img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80",
+    href: "/"
+  },
+  {
+    id: 6,
+    title: "CASA LANCIO",
+    category: "Sold",
+    loc: "Miami",
+    img: "https://images.unsplash.com/photo-1613490908836-e87a2ea042b4?q=80",
+    href: "/"
+  }
+];
+
 export default function ProjectsClient() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for next/right, -1 for prev/left
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeFilter, setActiveFilter] = useState('All');
+
+  const filteredProjects = activeFilter === 'All'
+    ? gridProjects
+    : gridProjects.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
 
   const containerRef = useRef(null);
 
@@ -285,6 +341,113 @@ export default function ProjectsClient() {
 
           {/* Aesthetic bottom border block (matching the beige strip in mockup) */}
           <div className="absolute bottom-0 left-0 right-0 h-6 md:h-8 bg-[#D6CBBC] z-30" />
+        </section>
+
+        {/* Grid Projects Section with Filters */}
+        <section className="w-full bg-[#D6CBBC] text-[#332820] py-20 md:py-28 px-6 sm:px-12 md:px-16 lg:px-24">
+          <div className="max-w-[1400px] mx-auto">
+            {/* Section Title */}
+            <div className="overflow-hidden pb-1 mb-8">
+              <motion.h2
+                initial={{ clipPath: "inset(100% 0 0 0)", y: 50 }}
+                whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
+                className="font-heading text-5xl md:text-7xl lg:text-8xl tracking-tight uppercase leading-[0.9] font-light"
+              >
+                PROJECTS
+              </motion.h2>
+            </div>
+
+            {/* Filter Pills */}
+            <div className="flex flex-wrap gap-2.5 md:gap-3 mb-12">
+              {['Coming Soon', 'Current projects', 'In development', 'Sold'].map((filter) => {
+                const isActive = activeFilter === filter;
+                return (
+                  <button
+                    key={filter}
+                    onClick={() => setActiveFilter(isActive ? 'All' : filter)}
+                    className={`px-6 py-2 rounded-full border text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? 'border-[#332820] bg-[#332820] text-[#D6CBBC]'
+                        : 'border-[#332820]/30 text-[#332820] hover:border-[#332820] bg-transparent'
+                    }`}
+                  >
+                    {filter}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Projects Grid */}
+            <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <AnimatePresence mode="popLayout">
+                {filteredProjects.map((proj) => (
+                  <motion.div
+                    layout
+                    key={proj.id}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    exit={{ opacity: 0, scale: 0.95 }}
+                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                    className="group relative aspect-[3/2] w-full overflow-hidden rounded-sm cursor-pointer"
+                  >
+                    <Link href={proj.href} className="block w-full h-full">
+                      {/* Image */}
+                      <img
+                        src={`${proj.img}&w=800&auto=format&fit=crop`}
+                        alt={proj.title}
+                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      />
+
+                      {/* Gradient Overlay for Text legibility */}
+                      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
+
+                      {/* Slight Dark Overlay on Hover */}
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/35 transition-colors duration-500 pointer-events-none" />
+
+                      {/* Category Badge */}
+                      <div className="absolute top-4 right-4 bg-[#332820] text-[#D6CBBC] px-3.5 py-1.5 text-[9px] tracking-widest uppercase font-medium">
+                        {proj.category}
+                      </div>
+
+                      {/* Project Text Overlay */}
+                      <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-[#D6CBBC] pointer-events-none">
+                        <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light tracking-wide uppercase leading-none mb-1 md:mb-2">
+                          {proj.title}
+                        </h3>
+                        <p className="text-[11px] md:text-xs tracking-widest font-light opacity-80 uppercase">
+                          {proj.loc}
+                        </p>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Empty State */}
+            {filteredProjects.length === 0 && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="w-full text-center py-20 text-[#332820]/60 font-light tracking-wide"
+              >
+                No projects in this category at the moment. Check back soon.
+              </motion.div>
+            )}
+
+            {/* CONTACT US Button */}
+            <div className="mt-12 md:mt-16">
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-3 bg-[#332820] text-[#D6CBBC] rounded-full text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#201b17] transition-all duration-300"
+              >
+                CONTACT US
+              </Link>
+            </div>
+          </div>
         </section>
 
         {/* Footer section (making the page normally scrollable downwards) */}
