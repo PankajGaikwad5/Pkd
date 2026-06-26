@@ -59,7 +59,7 @@ export default function PortfolioSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -126,7 +126,7 @@ export default function PortfolioSection() {
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)" }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.8,
                   ease: [0.76, 0, 0.24, 1],
@@ -140,7 +140,7 @@ export default function PortfolioSection() {
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)" }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.8,
                   ease: [0.76, 0, 0.24, 1],
@@ -154,7 +154,7 @@ export default function PortfolioSection() {
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)" }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.8,
                   ease: [0.76, 0, 0.24, 1],
@@ -172,7 +172,7 @@ export default function PortfolioSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -184,12 +184,18 @@ export default function PortfolioSection() {
           </div>
         </h2>
 
-        <div className="flex flex-col gap-0 mb-10 text-sm md:text-[14px] leading-[1.6] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light">
+        {/* Paragraph description for mobile/tablet */}
+        <p className="block xl:hidden mb-10 text-sm md:text-[14px] leading-[1.6] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light animate-fade-in">
+          We create refined, functional spaces where aesthetics meet purpose. Each project is a dialogue between form and feeling — crafted with precision, shaped by context, and inspired by timeless design principles.
+        </p>
+
+        {/* Paragraph description for desktop (retains line-by-line animations) */}
+        <div className="hidden xl:flex flex-col gap-0 mb-10 text-sm md:text-[14px] leading-[1.6] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light">
           <div className="overflow-hidden pb-1">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -203,7 +209,7 @@ export default function PortfolioSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -217,7 +223,7 @@ export default function PortfolioSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -231,7 +237,7 @@ export default function PortfolioSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -245,7 +251,7 @@ export default function PortfolioSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 0.8,
                 ease: [0.76, 0, 0.24, 1],
@@ -267,7 +273,7 @@ export default function PortfolioSection() {
       {/* Right Carousel Area */}
       <div className="w-full xl:w-[60%] flex items-center relative pl-6 sm:pl-12 md:pl-16 xl:pl-0 2xl:pl-8 xl:py-32">
         {/* Navigation Arrows overlay */}
-        <div className="absolute inset-y-0 left-6 sm:left-12 md:left-16 xl:left-0 2xl:left-8 right-0 z-10 flex items-center justify-between pointer-events-none px-4 md:px-6">
+        <div className="absolute inset-y-0 left-6 sm:left-12 md:left-16 xl:left-0 2xl:left-8 right-0 z-10 hidden xl:flex items-center justify-between pointer-events-none px-4 md:px-6">
           <button
             onClick={() => scroll("left")}
             className={`w-9 h-9 rounded-full bg-[#E6DFD4]/90 shadow-md flex items-center justify-center text-[#2E2824] pointer-events-auto transition-opacity duration-300 hover:bg-white ${canScrollLeft ? "opacity-100" : "opacity-0"}`}
@@ -295,7 +301,7 @@ export default function PortfolioSection() {
               key={i}
               initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
               whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true }}
               transition={{
                 duration: 1.2,
                 ease: [0.76, 0, 0.24, 1],

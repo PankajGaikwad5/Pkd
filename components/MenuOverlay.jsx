@@ -16,7 +16,7 @@ function MenuItem({ item, i, onClose }) {
       onClick={onClose}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative flex-1 flex items-center px-12 overflow-hidden group w-full"
+      className="relative flex-1 flex items-center px-6 md:px-12 overflow-hidden group w-full"
     >
       {/* Background slide up */}
       <motion.div
@@ -77,11 +77,21 @@ export default function MenuOverlay({
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            className="w-1/2 h-full bg-[#D6CBBC] flex flex-col pt-8 relative border-r border-[#332820]/10"
+            className="w-full md:w-1/2 h-full bg-[#D6CBBC] flex flex-col pt-8 relative border-r border-[#332820]/10"
           >
             {/* Top Left Text/Branding (Matches Navbar Height) */}
-            <div className="absolute top-8 left-12 z-20">
+            <div className="absolute top-8 left-6 md:left-12 z-20">
               <span className="text-[11px] font-light tracking-widest uppercase text-[#332820]">EST &ndash; 2020</span>
+            </div>
+
+            {/* Top Right CLOSE Button (Mobile Only) */}
+            <div className="absolute top-8 right-6 z-20 block md:hidden">
+              <button
+                onClick={onClose}
+                className="text-[11px] uppercase tracking-widest hover:text-[#332820]/60 transition-colors flex items-center font-light cursor-pointer text-[#332820]"
+              >
+                CLOSE
+              </button>
             </div>
 
             <nav className="flex flex-col h-full w-full justify-center text-[#332820] pt-16">
@@ -103,10 +113,10 @@ export default function MenuOverlay({
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            className="w-1/2 h-full bg-[#332820] text-[#D6CBBC] relative border-l border-[#D6CBBC]/10 border-r-[12px] border-[#332820]"
+            className="hidden md:block w-1/2 h-full bg-[#332820] text-[#D6CBBC] relative border-l border-[#D6CBBC]/10 border-r-[12px] border-[#332820]"
           >
             {/* CLOSE Button */}
-            <div className="absolute top-8 right-12 z-20">
+            <div className="absolute top-8 right-12 z-20 hidden md:block">
               <button 
                 onClick={onClose}
                 className="text-[11px] uppercase tracking-widest hover:text-white transition-colors flex items-center font-light cursor-pointer"

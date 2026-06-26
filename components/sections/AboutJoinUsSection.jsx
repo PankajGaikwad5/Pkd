@@ -63,7 +63,7 @@ export default function AboutJoinUsSection() {
           <motion.div
             initial={{ clipPath: "inset(0 100% 0 0)" }}
             whileInView={{ clipPath: "inset(0 0% 0 0)" }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: true }}
             transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
             className="w-full h-full"
           >
@@ -80,7 +80,7 @@ export default function AboutJoinUsSection() {
           <motion.div
             initial={{ clipPath: "inset(100% 0 0 0)" }}
             whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: true }}
             transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
             className="w-full h-full"
           >

@@ -11,7 +11,7 @@ export default function CraftingSection() {
       />
 
       {/* Subtle dark overlay */}
-      <div className="absolute w-full h-screen inset-0 bg-black/30" />
+      <div className="absolute w-full h-full inset-0 bg-black/30" />
 
       {/* Content */}
       <div className="relative z-10 w-full min-h-screen flex flex-col px-8 md:px-10 py-14 md:py-20">

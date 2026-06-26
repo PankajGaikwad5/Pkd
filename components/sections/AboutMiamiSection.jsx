@@ -13,7 +13,7 @@ export default function AboutMiamiSection() {
             <motion.h2
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
               className="font-heading text-2xl md:text-3xl text-[#D6CBBC] tracking-tight"
             >
@@ -26,7 +26,7 @@ export default function AboutMiamiSection() {
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
               className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light mb-4"
             >
@@ -35,7 +35,7 @@ export default function AboutMiamiSection() {
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light"
             >
@@ -48,7 +48,7 @@ export default function AboutMiamiSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)", y: 20 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
             >
               <Link
@@ -64,11 +64,11 @@ export default function AboutMiamiSection() {
       </div>
 
       {/* Right Image Area */}
-      <div className="w-full lg:w-[55%] h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-center justify-end pr-8 lg:pr-0 pb-12 lg:pb-0">
+      <div className="w-full lg:w-[55%] h-[50vh] md:h-[60vh] lg:h-[80vh] flex items-center justify-end pr-0 lg:pr-0 pb-12 lg:pb-0">
         <motion.div
           initial={{ clipPath: 'inset(0% 50% 0% 50%)' }}
           whileInView={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
           className="w-full h-full lg:h-[75vh] overflow-hidden rounded-sm"
         >

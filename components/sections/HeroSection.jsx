@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
-      <div className="absolute bottom-12 left-12 right-12 z-10 flex flex-col md:flex-row items-end justify-between text-[#E6DFD4]">
+      <div className="absolute bottom-8 left-6 right-6 md:bottom-12 md:left-12 md:right-12 z-10 flex flex-col md:flex-row items-start md:items-end justify-between text-[#E6DFD4]">
         <FadeIn y={20} delay={3.2} className="max-w-2xl">
           <p className="text-sm md:text-base lg:text-lg leading-relaxed font-light tracking-wide">
             At Arcca Group, we craft more than spaces — we shape the

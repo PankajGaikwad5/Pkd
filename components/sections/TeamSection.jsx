@@ -5,13 +5,13 @@ export default function TeamSection() {
     <section className="w-full min-h-screen bg-[#D6CBBC] flex flex-col lg:flex-row items-center pt-20 lg:pt-0">
       {/* Left Content Area */}
       <div className="w-full lg:w-[45%] flex flex-col justify-center py-12 lg:py-24 px-6 sm:px-12 md:px-16 lg:px-0">
-        <div className="w-full lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[800px] ml-20 lg:mr-0 lg:pr-12 xl:pr-20 2xl:pr-28">
+        <div className="w-full lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[800px] ml-0 lg:ml-20 lg:mr-0 lg:pr-12 xl:pr-20 2xl:pr-28">
           <div className="mb-6 lg:mb-8">
             <div className="overflow-hidden">
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)", y: 15 }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.05 }}
               >
                 <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#332820" strokeWidth="1.2" className="mb-2">
@@ -29,7 +29,7 @@ export default function TeamSection() {
                 <motion.div
                   initial={{ clipPath: "inset(100% 0 0 0)", y: 15 }}
                   whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
                 >
                   ARCCA GROUP®
@@ -42,7 +42,7 @@ export default function TeamSection() {
             <motion.h2
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] text-[#332820] tracking-tight leading-[0.9] uppercase"
             >
@@ -54,7 +54,7 @@ export default function TeamSection() {
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light mb-4"
             >
@@ -63,7 +63,7 @@ export default function TeamSection() {
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.3 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light"
             >
@@ -75,7 +75,7 @@ export default function TeamSection() {
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)", y: 20 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.35 }}
             >
               <button className="px-8 py-3 w-max bg-[#332820] text-[#D6CBBC] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#1E1A17] transition-colors border border-[#332820]">
@@ -91,7 +91,7 @@ export default function TeamSection() {
         <motion.div
           initial={{ clipPath: 'inset(0% 50% 0% 50%)' }}
           whileInView={{ clipPath: 'inset(0% 0% 0% 0%)' }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true }}
           transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
           className="w-full h-full lg:h-[85vh]"
         >

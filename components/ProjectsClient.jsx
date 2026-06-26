@@ -248,7 +248,7 @@ export default function ProjectsClient() {
           {/* Navigation Buttons (Desktop & Tablet) */}
           <button
             onClick={() => paginate(-1)}
-            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#D6CBBC]/30 flex items-center justify-center text-[#D6CBBC] bg-black/25 hover:bg-[#D6CBBC] hover:text-[#332820] hover:border-[#D6CBBC] transition-all duration-300 cursor-pointer"
+            className="hidden md:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#D6CBBC]/30 flex items-center justify-center text-[#D6CBBC] bg-black/25 hover:bg-[#D6CBBC] hover:text-[#332820] hover:border-[#D6CBBC] transition-all duration-300 cursor-pointer"
             aria-label="Previous Project"
           >
             <ArrowLeft size={16} />
@@ -256,14 +256,14 @@ export default function ProjectsClient() {
 
           <button
             onClick={() => paginate(1)}
-            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#D6CBBC]/30 flex items-center justify-center text-[#D6CBBC] bg-black/25 hover:bg-[#D6CBBC] hover:text-[#332820] hover:border-[#D6CBBC] transition-all duration-300 cursor-pointer"
+            className="hidden md:flex absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#D6CBBC]/30 flex items-center justify-center text-[#D6CBBC] bg-black/25 hover:bg-[#D6CBBC] hover:text-[#332820] hover:border-[#D6CBBC] transition-all duration-300 cursor-pointer"
             aria-label="Next Project"
           >
             <ArrowRight size={16} />
           </button>
 
           {/* Bottom Left Title Text Overlay - Stacked & GPU Translated */}
-          <div className="absolute bottom-16 left-6 md:bottom-20 md:left-16 z-20 text-[#D6CBBC] pointer-events-none w-[320px] h-[120px] md:h-[180px] overflow-hidden">
+          <div className="absolute bottom-16 left-6 md:bottom-20 md:left-16 z-20 text-[#D6CBBC] pointer-events-none w-[80vw] md:w-[320px] h-[160px] md:h-[180px] overflow-hidden">
             {projects.map((proj, idx) => {
               const isActive = idx === activeIndex;
               return (
@@ -295,13 +295,29 @@ export default function ProjectsClient() {
                   <span className="block mt-3 md:mt-4 text-[10px] md:text-[11px] tracking-[0.25em] font-light uppercase text-[#D6CBBC]/70">
                     {proj.loc}
                   </span>
+
+                  {/* Mobile-only project links to avoid overlay overlap */}
+                  <div className="flex items-center gap-4 mt-3 md:hidden">
+                    <a
+                      href={proj.href}
+                      className="pointer-events-auto text-[11px] tracking-[0.15em] font-light uppercase border-b border-[#D6CBBC]/40 pb-0.5 hover:border-[#D6CBBC] transition-colors duration-300 flex items-center gap-1 text-[#D6CBBC]"
+                    >
+                      VIEW PROJECT <ArrowDownRight size={10} className="inline-block" />
+                    </a>
+                    <Link
+                      href="/"
+                      className="pointer-events-auto text-[9px] tracking-[0.25em] font-light uppercase text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors duration-300"
+                    >
+                      ALL PROJECTS
+                    </Link>
+                  </div>
                 </motion.div>
               );
             })}
           </div>
 
           {/* Bottom Right Project Links Overlay - GPU Translated */}
-          <div className="absolute bottom-16 right-6 md:bottom-20 md:right-16 z-20 text-right pointer-events-none w-[320px] h-[120px] md:h-[180px] overflow-hidden flex justify-end">
+          <div className="hidden md:flex absolute bottom-16 right-6 md:bottom-20 md:right-16 z-20 text-right pointer-events-none w-[320px] h-[120px] md:h-[180px] overflow-hidden justify-end">
             {projects.map((proj, idx) => {
               const isActive = idx === activeIndex;
               return (
@@ -351,7 +367,7 @@ export default function ProjectsClient() {
               <motion.h2
                 initial={{ clipPath: "inset(100% 0 0 0)", y: 50 }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1] }}
                 className="font-heading text-5xl md:text-7xl lg:text-8xl tracking-tight uppercase leading-[0.9] font-light"
               >
@@ -388,7 +404,7 @@ export default function ProjectsClient() {
                     key={proj.id}
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true }}
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
                     className="group relative aspect-[3/2] w-full overflow-hidden rounded-sm cursor-pointer"

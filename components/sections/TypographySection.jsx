@@ -7,7 +7,7 @@ export default function TypographySection() {
 
             {/* Left paragraph text */}
             <FadeIn delay={0.1}>
-               <p className="text-[13px]  max-w-[220px] mb-10 md:mb-0 md:absolute md:top-0 md:left-0 z-10">
+               <p className="text-[13px] max-w-[220px] mb-10 md:mb-0 md:absolute md:top-0 md:left-0 z-10 text-center mx-auto md:text-left md:mx-0">
                   At Arcca Group, every project is
                   conceived as a creation
                   that transcends architecture — a
@@ -22,26 +22,26 @@ export default function TypographySection() {
             {/* Big typography */}
             <div className="font-heading w-full">
 
-               {/* Line 1: INSPIRED + dining image — right aligned */}
+               {/* Line 1: INSPIRED + dining image — centered on mobile, right aligned on desktop */}
                <FadeIn delay={0.2}>
-                  <div className="flex items-end justify-end text-[clamp(48px,10.3vw,155px)] leading-none tracking-tighter">
+                  <div className="flex items-end justify-center md:justify-end text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter">
                      <span>INSPIRED</span>
                      <img
                         src="/images/typography_dining.png"
                         alt="Luxury dining room"
-                        className="w-[clamp(80px,18vw,260px)] h-[clamp(50px,10.7vw,155px)] object-cover ml-2 md:ml-3 rounded-sm flex-shrink-0"
+                        className="w-14 h-10 sm:w-28 sm:h-20 lg:w-64 lg:h-40 object-cover ml-2 md:ml-3 rounded-sm flex-shrink-0"
                      />
                   </div>
                </FadeIn>
 
                {/* Line 2: DESIGN + living image + BY — centered */}
                <FadeIn delay={0.4}>
-                  <div className="flex items-center justify-center text-[clamp(48px,10.3vw,155px)] leading-none tracking-tighter mt-1 md:mt-2">
+                  <div className="flex items-center justify-center text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter mt-1 md:mt-2">
                      <span>DESIGN</span>
                      <img
                         src="/images/typography_living.png"
                         alt="Luxury living room"
-                        className="w-[clamp(40px,8.3vw,120px)] h-[clamp(40px,8.3vw,120px)] object-cover mx-1.5 md:mx-2 rounded-sm flex-shrink-0"
+                        className="w-8 h-8 sm:w-16 sm:h-16 lg:w-30 lg:h-30 object-cover mx-1.5 md:mx-2 rounded-sm flex-shrink-0"
                      />
                      <span>BY</span>
                   </div>
@@ -49,7 +49,7 @@ export default function TypographySection() {
 
                {/* Line 3: ARCCA® + TALK TO US button — centered */}
                <FadeIn delay={0.6}>
-                  <div className="flex items-end justify-center text-[clamp(48px,10.3vw,155px)] leading-none tracking-tighter mt-1 md:mt-2">
+                  <div className="flex items-end justify-center text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter mt-1 md:mt-2">
                      <div className="flex items-start">
                         <span>ARCCA</span>
                         <span className="text-[0.22em] leading-none relative top-[0.1em]">®</span>
