@@ -5,13 +5,13 @@ export default function HeroSection() {
   return (
     <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0 z-0 bg-[#E6DFD4]">
-        <img 
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop" 
+        <img
+          src="/home/heroimage.webp"
           alt="Luxury Home"
           className="w-full h-full object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+        <div className="absolute inset-0 bg-black/40" />
       </div>
 
       <div className="absolute bottom-12 left-12 right-12 z-10 flex flex-col md:flex-row items-end justify-between text-[#E6DFD4]">
@@ -23,12 +23,12 @@ export default function HeroSection() {
             intertwine beauty, well-being, and purposeful design.
           </p>
         </FadeIn>
-        
+
         <FadeIn y={20} delay={3.4} className="mt-8 md:mt-0 pb-2">
           <a href="#" className="flex items-center gap-2 text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
             EXPLORE
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 1L11 11M11 11V1.5M11 11H1.5" stroke="currentColor" strokeWidth="1.5"/>
+              <path d="M1 1L11 11M11 11V1.5M11 11H1.5" stroke="currentColor" strokeWidth="1.5" />
             </svg>
           </a>
         </FadeIn>
