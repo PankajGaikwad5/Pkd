@@ -138,12 +138,12 @@ export default function MenuOverlay({
                 <div className="grid grid-cols-2 gap-y-16 gap-x-8 font-sans text-[10px] lg:text-[11px] tracking-widest uppercase text-[#D6CBBC]">
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Email</p>
-                    <p className="opacity-70 font-light">enquires@teampkd.com</p>
+                    <p className="opacity-70 font-light">enquires@teampkd.in</p>
                   </div>
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Address</p>
                     <p className="opacity-70 font-light leading-relaxed">
-                      194 Isla Dorada Blvd,<br />Coral Gables, FL, 33143
+                      317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. PALLADIUM MALL, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
                     </p>
                   </div>
                   <div>
@@ -153,7 +153,7 @@ export default function MenuOverlay({
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Monday to Friday:</p>
                     <p className="opacity-70 font-light leading-relaxed">
-                      9:00 AM - 6:00 PM
+                      10:00 AM - 6:30 PM
                     </p>
                   </div>
                   <div className="col-span-2">
