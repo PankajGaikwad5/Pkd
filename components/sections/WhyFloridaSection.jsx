@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { FadeIn } from '../Animations';
+import Link from 'next/link';
 
 const maskTransition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
 
@@ -10,7 +11,7 @@ export default function WhyFloridaSection() {
       <div className="w-full lg:w-[45%] flex flex-col justify-center py-12 lg:py-24 px-6 sm:px-12 md:px-16 lg:px-0">
         <div className="w-full lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[800px] ml-0 lg:ml-20 lg:mr-0 lg:pr-12 xl:pr-20 2xl:pr-28">
           <div className="mb-6 lg:mb-8">
-            <div className="overflow-hidden">
+            {/* <div className="overflow-hidden">
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)", y: 15 }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
@@ -26,7 +27,7 @@ export default function WhyFloridaSection() {
                   <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none"></text>
                 </svg>
               </motion.div>
-            </div>
+            </div> */}
             <h3 className="text-[17px] uppercase tracking-[0.2em] font-light text-[#332820]">
               <div className="overflow-hidden pt-1">
                 <motion.div
@@ -35,7 +36,7 @@ export default function WhyFloridaSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
                 >
-                  WHY PKD?
+                  WHY PKD STUDIO?
                 </motion.div>
               </div>
             </h3>
@@ -61,7 +62,8 @@ export default function WhyFloridaSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light"
             >
-              We envision spaces that are not just lived in, but felt where every element has been curated to inspire connection, serenity, and a profound sense of belonging. Each project reflects a deep understanding of our clients&apos; evolving lifestyles, blending timeless aesthetics with intelligent innovation and sustainable craftsmanship.
+              We envision spaces that are not just lived in, but felt where every element has been curated to inspire connection, serenity, and a profound sense of belonging.
+              <br /><br /> Each project reflects a deep understanding of our clients&apos; evolving lifestyles, blending timeless aesthetics with intelligent innovation and sustainable craftsmanship.
             </motion.p>
           </div>
 
@@ -72,9 +74,14 @@ export default function WhyFloridaSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.35 }}
             >
-              <button className="px-8 py-3 w-max bg-[#332820] text-[#D6CBBC] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#1E1A17] transition-colors border border-[#332820]">
+              {/* <button className="px-8 py-3 w-max bg-[#332820] text-[#D6CBBC] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#1E1A17] transition-colors border border-[#332820]">
                 PROJECTS
-              </button>
+              </button> */}
+              <div>
+                <Link href="/projects" className="inline-block px-10 py-[14px] w-max bg-[#352D26] text-[#E6DFD4] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#201b17] transition-colors text-center">
+                  PROJECTS
+                </Link>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -90,12 +97,17 @@ export default function WhyFloridaSection() {
           className="w-full h-full lg:h-[85vh]"
         >
           <img
+            src="/sections/whypkd.webp"
+            alt="Luxury Home"
+            className="w-full h-full object-cover object-center"
+          />
+          {/* <img
             src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop"
             alt="Florida Luxury Home"
             className="w-full h-full object-cover object-center"
-          />
+          /> */}
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 }

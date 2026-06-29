@@ -7,7 +7,7 @@ export default function TeamSection() {
       <div className="w-full lg:w-[45%] flex flex-col justify-center py-12 lg:py-24 px-6 sm:px-12 md:px-16 lg:px-0">
         <div className="w-full lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[800px] ml-0 lg:ml-20 lg:mr-0 lg:pr-12 xl:pr-20 2xl:pr-28">
           <div className="mb-6 lg:mb-8">
-            <div className="overflow-hidden">
+            {/* <div className="overflow-hidden">
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)", y: 15 }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
@@ -23,7 +23,7 @@ export default function TeamSection() {
                   <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none"></text>
                 </svg>
               </motion.div>
-            </div>
+            </div> */}
             <h3 className="text-[17px] uppercase tracking-[0.2em] font-light text-[#332820]">
               <div className="overflow-hidden pt-1">
                 <motion.div

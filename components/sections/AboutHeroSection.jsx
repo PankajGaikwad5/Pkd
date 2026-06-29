@@ -9,13 +9,12 @@ export default function AboutHeroSection() {
 
         {/* Top Branding Area */}
         <div className="mb-12 lg:mb-0">
-          <motion.div
+          {/* <motion.div
             initial={{ clipPath: "inset(100% 0 0 0)", y: 15 }}
             whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           >
-            {/* Logo Grid */}
             <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#D6CBBC" strokeWidth="1.2" className="mb-4">
               <rect x="0.6" y="0.6" width="46.8" height="46.8" />
               <path d="M0 24H48 M24 0V48 M0 0L48 48 M48 0L0 48" />
@@ -25,7 +24,7 @@ export default function AboutHeroSection() {
               <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#D6CBBC" stroke="none"></text>
             </svg>
 
-          </motion.div>
+          </motion.div> */}
 
           {/* Subtitle */}
           <div className="overflow-hidden">

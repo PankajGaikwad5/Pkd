@@ -27,10 +27,15 @@ export default function TypographySection() {
                   <div className="flex items-end justify-center md:justify-end text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter">
                      <span>INSPIRED</span>
                      <img
-                        src="/images/typography_dining.png"
+                        src="/sections/inspired1.webp"
                         alt="Luxury dining room"
                         className="w-14 h-10 sm:w-28 sm:h-20 lg:w-64 lg:h-40 object-cover ml-2 md:ml-3 rounded-sm flex-shrink-0"
                      />
+                     {/* <img
+                        src="/images/typography_dining.png"
+                        alt="Luxury dining room"
+                        className="w-14 h-10 sm:w-28 sm:h-20 lg:w-64 lg:h-40 object-cover ml-2 md:ml-3 rounded-sm flex-shrink-0"
+                     /> */}
                   </div>
                </FadeIn>
 
@@ -39,10 +44,15 @@ export default function TypographySection() {
                   <div className="flex items-center justify-center text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter mt-1 md:mt-2">
                      <span>DESIGN</span>
                      <img
-                        src="/images/typography_living.png"
+                        src="/sections/inspired2.webp"
                         alt="Luxury living room"
                         className="w-8 h-8 sm:w-16 sm:h-16 lg:w-30 lg:h-30 object-cover mx-1.5 md:mx-2 rounded-sm flex-shrink-0"
                      />
+                     {/* <img
+                        src="/images/typography_living.png"
+                        alt="Luxury living room"
+                        className="w-8 h-8 sm:w-16 sm:h-16 lg:w-30 lg:h-30 object-cover mx-1.5 md:mx-2 rounded-sm flex-shrink-0"
+                     /> */}
                      <span>BY</span>
                   </div>
                </FadeIn>
@@ -51,8 +61,7 @@ export default function TypographySection() {
                <FadeIn delay={0.6}>
                   <div className="flex items-end justify-center text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter mt-1 md:mt-2">
                      <div className="flex items-start">
-                        <span>PKD</span>
-                        <span className="text-[0.22em] leading-none relative top-[0.1em]">®</span>
+                        <span>PKD STUDIO</span>
                      </div>
                      <button className="inline-flex items-center px-6 md:px-8 py-2.5 md:py-3.5 bg-[#332820] text-[#D6CBBC] rounded-full text-[10px] md:text-[11px] tracking-[0.15em] uppercase cursor-pointer hover:bg-[#1E1A17] transition-colors whitespace-nowrap ml-4 md:ml-6 mb-[0.1em]">
                         TALK TO US

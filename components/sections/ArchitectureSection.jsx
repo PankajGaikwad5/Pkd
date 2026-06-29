@@ -12,7 +12,7 @@ export default function ArchitectureSection() {
           {/* Top Content */}
           <div>
             {/* Logo */}
-            <svg
+            {/* <svg
               width="36"
               height="36"
               viewBox="0 0 48 48"
@@ -27,7 +27,7 @@ export default function ArchitectureSection() {
               <text x="33" y="18" fontSize="11" fontFamily="sans-serif" fill="#2E2824" stroke="none">R</text>
               <text x="6" y="42" fontSize="11" fontFamily="sans-serif" fill="#2E2824" stroke="none">C</text>
               <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#2E2824" stroke="none">A</text>
-            </svg>
+            </svg> */}
 
             {/* Subtitle */}
             <h3 className="text-xs md:text-sm uppercase tracking-[0.3em] font-light text-[#2E2824]/90 mb-6">
@@ -73,10 +73,15 @@ export default function ArchitectureSection() {
             className="w-full h-full"
           >
             <img
-              src="https://arccagroup.us/wp-content/uploads/2025/09/Antibes-Stair-Hall-2nd-Floor-Cortada-e1758903352789.png"
+              src="/sections/inspirednow1.webp"
               alt="Luxury Architectural Staircase"
               className="w-full h-full object-cover"
             />
+            {/* <img
+              src="https://arccagroup.us/wp-content/uploads/2025/09/Antibes-Stair-Hall-2nd-Floor-Cortada-e1758903352789.png"
+              alt="Luxury Architectural Staircase"
+              className="w-full h-full object-cover"
+            /> */}
           </motion.div>
         </div>
 
@@ -90,10 +95,15 @@ export default function ArchitectureSection() {
             className="w-full h-full"
           >
             <img
-              src="https://arccagroup.us/wp-content/uploads/2025/04/Pantry.jpeg"
+              src="/sections/inspirednow2.webp"
               alt="Luxury Modern Pantry and Wine Cellar"
               className="w-full h-full object-cover"
             />
+            {/* <img
+              src="https://arccagroup.us/wp-content/uploads/2025/04/Pantry.jpeg"
+              alt="Luxury Modern Pantry and Wine Cellar"
+              className="w-full h-full object-cover"
+            /> */}
           </motion.div>
         </div>
 

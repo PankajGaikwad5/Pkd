@@ -55,7 +55,7 @@ export default function PortfolioSection() {
       {/* Left Content Area */}
       <div className="w-full xl:w-[40%] flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:pl-20 xl:pl-24 2xl:pl-32 xl:pr-12 py-12 xl:py-32">
         <div className="mb-10">
-          <div className="overflow-hidden">
+          {/* <div className="overflow-hidden">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
@@ -119,7 +119,7 @@ export default function PortfolioSection() {
                 </text>
               </svg>
             </motion.div>
-          </div>
+          </div> */}
 
           <div className="mt-4 text-xl md:text-2xl lg:text-3xl xl:text-[22px] uppercase tracking-[0.05em] font-light text-[#2E2824] leading-[1.3]">
             <div className="overflow-hidden pb-1">
