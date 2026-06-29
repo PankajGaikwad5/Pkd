@@ -159,9 +159,9 @@ export default function MenuOverlay({
                   <div className="col-span-2">
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Social</p>
                     <ul className="space-y-3 opacity-70 font-light">
-                      <li><a href="#" className="hover:opacity-100 transition-opacity">Instagram</a></li>
+                      <li><a href="https://www.instagram.com/pkdstudio_/" className="hover:opacity-100 transition-opacity">Instagram</a></li>
                       <li><a href="#" className="hover:opacity-100 transition-opacity">Facebook</a></li>
-                      <li><a href="#" className="hover:opacity-100 transition-opacity">LinkedIn</a></li>
+                      <li><a href="http://www.linkedin.com/in/prachiti-khanvilkar-412874114" className="hover:opacity-100 transition-opacity">LinkedIn</a></li>
                     </ul>
                   </div>
                 </div>

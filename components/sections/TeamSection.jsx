@@ -58,7 +58,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light mb-4"
             >
-              At PKD Studio, we don&apos;t simply follow trends we define the future of luxury living. What began as a family-driven venture has evolved into a firm with international reach, united by a clear vision and an enduring passion for excellence.
+              Behind every exceptional space is a team driven by passion, precision, and purpose. At PKD Studio, our architects, designers, and project specialists work seamlessly together, combining diverse expertise to deliver thoughtful, detail-oriented interiors that elevate everyday living.
             </motion.p>
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
@@ -67,7 +67,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.3 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light"
             >
-              With deep-rooted expertise in the Miami market, our team sees possibilities where others see obstacles uncovering unique opportunities through a combination of strategic precision, creative innovation, and an unwavering commitment to quality.
+              With a collaborative approach and an unwavering commitment to craftsmanship, we ensure every project is executed with creativity, transparency, and care, creating homes that are as functional as they are beautiful.
             </motion.p>
           </div>
 

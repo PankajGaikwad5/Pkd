@@ -42,16 +42,16 @@ export default function ArchitectureSection() {
             </h2>
 
             {/* Paragraphs (Static) */}
-            <div className="space-y-2 text-sm md:text-[15px] leading-relaxed text-[#2E2824]/80 font-light max-w-[340px] mb-3">
+            <div className="space-y-2 text-sm md:text-[15px]  text-[#2E2824]/80 font-light max-w-[340px] mb-3">
               <p>
                 At PKD Studio, we believe design transforms the everyday into something extraordinary.
               </p>
               <p>
                 Each project begins with a vision where aesthetics, functionality, and emotion coexist in perfect balance.
               </p>
-              <p>
+              {/* <p>
                 Inspired by icons like Fallingwater, Ghost House, and Capital Hill Residence, we see architecture as a living dialogue with its surroundings.
-              </p>
+              </p> */}
             </div>
           </div>
 
