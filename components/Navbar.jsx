@@ -13,7 +13,7 @@ function MenuButton({ onClick }) {
       onClick={onClick}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex flex-col gap-[7px] w-8 py-1 relative group overflow-hidden"
+      className="flex flex-col gap-[7px] w-8 py-1 relative group overflow-hidden hover:cursor-pointer"
     >
       {[0, 1, 2, 3].map((i) => (
         <div key={i} className="w-full h-[1px] relative overflow-hidden bg-transparent">
