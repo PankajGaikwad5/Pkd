@@ -7,7 +7,7 @@ export default function AboutMiamiSection() {
       {/* Left Content Area */}
       <div className="w-full lg:w-[45%] flex flex-col justify-center lg:py-12 lg:pl-20 lg:pr-12 xl:pr-20">
         <div className="w-full lg:max-w-[420px] xl:max-w-[500px]">
-          
+
           {/* Heading */}
           <div className="overflow-hidden pb-1 mb-2">
             <motion.h2
@@ -17,7 +17,8 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
               className="font-heading text-2xl md:text-3xl text-[#D6CBBC] tracking-tight"
             >
-              HEADQUARTERED IN MIAMI, FLORIDA, ARCCA® STARTED AS A FAMILY BUSINESS AND HAS NOW GROWN INTO A GLOBAL LEADER IN RESIDENTIAL DEVELOPMENT.
+              LUXURY INTERIORS & ARCHITECTURE,
+              BASED IN THE HEART OF MUMBAI, LED BY PRACHITI KHANVILKAR, BRINGING OVER 25 YEARS OF EXPERIENCE IN CRAFTING THOUGHTFULLY DESIGNED SPACES.
             </motion.h2>
           </div>
 
@@ -30,7 +31,7 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
               className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light mb-4"
             >
-              Led by a dynamic team of visionaries, we specialize in crafting upscale residences with impeccably finished interiors and unique designs.
+              Founded on a passion for timeless design and meticulous craftsmanship, we create bespoke residential and commercial interiors that seamlessly blend functionality with refined aesthetics.
             </motion.p>
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
@@ -39,7 +40,9 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light"
             >
-              Our expertise in Miami's luxury real estate market allows us to carefully select properties and land for development, ensuring premium quality and value in every project. With a focus on delivering superior products and timely results, we have built a strong track record of successful projects that go beyond expectations.
+              Every project is approached with a deep understanding of our clients' aspirations, resulting in spaces that are elegant, enduring, and distinctly personal.
+
+              From concept development and material curation to flawless execution, we design environments that celebrate luxury, attention to detail, and meaningful living..
             </motion.p>
           </div>
 
