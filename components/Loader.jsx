@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export default function Loader() {
   const ease = [0.83, 0, 0.17, 1]; // Stronger easing for luxurious feel
-  
+
   return (
     <motion.div
       exit={{ opacity: 0, transition: { duration: 0.1, delay: 1.6 } }}
@@ -63,16 +63,16 @@ export default function Loader() {
       >
         <LogoContent />
       </motion.div>
-      
+
       {/* Right Logo Half */}
       <motion.div
-         initial={{ x: '-50%', y: '-50%' }}
-         exit={{ x: 'calc(50vw - 50%)', y: '-50%' }}
-         transition={{ duration: 1.6, ease }}
-         className="absolute top-1/2 left-1/2 z-10"
-         style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)' }}
+        initial={{ x: '-50%', y: '-50%' }}
+        exit={{ x: 'calc(50vw - 50%)', y: '-50%' }}
+        transition={{ duration: 1.6, ease }}
+        className="absolute top-1/2 left-1/2 z-10"
+        style={{ clipPath: 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)' }}
       >
-         <LogoContent />
+        <LogoContent />
       </motion.div>
     </motion.div>
   );
@@ -88,12 +88,12 @@ function LogoContent() {
       className="w-[5.5rem] h-[5.5rem] border border-[#2E2824] bg-[#E6DFD4] relative flex flex-col font-heading text-[#2E2824] leading-none"
     >
       <div className="flex w-full h-1/2 border-b border-[#2E2824]">
-        <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[2.5rem] pt-1">A</div>
-        <div className="w-1/2 h-full flex justify-center items-center text-[2.5rem] pt-1">R</div>
+        <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[1.5rem] pt-1">P</div>
+        <div className="w-1/2 h-full flex justify-center items-center text-[1.5rem] pt-1">K</div>
       </div>
       <div className="flex w-full h-1/2">
-        <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[2.5rem] pt-1">C</div>
-        <div className="w-1/2 h-full flex justify-center items-center text-[2.5rem] pt-1 rotate-180">A</div>
+        <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[1.5rem] pt-1">D</div>
+        <div className="w-1/2 h-full flex justify-center items-center text-[1.5rem] pt-1 rotate-180">S</div>
       </div>
     </motion.div>
   );

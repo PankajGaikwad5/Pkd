@@ -8,7 +8,6 @@ import MenuOverlay from './MenuOverlay';
 // Import sections
 import HeroSection from './sections/HeroSection';
 import WhyFloridaSection from './sections/WhyFloridaSection';
-import BlueprintSection from './sections/BlueprintSection';
 import PortfolioSection from './sections/PortfolioSection';
 import FeaturedSection from './sections/FeaturedSection';
 import ArchitectureSection from './sections/ArchitectureSection';
@@ -35,7 +34,7 @@ export default function HomeClient() {
     return () => clearTimeout(t);
   }, []);
 
-   return (
+  return (
     <>
       <AnimatePresence mode="wait">
         {loading && <Loader key="loader" />}
@@ -45,16 +44,15 @@ export default function HomeClient() {
       <MenuOverlay isOpen={menuOpen} onClose={() => setMenuOpen(false)} />
 
       <main className="w-full relative">
-         <HeroSection />
-         <WhyFloridaSection />
-         <BlueprintSection />
-         <PortfolioSection />
-         <FeaturedSection />
-         <ArchitectureSection />
-         <TypographySection />
-         <CraftingSection />
-         <TeamSection />
-         <TeamCarouselSection />
+        <HeroSection />
+        <WhyFloridaSection />
+        <PortfolioSection />
+        <FeaturedSection />
+        <ArchitectureSection />
+        <TypographySection />
+        <CraftingSection />
+        <TeamSection />
+        <TeamCarouselSection />
       </main>
 
       <FooterSection />
