@@ -49,7 +49,7 @@ export default function AboutHeroSection() {
               transition={{ duration: 1.0, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
               className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-[2.8rem] text-[#D6CBBC] tracking-tight"
             >
-              WELCOME TO PKD STUDIO, WHERE LUXURY MEETS LIFESTYLE IN THE VIBRANT HEART OF MIAMI
+              WELCOME TO PKD STUDIO, WHERE LUXURY MEETS LIFESTYLE IN THE VIBRANT HEART OF MUMBAI
             </motion.h2>
           </div>
         </div>
