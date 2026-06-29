@@ -24,7 +24,7 @@ export default function AboutCollaborativeSection() {
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
             className="font-heading text-5xl sm:text-6xl lg:text-[4rem] xl:text-[5rem] tracking-tight leading-[1.0] uppercase"
           >
-            AT ARCCA
+            AT PKD STUDIO
           </motion.h2>
         </div>
 

@@ -17,8 +17,7 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
               className="font-heading text-2xl md:text-3xl text-[#D6CBBC] tracking-tight"
             >
-              LUXURY INTERIORS & ARCHITECTURE,
-              BASED IN THE HEART OF MUMBAI, LED BY PRACHITI KHANVILKAR, BRINGING OVER 25 YEARS OF EXPERIENCE IN CRAFTING THOUGHTFULLY DESIGNED SPACES.
+              BASED IN THE HEART OF MUMBAI, WE CREATE LUXURY INTERIORS AND ARCHITECTURE
             </motion.h2>
           </div>
 
@@ -31,7 +30,7 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
               className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light mb-4"
             >
-              Founded on a passion for timeless design and meticulous craftsmanship, we create bespoke residential and commercial interiors that seamlessly blend functionality with refined aesthetics.
+              With a thoughtful approach to design and execution, we craft bespoke residential and commercial spaces that balance timeless aesthetics with everyday functionality.
             </motion.p>
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
@@ -40,9 +39,7 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light"
             >
-              Every project is approached with a deep understanding of our clients' aspirations, resulting in spaces that are elegant, enduring, and distinctly personal.
-
-              From concept development and material curation to flawless execution, we design environments that celebrate luxury, attention to detail, and meaningful living..
+              Led by Prachiti Khanvilkar, bringing over 25 years of excellence, our studio delivers refined interiors through meticulous planning, premium materials, and uncompromising attention to detail.
             </motion.p>
           </div>
 
