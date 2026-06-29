@@ -92,7 +92,7 @@ export default function FooterSection() {
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">EMAIL</h4>
                 <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
-                  <a href="mailto:info@arccagp.com" className="hover:opacity-60 transition-opacity duration-300">info@arccagp.com</a>
+                  <a href="mailto:enquires@teampkd.in" className="hover:opacity-60 transition-opacity duration-300">enquires@teampkd.in</a>
                 </p>
               </div>
             </FadeIn>
