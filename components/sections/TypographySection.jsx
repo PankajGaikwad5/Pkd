@@ -8,9 +8,9 @@ export default function TypographySection() {
             {/* Left paragraph text */}
             <FadeIn delay={0.1}>
                <p className="text-[13px] max-w-[220px] mb-10 md:mb-0 md:absolute md:top-0 md:left-0 z-10 text-center mx-auto md:text-left md:mx-0">
-                  At Arcca Group, every project is
+                  At PKD Studio, every project is
                   conceived as a creation
-                  that transcends architecture — a
+                  that transcends architecture a
                   space designed to{' '}
                   <strong>elevate everyday life</strong> through:
                   <br /><br />
@@ -51,7 +51,7 @@ export default function TypographySection() {
                <FadeIn delay={0.6}>
                   <div className="flex items-end justify-center text-4xl sm:text-7xl lg:text-[9.25rem] leading-none tracking-tighter mt-1 md:mt-2">
                      <div className="flex items-start">
-                        <span>ARCCA</span>
+                        <span>PKD</span>
                         <span className="text-[0.22em] leading-none relative top-[0.1em]">®</span>
                      </div>
                      <button className="inline-flex items-center px-6 md:px-8 py-2.5 md:py-3.5 bg-[#332820] text-[#D6CBBC] rounded-full text-[10px] md:text-[11px] tracking-[0.15em] uppercase cursor-pointer hover:bg-[#1E1A17] transition-colors whitespace-nowrap ml-4 md:ml-6 mb-[0.1em]">

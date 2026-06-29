@@ -102,7 +102,7 @@ export default function Navbar({ onMenuClick }) {
         </div>
 
         <div className="flex-1 flex items-center justify-end gap-10">
-          <span className="hidden md:block text-[11px] font-light tracking-widest uppercase">EST &ndash; 2020</span>
+          <span className="hidden md:block text-[11px] font-light tracking-widest uppercase">EST &ndash; 2017</span>
           <MenuButton onClick={onMenuClick} />
         </div>
       </div>

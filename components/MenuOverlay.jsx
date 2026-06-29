@@ -138,7 +138,7 @@ export default function MenuOverlay({
                 <div className="grid grid-cols-2 gap-y-16 gap-x-8 font-sans text-[10px] lg:text-[11px] tracking-widest uppercase text-[#D6CBBC]">
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Email</p>
-                    <p className="opacity-70 font-light">info@arccagp.com</p>
+                    <p className="opacity-70 font-light">enquires@teampkd.com</p>
                   </div>
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Address</p>

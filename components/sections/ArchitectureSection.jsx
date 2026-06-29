@@ -44,7 +44,7 @@ export default function ArchitectureSection() {
             {/* Paragraphs (Static) */}
             <div className="space-y-2 text-sm md:text-[15px] leading-relaxed text-[#2E2824]/80 font-light max-w-[340px] mb-3">
               <p>
-                At Arcca Group, we believe design transforms the everyday into something extraordinary.
+                At PKD Studio, we believe design transforms the everyday into something extraordinary.
               </p>
               <p>
                 Each project begins with a vision where aesthetics, functionality, and emotion coexist in perfect balance.

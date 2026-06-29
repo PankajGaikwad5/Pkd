@@ -20,10 +20,10 @@ export default function WhyFloridaSection() {
                 <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#332820" strokeWidth="1.2" className="mb-2">
                   <rect x="0.6" y="0.6" width="46.8" height="46.8" />
                   <path d="M0 24H48 M24 0V48 M0 0L48 48 M48 0L0 48" />
-                  <text x="6" y="18" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none">A</text>
-                  <text x="33" y="18" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none">R</text>
-                  <text x="6" y="42" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none">C</text>
-                  <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none">A</text>
+                  <text x="6" y="18" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none"></text>
+                  <text x="33" y="18" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none"></text>
+                  <text x="6" y="42" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none"></text>
+                  <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#332820" stroke="none"></text>
                 </svg>
               </motion.div>
             </div>
@@ -35,7 +35,7 @@ export default function WhyFloridaSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
                 >
-                  WHY FLORIDA?
+                  WHY PKD?
                 </motion.div>
               </div>
             </h3>
@@ -61,7 +61,7 @@ export default function WhyFloridaSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light"
             >
-              We envision spaces that are not just lived in, but felt — where every element has been curated to inspire connection, serenity, and a profound sense of belonging. Each project reflects a deep understanding of our clients&apos; evolving lifestyles, blending timeless aesthetics with intelligent innovation and sustainable craftsmanship.
+              We envision spaces that are not just lived in, but felt where every element has been curated to inspire connection, serenity, and a profound sense of belonging. Each project reflects a deep understanding of our clients&apos; evolving lifestyles, blending timeless aesthetics with intelligent innovation and sustainable craftsmanship.
             </motion.p>
           </div>
 
