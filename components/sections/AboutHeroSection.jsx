@@ -64,7 +64,7 @@ export default function AboutHeroSection() {
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.6, ease: [0.76, 0, 0.24, 1] }}
-            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2070&auto=format&fit=crop"
+            src="/sections/aboutus.webp"
             alt="ARCCA Luxury Architecture"
             className="w-full h-full object-cover"
           />
