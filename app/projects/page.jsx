@@ -1,8 +1,8 @@
 import ProjectsClient from "@/components/ProjectsClient";
 
 export const metadata = {
-  title: 'Projects - Arcca Group',
-  description: 'Explore Arcca Group\'s luxury residential developments, architecture, and design portfolio in Miami.',
+  title: 'Projects - PKD STUIO',
+  description: 'Explore PKD STUIO\'s luxury residential developments, architecture, and design portfolio in Miami.',
 };
 
 export default function ProjectsPage() {

@@ -174,7 +174,7 @@ export default function ProjectsClient() {
 
       {/* Main Container - Scrollable page body */}
       <main className="w-full relative bg-[#332820] text-[#D6CBBC]">
-        
+
         {/* Fullscreen Carousel Section */}
         <section
           ref={containerRef}
@@ -204,10 +204,11 @@ export default function ProjectsClient() {
           </div>
 
           {/* Blurred & darkened background overlay layer */}
-          <div className="absolute inset-0 bg-[#332820]/65 backdrop-blur-[6px] z-[1] pointer-events-none" />
+          {/* <div className="absolute inset-0 bg-[#332820]/65 backdrop-blur-[6px] z-[1] pointer-events-none" /> */}
+          <div className="absolute inset-0 bg-black/60  z-[1] pointer-events-none" />
 
           {/* Centered Interactive Foreground Card - GPU Stacked */}
-          <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+          {/* <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
             <div className="relative w-[82vw] max-w-[370px] h-[60vh] md:h-[68vh] xl:h-[72vh] aspect-[9/16] pointer-events-auto">
               {projects.map((proj, idx) => {
                 const isActive = idx === activeIndex;
@@ -243,7 +244,7 @@ export default function ProjectsClient() {
                 );
               })}
             </div>
-          </div>
+          </div> */}
 
           {/* Navigation Buttons (Desktop & Tablet) */}
           <button
@@ -383,11 +384,10 @@ export default function ProjectsClient() {
                   <button
                     key={filter}
                     onClick={() => setActiveFilter(isActive ? 'All' : filter)}
-                    className={`px-6 py-2 rounded-full border text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${
-                      isActive
-                        ? 'border-[#332820] bg-[#332820] text-[#D6CBBC]'
-                        : 'border-[#332820]/30 text-[#332820] hover:border-[#332820] bg-transparent'
-                    }`}
+                    className={`px-6 py-2 rounded-full border text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${isActive
+                      ? 'border-[#332820] bg-[#332820] text-[#D6CBBC]'
+                      : 'border-[#332820]/30 text-[#332820] hover:border-[#332820] bg-transparent'
+                      }`}
                   >
                     {filter}
                   </button>
