@@ -58,7 +58,8 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
               className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light mb-4"
             >
-              Behind every exceptional space is a team driven by passion, precision, and purpose. At PKD Studio, our architects, designers, and project specialists work seamlessly together, combining diverse expertise to deliver thoughtful, detail-oriented interiors that elevate everyday living.
+              Behind every exceptional space is a team driven by passion, precision, and purpose.
+              <br /> <br />At PKD Studio, our architects, designers, and project specialists work seamlessly together, combining diverse expertise to deliver thoughtful, detail-oriented interiors that elevate everyday living.
             </motion.p>
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
