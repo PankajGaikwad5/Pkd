@@ -32,7 +32,7 @@ export default function AboutClient() {
 
       <main className="w-full relative bg-[#332820] text-[#D6CBBC]">
         <AboutHeroSection />
-        
+
         {/* Horizontal Line Splitting Sections */}
         <div className="w-full py-12 md:py-16 bg-[#332820] relative flex items-center overflow-hidden">
           <motion.div
@@ -46,9 +46,9 @@ export default function AboutClient() {
 
         <AboutMiamiSection />
         <AboutCollaborativeSection />
-        <AboutInspirationSection />
+        {/* <AboutInspirationSection />
         <AboutLivingExperienceSection />
-        <AboutJoinUsSection />
+        <AboutJoinUsSection /> */}
       </main>
 
       <FooterSection />
