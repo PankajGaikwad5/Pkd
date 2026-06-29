@@ -185,13 +185,13 @@ export default function PortfolioSection() {
         </h2>
 
         {/* Paragraph description for mobile/tablet */}
-        <p className="block xl:hidden mb-10 text-sm md:text-[14px] leading-[1.6] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light animate-fade-in">
+        <p className="block xl:hidden mb-10 text-sm md:text-[14px] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light animate-fade-in">
           We create refined, functional spaces where aesthetics meet purpose. Each project is a dialogue between form and feeling crafted with precision, shaped by context, and inspired by timeless design principles.
         </p>
 
         {/* Paragraph description for desktop (retains line-by-line animations) */}
-        <div className="hidden xl:flex flex-col gap-0 mb-10 text-sm md:text-[14px] leading-[1.6] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light">
-          <div className="overflow-hidden pb-1">
+        <div className="hidden xl:flex flex-col gap-0 mb-10 text-sm md:text-[14px] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light">
+          <div className="overflow-hidden ">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
@@ -205,7 +205,7 @@ export default function PortfolioSection() {
               We create refined, functional spaces where
             </motion.div>
           </div>
-          <div className="overflow-hidden pb-1">
+          <div className="overflow-hidden ">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
@@ -219,7 +219,7 @@ export default function PortfolioSection() {
               aesthetics meet purpose. Each project is a
             </motion.div>
           </div>
-          <div className="overflow-hidden pb-1">
+          <div className="overflow-hidden ">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
@@ -233,7 +233,7 @@ export default function PortfolioSection() {
               dialogue between form and feeling
             </motion.div>
           </div>
-          <div className="overflow-hidden pb-1">
+          <div className="overflow-hidden ">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}
@@ -247,7 +247,7 @@ export default function PortfolioSection() {
               crafted with precision, shaped by context,
             </motion.div>
           </div>
-          <div className="overflow-hidden pb-1">
+          <div className="overflow-hidden ">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)" }}
               whileInView={{ clipPath: "inset(0% 0 0 0)" }}

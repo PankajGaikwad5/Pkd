@@ -81,7 +81,7 @@ export default function MenuOverlay({
           >
             {/* Top Left Text/Branding (Matches Navbar Height) */}
             <div className="absolute top-8 left-6 md:left-12 z-20">
-              <span className="text-[11px] font-light tracking-widest uppercase text-[#332820]">EST &ndash; 2020</span>
+              <span className="text-[11px] font-light tracking-widest uppercase text-[#332820]">EST &ndash; 2017</span>
             </div>
 
             {/* Top Right CLOSE Button (Mobile Only) */}
@@ -128,8 +128,8 @@ export default function MenuOverlay({
             <div className="flex flex-col h-full pt-20">
               {/* Logo Area */}
               <div className="flex-1 flex justify-center items-start pt-8">
-                <h2 className="font-heading text-8xl lg:text-[9rem] tracking-[0.1em] font-light leading-none text-[#D6CBBC]">
-                  ARCCA<sup className="text-3xl ml-2">&reg;</sup>
+                <h2 className="font-heading text-8xl lg:text-[9rem] tracking-[0.1em] font-light leading-none text-[#D6CBBC] ml-6">
+                  PKD STUDIO
                 </h2>
               </div>
 
