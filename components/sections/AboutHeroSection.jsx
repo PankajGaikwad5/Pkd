@@ -5,7 +5,7 @@ export default function AboutHeroSection() {
     <section className="w-full min-h-screen bg-[#332820] flex flex-col lg:flex-row items-stretch pt-24">
       {/* Left Content Column */}
       <div className="w-full lg:w-[45%] flex flex-col justify-between py-12 lg:py-24 px-8 sm:px-12 md:px-16 lg:pl-20 lg:pr-12 xl:pr-20">
-        
+
         {/* Top Branding Area */}
         <div className="mb-12 lg:mb-0">
           <motion.div
@@ -49,7 +49,7 @@ export default function AboutHeroSection() {
               transition={{ duration: 1.0, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
               className="font-heading text-2xl md:text-3xl lg:text-4xl xl:text-[2.8rem] text-[#D6CBBC] tracking-tight"
             >
-              WELCOME TO ARCCA®, WHERE LUXURY MEETS LIFESTYLE IN THE VIBRANT HEART OF MIAMI
+              WELCOME TO PKD, WHERE LUXURY MEETS LIFESTYLE IN THE VIBRANT HEART OF MIAMI
             </motion.h2>
           </div>
         </div>
