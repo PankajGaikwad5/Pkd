@@ -105,7 +105,7 @@ export default function FooterSection() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.65}>
+            {/* <FadeIn delay={0.65}>
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">LEGAL</h4>
                 <ul className="space-y-2 text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
@@ -114,7 +114,7 @@ export default function FooterSection() {
                   <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Accessibility Policy</a></li>
                 </ul>
               </div>
-            </FadeIn>
+            </FadeIn> */}
           </div>
         </div>
       </div>
