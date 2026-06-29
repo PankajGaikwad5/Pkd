@@ -2,15 +2,15 @@ import localFont from 'next/font/local';
 import { LenisProvider } from '@/components/LenisProvider';
 import './globals.css';
 
-const centuryGothic = localFont({
+const glacialIndifference = localFont({
   src: [
     {
-      path: '../public/fonts/centurygothic.ttf',
+      path: '../public/fonts/GlacialIndifference-Regular.otf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/centurygothic_bold.ttf',
+      path: '../public/fonts/GlacialIndifference-Bold.otf',
       weight: '700',
       style: 'normal',
     },
@@ -27,7 +27,7 @@ export default function RootLayout({
   children,
 }) {
   return (
-    <html lang="en" className={`${centuryGothic.variable}`}>
+    <html lang="en" className={`${glacialIndifference.variable}`}>
       <body suppressHydrationWarning className="bg-[#D6CBBC] text-[#332820] antialiased overflow-x-hidden">
         <LenisProvider>
           {children}
