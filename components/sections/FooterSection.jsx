@@ -37,9 +37,6 @@ export default function FooterSection() {
         <nav className="flex flex-col gap-4 text-4xl sm:text-5xl lg:text-[3.2rem] font-light leading-tight">
           <FadeIn delay={0.05}><Link href="/" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">HOME</Link></FadeIn>
           <FadeIn delay={0.1}><Link href="/about-us" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">ABOUT US</Link></FadeIn>
-          <FadeIn delay={0.15}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">VISION</a></FadeIn>
-          <FadeIn delay={0.2}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">TEAM</a></FadeIn>
-          <FadeIn delay={0.25}><a href="#" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">SERVICES</a></FadeIn>
           <FadeIn delay={0.3}><Link href="/projects" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">PROJECTS</Link></FadeIn>
           <FadeIn delay={0.35}><Link href="/contact" className="hover:opacity-60 transition-opacity duration-300 tracking-wide font-sans block">CONTACT</Link></FadeIn>
         </nav>
@@ -81,7 +78,7 @@ export default function FooterSection() {
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">FOLLOW US</h4>
                 <ul className="space-y-2 text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
-                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Instagram</a></li>
+                  <li><a href="https://www.instagram.com/pkdstudio_/" className="hover:opacity-60 transition-opacity duration-300">Instagram</a></li>
                   <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Facebook</a></li>
                   <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">LinkedIn</a></li>
                 </ul>
