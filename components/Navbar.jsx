@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 function MenuButton({ onClick }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -98,7 +99,8 @@ export default function Navbar({ onMenuClick }) {
         </div>
 
         <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex justify-center">
-          <h1 className="font-heading text-4xl md:text-5xl tracking-[0.3em] font-light">ARCCA</h1>
+          {/* <h1 className="font-heading text-4xl md:text-5xl tracking-[0.3em] font-light">ARCCA</h1> */}
+          <img src="/logo.png" alt="logo" className="w-40 " />
         </div>
 
         <div className="flex-1 flex items-center justify-end gap-10">
