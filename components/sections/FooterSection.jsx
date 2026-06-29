@@ -19,7 +19,7 @@ function AnimatedLogo() {
               delay: 0.1 + index * 0.12,
               ease: [0.19, 1, 0.22, 1],
             }}
-            className="block font-serif text-[clamp(3.5rem,8vw,8.5rem)] font-light leading-none text-[#D6CBBC] tracking-normal"
+            className="block  text-[clamp(3.5rem,8vw,8.5rem)] font-light leading-none text-[#D6CBBC] tracking-normal"
           >
             {char}
           </motion.span>

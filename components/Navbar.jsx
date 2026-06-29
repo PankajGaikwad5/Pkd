@@ -88,11 +88,11 @@ export default function Navbar({ onMenuClick }) {
       {/* Content Layer with Mix Blend Difference */}
       <div className="flex items-center justify-between px-8 py-6 relative mix-blend-difference">
         <div className="flex-1 flex items-center gap-3">
-          {isProjectsPage && (
+          {/* {isProjectsPage && (
             <span className="font-serif italic text-xs md:text-sm tracking-wider opacity-85 text-[#D6CBBC] block">
               Select project
             </span>
-          )}
+          )} */}
           <Link href="/projects" className="hidden md:block px-6 py-2 border border-current rounded-full text-[11px] tracking-widest hover:bg-[#D6CBBC] hover:text-[#332820] transition-colors duration-300">
             OUR PORTFOLIO
           </Link>

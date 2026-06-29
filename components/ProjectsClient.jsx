@@ -196,7 +196,7 @@ export default function ProjectsClient() {
                   <img
                     src={`${proj.img}&w=1200&auto=format&fit=crop`}
                     alt={proj.title}
-                    className="w-full h-full object-cover scale-105 pointer-events-none select-none"
+                    className="w-full h-full object-cover pointer-events-none"
                   />
                 </div>
               ))}
@@ -278,7 +278,7 @@ export default function ProjectsClient() {
                   initial={false}
                   animate={{
                     opacity: isActive ? 1 : 0,
-                    x: isActive ? 0 : (direction > 0 ? -80 : 80), // Subtle 80px parallax slide
+                    x: isActive ? 0 : 0,
                   }}
                   transition={{
                     duration: 1.2,
@@ -332,7 +332,7 @@ export default function ProjectsClient() {
                   initial={false}
                   animate={{
                     opacity: isActive ? 1 : 0,
-                    x: isActive ? 0 : (direction > 0 ? -80 : 80),
+                    x: isActive ? 0 : 0,
                   }}
                   transition={{
                     duration: 1.2,
