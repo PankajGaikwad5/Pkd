@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { FadeIn } from '../Animations';
 import Link from 'next/link';
 
-const logoLetters = ['Λ', 'R', 'C', 'C', 'Λ'];
+const logoLetters = ['P', 'K', 'D', ' ', 'S', 'T', 'U', 'D', 'I', 'O'];
 
 function AnimatedLogo() {
   return (
