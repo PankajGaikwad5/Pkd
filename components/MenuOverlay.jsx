@@ -125,17 +125,17 @@ export default function MenuOverlay({
               </button>
             </div>
 
-            <div className="flex flex-col h-full pt-20">
+            <div className="w-full flex flex-col h-full pt-20">
               {/* Logo Area */}
-              <div className="flex-1 flex justify-center items-start pt-8">
-                <h2 className="font-heading text-8xl lg:text-[9rem] tracking-[0.1em] font-light leading-none text-[#D6CBBC] ml-6">
+              <div className="flex-1 flex  w-full justify-center items-start pt-8">
+                <h2 className="font-heading text-8xl lg:text-[9rem] tracking-[0.1em] font-light leading-none text-[#D6CBBC] ml-20">
                   PKD STUDIO
                 </h2>
               </div>
 
               {/* Contact Area */}
               <div className="px-24 pb-16 w-full mx-auto">
-                <div className="grid grid-cols-2 gap-y-16 gap-x-8 font-sans text-[10px] lg:text-[11px] tracking-widest uppercase text-[#D6CBBC]">
+                <div className="grid grid-cols-2 gap-y-16 gap-x-8 font-sans text-[10px] lg:text-[11px] tracking-widest text-[#D6CBBC]">
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Email</p>
                     <p className="opacity-70 font-light">enquires@teampkd.in</p>
