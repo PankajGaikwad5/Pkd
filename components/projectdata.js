@@ -75,11 +75,11 @@ export const gridProjects = [
   },
   {
     id: 6,
-    title: "DHAVAL SHAH GHATKOPAR",
-    slug: "dhaval-shah-ghatkopar",
-    folder: "DHAVAL SHAH GHATKOPAR",
+    title: "DHAVAL SHAH",
+    slug: "dhaval-shah",
+    folder: "DHAVAL SHAH",
     category: "Completed projects",
-    loc: "Ghatkopar, Mumbai",
+    loc: "Mumbai",
     img: "/projects/DHAVAL SHAH GHATKOPAR/1.webp",
     href: "/projects/dhaval-shah-ghatkopar"
   },
