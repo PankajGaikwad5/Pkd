@@ -64,14 +64,7 @@ export default function FooterSection() {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.5}>
-              <div>
-                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">PHONE</h4>
-                <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
-                  786 901 1622
-                </p>
-              </div>
-            </FadeIn>
+
 
             <FadeIn delay={0.6}>
               <div>
