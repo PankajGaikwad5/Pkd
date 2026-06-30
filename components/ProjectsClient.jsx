@@ -8,149 +8,7 @@ import FooterSection from './sections/FooterSection';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ArrowDownRight } from 'lucide-react';
 
-const projects = [
-  {
-    title: "GRAND CHÂTEAU",
-    loc: "Mumbai",
-    img: "/projects/GRAND CHATEAU/1.webp",
-    href: "#"
-  },
-  {
-    title: "JADE",
-    loc: "Mumbai",
-    img: "/projects/JADE/1.webp",
-    href: "#"
-  },
-  {
-    title: "LITHIC HOME",
-    loc: "Mumbai",
-    img: "/projects/LITHIC HOME/1.webp",
-    href: "#"
-  }
-];
-
-const gridProjects = [
-  {
-    id: 1,
-    title: "17 ALTAMOUNT",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/17 ALTAMOUNT/1.webp",
-    href: "#"
-  },
-  {
-    id: 2,
-    title: "ANIL BAJAJ",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/ANIL BAJAJ/1.webp",
-    href: "#"
-  },
-  {
-    id: 3,
-    title: "ASIT THAKKAR",
-    category: "Coming Soon",
-    loc: "Mumbai",
-    img: "/projects/ASIT THAKKAR/1.webp",
-    href: "#"
-  },
-  {
-    id: 4,
-    title: "BINOY SHAH",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/BINOY SHAH/1.webp",
-    href: "#"
-  },
-  {
-    id: 5,
-    title: "CHETAN SHAH",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/CHETAN SHAH/1.webp",
-    href: "#"
-  },
-  {
-    id: 6,
-    title: "DHAVAL SHAH GHATKOPAR",
-    category: "Current projects",
-    loc: "Ghatkopar, Mumbai",
-    img: "/projects/DHAVAL SHAH GHATKOPAR/1.webp",
-    href: "#"
-  },
-  {
-    id: 7,
-    title: "GRAND CHÂTEAU",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/GRAND CHATEAU/1.webp",
-    href: "#"
-  },
-  {
-    id: 8,
-    title: "JADE",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/JADE/1.webp",
-    href: "#"
-  },
-  {
-    id: 9,
-    title: "JIMIT SHAH",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/JIMIT SHAH/1.webp",
-    href: "#"
-  },
-  {
-    id: 10,
-    title: "LITHIC HOME",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/LITHIC HOME/1.webp",
-    href: "#"
-  },
-  {
-    id: 11,
-    title: "NIRAJ OFFICE",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/NIRAJ OFFICE/1.webp",
-    href: "#"
-  },
-  {
-    id: 12,
-    title: "NOUVEAU HOME",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/NOUVEAU HOME/1.webp",
-    href: "#"
-  },
-  {
-    id: 13,
-    title: "PKD OFFICE",
-    category: "Current projects",
-    loc: "Lower Parel, Mumbai",
-    img: "/projects/PKD OFFICE/1.webp",
-    href: "#"
-  },
-  {
-    id: 14,
-    title: "THE CANVAS HOME",
-    category: "Coming Soon",
-    loc: "Mumbai",
-    img: "/projects/THE CANVAS HOME/1.webp",
-    href: "#"
-  },
-  {
-    id: 15,
-    title: "VAAYU",
-    category: "Current projects",
-    loc: "Mumbai",
-    img: "/projects/VAAYU/1.webp",
-    href: "#"
-  }
-];
+import { projects, gridProjects } from './projectdata';
 
 export default function ProjectsClient() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -366,7 +224,7 @@ export default function ProjectsClient() {
                       VIEW PROJECT <ArrowDownRight size={10} className="inline-block" />
                     </a>
                     <Link
-                      href="/"
+                      href="#grid"
                       className="pointer-events-auto text-[9px] tracking-[0.25em] font-light uppercase text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors duration-300"
                     >
                       ALL PROJECTS
@@ -406,7 +264,7 @@ export default function ProjectsClient() {
                     VIEW PROJECT <ArrowDownRight size={11} className="inline-block" />
                   </a>
                   <Link
-                    href="/"
+                    href="#grid"
                     className="pointer-events-auto text-[9px] md:text-[10px] xl:text-[11px] tracking-[0.25em] font-light uppercase text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors duration-300 mt-2"
                   >
                     ALL PROJECTS
@@ -421,7 +279,7 @@ export default function ProjectsClient() {
         </section>
 
         {/* Grid Projects Section with Filters */}
-        <section className="w-full bg-[#D6CBBC] text-[#332820] py-20 md:py-28 px-6 sm:px-12 md:px-16 lg:px-24">
+        <section className="w-full bg-[#D6CBBC] text-[#332820] py-20 md:py-28 px-6 sm:px-12 md:px-16 lg:px-24" id='grid'>
           <div className="max-w-[1400px] mx-auto">
             {/* Section Title */}
             <div className="overflow-hidden pb-1 mb-8">

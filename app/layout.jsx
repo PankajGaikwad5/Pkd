@@ -19,7 +19,7 @@ const glacialIndifference = localFont({
 });
 
 export const metadata = {
-  title: 'Arcca Group',
+  title: 'PKD Studio',
   description: 'Design, Architecture, Interior Design',
 };
 

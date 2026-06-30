@@ -3,28 +3,32 @@
 import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'motion/react';
 import { FadeIn } from '../Animations';
+import Link from 'next/link';
 
 const PROJECTS = [
   {
     id: 1,
-    titleLine1: "CASA",
-    titleLine2: "DOHA",
-    image: "/images/featured_doha.png",
-    num: "1 / 3"
+    titleLine1: "GRAND",
+    titleLine2: "CHÂTEAU",
+    image: "/projects/GRAND CHATEAU/1.webp",
+    num: "1 / 3",
+    href: "/projects/grand-chateau"
   },
   {
     id: 2,
-    titleLine1: "CASA",
-    titleLine2: "ANTIBES",
-    image: "/images/featured_antibes.png",
-    num: "2 / 3"
+    titleLine1: "JADE",
+    titleLine2: "",
+    image: "/projects/JADE/1.webp",
+    num: "2 / 3",
+    href: "/projects/jade"
   },
   {
     id: 3,
-    titleLine1: "CASA",
-    titleLine2: "FERRARA",
-    image: "/images/featured_ferrara.png",
-    num: "3 / 3"
+    titleLine1: "LITHIC",
+    titleLine2: "HOME",
+    image: "/projects/LITHIC HOME/1.webp",
+    num: "3 / 3",
+    href: "/projects/lithic-home"
   }
 ];
 
@@ -97,12 +101,12 @@ function StackingCard({ project, index }) {
           {/* View Button */}
           <div>
             <FadeIn y={20} delay={0.4}>
-              <a 
-                href="#"
+              <Link 
+                href={project.href}
                 className="px-10 py-3.5 border border-[#E6DFD4]/30 rounded-full text-[#E6DFD4] text-xs sm:text-sm uppercase tracking-[0.2em] bg-black/20 backdrop-blur-sm hover:bg-[#E6DFD4] hover:text-[#2E2824] hover:border-white transition-all duration-500 block text-center"
               >
                 VIEW
-              </a>
+              </Link>
             </FadeIn>
           </div>
         </div>

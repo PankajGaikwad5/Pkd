@@ -1,4 +1,5 @@
 import { FadeIn } from '../Animations';
+import Link from 'next/link';
 
 export default function TypographySection() {
    return (
@@ -63,9 +64,9 @@ export default function TypographySection() {
                      <div className="flex items-start">
                         <span>PKD STUDIO</span>
                      </div>
-                     <button className="inline-flex items-center px-6 md:px-8 py-2.5 md:py-3.5 bg-[#332820] text-[#D6CBBC] rounded-full text-[10px] md:text-[11px] tracking-[0.15em] uppercase cursor-pointer hover:bg-[#1E1A17] transition-colors whitespace-nowrap ml-4 md:ml-6 mb-[0.1em]">
-                        TALK TO US
-                     </button>
+                     <Link href="/contact" className="inline-block px-10 py-[14px] w-max bg-[#352D26] text-[#E6DFD4] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#201b17] transition-colors text-center">
+                        Talk to us
+                     </Link>
                   </div>
                </FadeIn>
             </div>

@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { projects } from "../projectdata";
 
 const maskTransition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
 
@@ -10,27 +11,6 @@ export default function PortfolioSection() {
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
-
-  const projects = [
-    {
-      title: "CASA DOHA",
-      loc: "Pinecrest",
-      img: "https://images.unsplash.com/photo-1613490908836-e87a2ea042b4?q=80&w=2070&auto=format&fit=crop",
-      badge: "CURRENT PROJECTS",
-    },
-    {
-      title: "CASA ANTIBES",
-      loc: "Coral Gables",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070&auto=format&fit=crop",
-      badge: "",
-    },
-    {
-      title: "CASA 88",
-      loc: "Miami Dade",
-      img: "https://images.unsplash.com/photo-1600607688969-a5bfcd64bd11?q=80&w=2070&auto=format&fit=crop",
-      badge: "IN DEVELOPMENT",
-    },
-  ];
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -307,34 +287,34 @@ export default function PortfolioSection() {
                 ease: [0.76, 0, 0.24, 1],
                 delay: 0.1 + i * 0.1,
               }}
-              className="w-[85vw] md:w-[60vw] xl:w-[32vw] 2xl:w-[28vw] aspect-[4/3] shrink-0 snap-start relative group cursor-pointer overflow-hidden bg-black/10"
+              className="w-[85vw] md:w-[60vw] xl:w-[32vw] 2xl:w-[28vw] aspect-[4/3] shrink-0 snap-start relative group overflow-hidden bg-black/10"
             >
-              <img
-                src={proj.img}
-                className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
-                alt={proj.title}
-              />
+              <Link href={proj.href} className="block w-full h-full relative">
+                <img
+                  src={proj.img}
+                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                  alt={proj.title}
+                />
 
-              {/* Gradient overlay on bottom */}
-              <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                {/* Gradient overlay on bottom */}
+                <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
 
-              {/* Hover dark overlay */}
-              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-500 pointer-events-none" />
+                {/* Hover dark overlay */}
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 pointer-events-none" />
 
-              {proj.badge && (
                 <div className="absolute top-0 right-0 bg-[#352D26] text-[#E6DFD4] px-4 py-1.5 text-[11px] tracking-widest uppercase shadow-sm">
-                  {proj.badge}
+                  CURRENT PROJECTS
                 </div>
-              )}
 
-              <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-[#E6DFD4] pointer-events-none">
-                <h3 className="font-heading text-3xl lg:text-4xl xl:text-5xl mb-1">
-                  {proj.title}
-                </h3>
-                <p className="text-[13px] tracking-wide font-light opacity-90">
-                  {proj.loc}
-                </p>
-              </div>
+                <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-[#E6DFD4] pointer-events-none">
+                  <h3 className="font-heading text-3xl lg:text-4xl xl:text-5xl mb-1">
+                    {proj.title}
+                  </h3>
+                  <p className="text-[13px] tracking-wide font-light opacity-90">
+                    {proj.loc}
+                  </p>
+                </div>
+              </Link>
             </motion.div>
           ))}
         </div>

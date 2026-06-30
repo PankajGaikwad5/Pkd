@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 export default function ArchitectureSection() {
   return (
@@ -57,9 +58,9 @@ export default function ArchitectureSection() {
 
           {/* Bottom Button */}
           <div className="mt-4 lg:mt-0">
-            <button className="px-4 py-1 bg-[#2E2824] hover:bg-[#1E1A17] text-[#E6DFD4] rounded-[50px] text-lg font-medium uppercase transition-colors border border-[#2E2824] w-max">
+            <Link href="/about-us" className="inline-block px-10 py-[14px] w-max bg-[#352D26] text-[#E6DFD4] rounded-[50px] text-[11px] font-medium uppercase tracking-[0.2em] hover:bg-[#201b17] transition-colors text-center">
               ABOUT US
-            </button>
+            </Link>
           </div>
         </div>
 
