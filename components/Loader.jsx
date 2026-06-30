@@ -93,7 +93,7 @@ function LogoContent() {
       </div>
       <div className="flex w-full h-1/2">
         <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[1.5rem] pt-1">D</div>
-        <div className="w-1/2 h-full flex justify-center items-center text-[1.5rem] rotate-180">S</div>
+        <div className="w-1/2 h-full flex justify-center items-center text-[1.5rem] pt-1">S</div>
       </div>
     </motion.div>
   );
