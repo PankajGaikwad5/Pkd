@@ -42,7 +42,7 @@ export default function ArchitectureSection() {
             </h2>
 
             {/* Paragraphs (Static) */}
-            <div className="space-y-2 text-sm md:text-[15px]  text-[#2E2824]/80 font-light max-w-[340px] mb-3">
+            <div className="space-y-3 text-sm md:text-[15px] leading-tight text-[#2E2824]/80 font-light max-w-[340px] mb-3">
               <p>
                 At PKD Studio, we believe design transforms the everyday into something extraordinary.
               </p>
