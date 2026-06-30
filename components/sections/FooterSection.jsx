@@ -59,7 +59,7 @@ export default function FooterSection() {
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">ADDRESS</h4>
                 <p className="text-[13px] text-[#D6CBBC]/90 font-light leading-relaxed normal-case font-sans">
-                  317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. PALLADIUM MALL, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                  317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
                 </p>
               </div>
             </FadeIn>

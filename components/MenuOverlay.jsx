@@ -143,7 +143,7 @@ export default function MenuOverlay({
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Address</p>
                     <p className="opacity-70 font-light leading-relaxed">
-                      317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. PALLADIUM MALL, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                      317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
                     </p>
                   </div>
                   <div>
