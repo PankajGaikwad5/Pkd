@@ -52,7 +52,7 @@ export default function HomeClient() {
         <TypographySection />
         <CraftingSection />
         <TeamSection />
-        <TeamCarouselSection />
+        {/* <TeamCarouselSection /> */}
       </main>
 
       <FooterSection />
