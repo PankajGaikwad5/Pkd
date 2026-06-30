@@ -10,85 +10,145 @@ import { ArrowLeft, ArrowRight, ArrowDownRight } from 'lucide-react';
 
 const projects = [
   {
-    title: "CASA RAVELLO",
-    loc: "High Pines Miami",
-    img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80",
-    href: "/"
+    title: "GRAND CHÂTEAU",
+    loc: "Mumbai",
+    img: "/projects/GRAND CHATEAU/1.webp",
+    href: "#"
   },
   {
-    title: "CASA LUME",
-    loc: "Coral Gables",
-    img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80",
-    href: "/"
+    title: "JADE",
+    loc: "Mumbai",
+    img: "/projects/JADE/1.webp",
+    href: "#"
   },
   {
-    title: "CASA DOHA",
-    loc: "Pinecrest",
-    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80",
-    href: "/"
-  },
-  {
-    title: "CASA ANTIBES",
-    loc: "Key Biscayne",
-    img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80",
-    href: "/"
-  },
-  {
-    title: "CASA VISTA",
-    loc: "Coconut Grove",
-    img: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80",
-    href: "/"
+    title: "LITHIC HOME",
+    loc: "Mumbai",
+    img: "/projects/LITHIC HOME/1.webp",
+    href: "#"
   }
 ];
 
 const gridProjects = [
   {
     id: 1,
-    title: "CASA LUME",
-    category: "In development",
-    loc: "Coral Gables",
-    img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80",
-    href: "/"
+    title: "17 ALTAMOUNT",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/17 ALTAMOUNT/1.webp",
+    href: "#"
   },
   {
     id: 2,
-    title: "CASA 88",
-    category: "In development",
-    loc: "Miami Dade",
-    img: "https://images.unsplash.com/photo-1600607688969-a5bfcd64bd11?q=80",
-    href: "/"
+    title: "ANIL BAJAJ",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/ANIL BAJAJ/1.webp",
+    href: "#"
   },
   {
     id: 3,
-    title: "CASA MARSI",
-    category: "Current projects",
-    loc: "In the heart of Pinecrest",
-    img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80",
-    href: "/"
+    title: "ASIT THAKKAR",
+    category: "Coming Soon",
+    loc: "Mumbai",
+    img: "/projects/ASIT THAKKAR/1.webp",
+    href: "#"
   },
   {
     id: 4,
-    title: "CASA MALTA",
+    title: "BINOY SHAH",
     category: "Current projects",
-    loc: "Miami",
-    img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80",
-    href: "/"
+    loc: "Mumbai",
+    img: "/projects/BINOY SHAH/1.webp",
+    href: "#"
   },
   {
     id: 5,
-    title: "CASA ALMERIA",
-    category: "Sold",
-    loc: "Coral Gables",
-    img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80",
-    href: "/"
+    title: "CHETAN SHAH",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/CHETAN SHAH/1.webp",
+    href: "#"
   },
   {
     id: 6,
-    title: "CASA LANCIO",
-    category: "Sold",
-    loc: "Miami",
-    img: "https://images.unsplash.com/photo-1613490908836-e87a2ea042b4?q=80",
-    href: "/"
+    title: "DHAVAL SHAH GHATKOPAR",
+    category: "Current projects",
+    loc: "Ghatkopar, Mumbai",
+    img: "/projects/DHAVAL SHAH GHATKOPAR/1.webp",
+    href: "#"
+  },
+  {
+    id: 7,
+    title: "GRAND CHÂTEAU",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/GRAND CHATEAU/1.webp",
+    href: "#"
+  },
+  {
+    id: 8,
+    title: "JADE",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/JADE/1.webp",
+    href: "#"
+  },
+  {
+    id: 9,
+    title: "JIMIT SHAH",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/JIMIT SHAH/1.webp",
+    href: "#"
+  },
+  {
+    id: 10,
+    title: "LITHIC HOME",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/LITHIC HOME/1.webp",
+    href: "#"
+  },
+  {
+    id: 11,
+    title: "NIRAJ OFFICE",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/NIRAJ OFFICE/1.webp",
+    href: "#"
+  },
+  {
+    id: 12,
+    title: "NOUVEAU HOME",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/NOUVEAU HOME/1.webp",
+    href: "#"
+  },
+  {
+    id: 13,
+    title: "PKD OFFICE",
+    category: "Current projects",
+    loc: "Lower Parel, Mumbai",
+    img: "/projects/PKD OFFICE/1.webp",
+    href: "#"
+  },
+  {
+    id: 14,
+    title: "THE CANVAS HOME",
+    category: "Coming Soon",
+    loc: "Mumbai",
+    img: "/projects/THE CANVAS HOME/1.webp",
+    href: "#"
+  },
+  {
+    id: 15,
+    title: "VAAYU",
+    category: "Current projects",
+    loc: "Mumbai",
+    img: "/projects/VAAYU/1.webp",
+    href: "#"
   }
 ];
 
@@ -97,11 +157,11 @@ export default function ProjectsClient() {
   const [direction, setDirection] = useState(1); // 1 for next/right, -1 for prev/left
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [activeFilter, setActiveFilter] = useState('Current projects');
 
-  const filteredProjects = activeFilter === 'All'
-    ? gridProjects
-    : gridProjects.filter(p => p.category.toLowerCase() === activeFilter.toLowerCase());
+  const filteredProjects = gridProjects.filter(
+    p => p.category.toLowerCase() === activeFilter.toLowerCase()
+  );
 
   const containerRef = useRef(null);
 
@@ -194,7 +254,7 @@ export default function ProjectsClient() {
               {projects.map((proj, idx) => (
                 <div key={idx} className="w-screen h-screen relative shrink-0 overflow-hidden">
                   <img
-                    src={`${proj.img}&w=1200&auto=format&fit=crop`}
+                    src={proj.img}
                     alt={proj.title}
                     className="w-full h-full object-cover pointer-events-none"
                   />
@@ -236,7 +296,7 @@ export default function ProjectsClient() {
                     whileDrag={{ scale: 0.95 }}
                   >
                     <img
-                      src={`${proj.img}&w=600&auto=format&fit=crop`}
+                      src={proj.img}
                       alt={proj.title}
                       className="w-full h-full object-cover pointer-events-none select-none"
                     />
@@ -378,12 +438,12 @@ export default function ProjectsClient() {
 
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-2.5 md:gap-3 mb-12">
-              {['Coming Soon', 'Current projects', 'In development', 'Sold'].map((filter) => {
+              {['Current projects', 'Coming Soon'].map((filter) => {
                 const isActive = activeFilter === filter;
                 return (
                   <button
                     key={filter}
-                    onClick={() => setActiveFilter(isActive ? 'All' : filter)}
+                    onClick={() => setActiveFilter(filter)}
                     className={`px-6 py-2 rounded-full border text-xs uppercase tracking-wider transition-all duration-300 cursor-pointer ${isActive
                       ? 'border-[#332820] bg-[#332820] text-[#D6CBBC]'
                       : 'border-[#332820]/30 text-[#332820] hover:border-[#332820] bg-transparent'
@@ -398,23 +458,16 @@ export default function ProjectsClient() {
             {/* Projects Grid */}
             <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <AnimatePresence mode="popLayout">
-                {filteredProjects.map((proj) => (
-                  <motion.div
-                    layout
-                    key={proj.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    exit={{ opacity: 0, scale: 0.95 }}
-                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                    className="group relative aspect-[3/2] w-full overflow-hidden rounded-sm cursor-pointer"
-                  >
-                    <Link href={proj.href} className="block w-full h-full">
+                {filteredProjects.map((proj) => {
+                  const isComingSoon = proj.category.toLowerCase() === 'coming soon';
+                  const CardContent = (
+                    <>
                       {/* Image */}
                       <img
-                        src={`${proj.img}&w=800&auto=format&fit=crop`}
+                        src={proj.img}
                         alt={proj.title}
-                        className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                        className={`w-full h-full object-cover transition-transform duration-700 ease-out ${isComingSoon ? 'blur-2xl scale-110 pointer-events-none' : 'group-hover:scale-105'
+                          }`}
                       />
 
                       {/* Gradient Overlay for Text legibility */}
@@ -437,9 +490,42 @@ export default function ProjectsClient() {
                           {proj.loc}
                         </p>
                       </div>
-                    </Link>
-                  </motion.div>
-                ))}
+
+                      {/* Coming Soon Overlay */}
+                      {isComingSoon && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/25 z-[5] pointer-events-none">
+                          <span className="text-[11.5px] tracking-[0.3em] font-medium uppercase text-[#D6CBBC] border border-[#D6CBBC]/30 px-6 py-2.5 bg-black/45 backdrop-blur-[4px]">
+                            COMING SOON
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  );
+
+                  return (
+                    <motion.div
+                      layout
+                      key={proj.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+                      className={`group relative aspect-[3/2] w-full overflow-hidden rounded-sm ${isComingSoon ? 'cursor-default' : 'cursor-pointer'
+                        }`}
+                    >
+                      {isComingSoon ? (
+                        <div className="w-full h-full relative">
+                          {CardContent}
+                        </div>
+                      ) : (
+                        <Link href={proj.href} className="block w-full h-full">
+                          {CardContent}
+                        </Link>
+                      )}
+                    </motion.div>
+                  );
+                })}
               </AnimatePresence>
             </motion.div>
 
