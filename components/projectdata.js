@@ -28,7 +28,7 @@ export const gridProjects = [
     title: "17 ALTAMOUNT",
     slug: "17-altamount",
     folder: "17 ALTAMOUNT",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/17 ALTAMOUNT/1.webp",
     href: "/projects/17-altamount"
@@ -38,7 +38,7 @@ export const gridProjects = [
     title: "ANIL BAJAJ",
     slug: "anil-bajaj",
     folder: "ANIL BAJAJ",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/ANIL BAJAJ/1.webp",
     href: "/projects/anil-bajaj"
@@ -58,7 +58,7 @@ export const gridProjects = [
     title: "BINOY SHAH",
     slug: "binoy-shah",
     folder: "BINOY SHAH",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/BINOY SHAH/1.webp",
     href: "/projects/binoy-shah"
@@ -68,7 +68,7 @@ export const gridProjects = [
     title: "CHETAN SHAH",
     slug: "chetan-shah",
     folder: "CHETAN SHAH",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/CHETAN SHAH/1.webp",
     href: "/projects/chetan-shah"
@@ -78,7 +78,7 @@ export const gridProjects = [
     title: "DHAVAL SHAH GHATKOPAR",
     slug: "dhaval-shah-ghatkopar",
     folder: "DHAVAL SHAH GHATKOPAR",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Ghatkopar, Mumbai",
     img: "/projects/DHAVAL SHAH GHATKOPAR/1.webp",
     href: "/projects/dhaval-shah-ghatkopar"
@@ -88,7 +88,7 @@ export const gridProjects = [
     title: "GRAND CHÂTEAU",
     slug: "grand-chateau",
     folder: "GRAND CHATEAU",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/GRAND CHATEAU/1.webp",
     href: "/projects/grand-chateau"
@@ -98,7 +98,7 @@ export const gridProjects = [
     title: "JADE",
     slug: "jade",
     folder: "JADE",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/JADE/1.webp",
     href: "/projects/jade"
@@ -108,7 +108,7 @@ export const gridProjects = [
     title: "JIMIT SHAH",
     slug: "jimit-shah",
     folder: "JIMIT SHAH",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/JIMIT SHAH/1.webp",
     href: "/projects/jimit-shah"
@@ -118,7 +118,7 @@ export const gridProjects = [
     title: "LITHIC HOME",
     slug: "lithic-home",
     folder: "LITHIC HOME",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/LITHIC HOME/1.webp",
     href: "/projects/lithic-home"
@@ -128,7 +128,7 @@ export const gridProjects = [
     title: "NIRAJ OFFICE",
     slug: "niraj-office",
     folder: "NIRAJ OFFICE",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/NIRAJ OFFICE/1.webp",
     href: "/projects/niraj-office"
@@ -138,21 +138,21 @@ export const gridProjects = [
     title: "NOUVEAU HOME",
     slug: "nouveau-home",
     folder: "NOUVEAU HOME",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/NOUVEAU HOME/1.webp",
     href: "/projects/nouveau-home"
   },
-  {
-    id: 13,
-    title: "PKD OFFICE",
-    slug: "pkd-office",
-    folder: "PKD OFFICE",
-    category: "Current projects",
-    loc: "Lower Parel, Mumbai",
-    img: "/projects/PKD OFFICE/1.webp",
-    href: "/projects/pkd-office"
-  },
+  // {
+  //   id: 13,
+  //   title: "PKD OFFICE",
+  //   slug: "pkd-office",
+  //   folder: "PKD OFFICE",
+  //   category: "Completed projects",
+  //   loc: "Lower Parel, Mumbai",
+  //   img: "/projects/PKD OFFICE/1.webp",
+  //   href: "/projects/pkd-office"
+  // },
   {
     id: 14,
     title: "THE CANVAS HOME",
@@ -168,7 +168,7 @@ export const gridProjects = [
     title: "VAAYU",
     slug: "vaayu",
     folder: "VAAYU",
-    category: "Current projects",
+    category: "Completed projects",
     loc: "Mumbai",
     img: "/projects/VAAYU/1.webp",
     href: "/projects/vaayu"

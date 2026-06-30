@@ -303,7 +303,7 @@ export default function PortfolioSection() {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 pointer-events-none" />
 
                 <div className="absolute top-0 right-0 bg-[#352D26] text-[#E6DFD4] px-4 py-1.5 text-[11px] tracking-widest uppercase shadow-sm">
-                  CURRENT PROJECTS
+                  COMPLETED PROJECTS
                 </div>
 
                 <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-[#E6DFD4] pointer-events-none">

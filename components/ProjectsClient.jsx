@@ -15,7 +15,7 @@ export default function ProjectsClient() {
   const [direction, setDirection] = useState(1); // 1 for next/right, -1 for prev/left
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeFilter, setActiveFilter] = useState('Current projects');
+  const [activeFilter, setActiveFilter] = useState('Completed projects');
 
   const filteredProjects = gridProjects.filter(
     p => p.category.toLowerCase() === activeFilter.toLowerCase()
@@ -296,7 +296,7 @@ export default function ProjectsClient() {
 
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-2.5 md:gap-3 mb-12">
-              {['Current projects', 'Coming Soon'].map((filter) => {
+              {['Completed projects', 'Coming Soon'].map((filter) => {
                 const isActive = activeFilter === filter;
                 return (
                   <button

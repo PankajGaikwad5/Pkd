@@ -12,6 +12,7 @@ export default function ProjectDetailClient({ project, images }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const thumbRefs = useRef([]);
 
@@ -73,7 +74,7 @@ export default function ProjectDetailClient({ project, images }) {
       <main className="w-full relative bg-[#332820] text-[#D6CBBC]">
 
         {/* Hero Header Section */}
-        <section className="w-full pt-32 pb-12 px-6 sm:px-12 md:px-16 lg:px-24 max-w-[1400px] mx-auto">
+        <section className="w-full pt-32 px-6 sm:px-12 md:px-16 lg:px-24 max-w-[1400px] mx-auto">
           {/* Back button */}
           <Link
             href="/projects"
@@ -100,14 +101,12 @@ export default function ProjectDetailClient({ project, images }) {
 
         {/* Image Slider Section */}
         <section className="w-full pb-16 px-6 sm:px-12 md:px-16 lg:px-24">
-          {/* Large Slider Card */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
             className="relative aspect-[16/9] w-full max-w-[1400px] mx-auto overflow-hidden bg-black/35 group/slider rounded-sm border border-[#D6CBBC]/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
           >
-            {/* Slide */}
             <div className="absolute inset-0 select-none flex items-center justify-center p-2 md:p-4">
               <AnimatePresence mode="wait">
                 <motion.img
@@ -123,10 +122,8 @@ export default function ProjectDetailClient({ project, images }) {
               </AnimatePresence>
             </div>
 
-            {/* Hover sliding overlay */}
             <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/slider:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-            {/* Navigation Arrows */}
             <button
               onClick={prevImage}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-black/40 hover:bg-[#D6CBBC] hover:text-[#332820] text-[#D6CBBC] border border-[#D6CBBC]/10 flex items-center justify-center transition-all cursor-pointer opacity-0 group-hover/slider:opacity-100"
@@ -142,7 +139,6 @@ export default function ProjectDetailClient({ project, images }) {
               <ChevronRight size={20} />
             </button>
 
-            {/* Fullscreen Expansion Button */}
             <button
               onClick={() => setIsFullscreen(true)}
               className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-black/55 hover:bg-[#D6CBBC] hover:text-[#332820] text-[#D6CBBC] border border-[#D6CBBC]/15 flex items-center justify-center transition-all cursor-pointer shadow-lg"
@@ -151,35 +147,63 @@ export default function ProjectDetailClient({ project, images }) {
               <Maximize size={18} />
             </button>
 
-            {/* Image counter indicator */}
             <div className="absolute bottom-4 left-4 bg-black/55 border border-[#D6CBBC]/15 text-[#D6CBBC] text-[10px] tracking-widest px-4 py-2 rounded-full shadow-lg">
               {activeIndex + 1} / {images.length}
             </div>
-          </motion.div>
+          </motion.div> */}
 
-          {/* Slider Thumbnails scroll bar */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.4 }}
-            className="w-full max-w-[1400px] mx-auto mt-6"
+            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.5 }}
+            className="w-full max-w-[1400px] mx-auto mt-10"
           >
-            <div className="relative flex gap-2.5 overflow-x-auto py-2 scroll-smooth select-none scrollbar-none" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-              {images.map((img, idx) => (
-                <button
-                  key={idx}
-                  ref={(el) => (thumbRefs.current[idx] = el)}
-                  onClick={() => setActiveIndex(idx)}
-                  className={`relative w-16 h-12 md:w-24 md:h-16 shrink-0 overflow-hidden border transition-all ${
-                    idx === activeIndex
-                      ? 'border-[#D6CBBC] scale-105 opacity-100'
-                      : 'border-transparent opacity-40 hover:opacity-85'
-                  }`}
-                >
-                  <img src={img} className="w-full h-full object-cover pointer-events-none" alt="" />
-                </button>
-              ))}
-            </div>
+            {/* Height-restricted wrapper for long galleries */}
+            {(() => {
+              const hasMany = images.length > 12;
+              const shouldLimit = hasMany && !isExpanded;
+              
+              return (
+                <div className={`relative ${shouldLimit ? 'max-h-[1000px] overflow-hidden' : ''} transition-all duration-700 ease-in-out`}>
+                  <div className="columns-2 sm:columns-3 md:columns-4 gap-4 sm:gap-6">
+                    {images.map((img, idx) => (
+                      <div
+                        key={idx}
+                        onClick={() => {
+                          setActiveIndex(idx);
+                          setIsFullscreen(true);
+                        }}
+                        className="break-inside-avoid relative mb-4 sm:mb-6 overflow-hidden bg-black/10 cursor-pointer border border-[#D6CBBC]/10 rounded-sm group"
+                      >
+                        <img
+                          src={img}
+                          alt={`${project.title} - Masonry ${idx + 1}`}
+                          className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+                          loading="lazy"
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 flex items-center justify-center">
+                          <span className="text-[10px] tracking-widest text-[#D6CBBC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 uppercase border border-[#D6CBBC]/30 px-3 py-1.5 bg-black/25 backdrop-blur-sm">
+                            VIEW FULL
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Gradient Blur Overlay & Show More Button */}
+                  {shouldLimit && (
+                    <div className="absolute bottom-0 left-0 right-0 h-[400px] bg-gradient-to-t from-[#332820] via-[#332820]/95 via-[#332820]/60 to-transparent flex items-end justify-center pb-6 z-10 pointer-events-none">
+                      <button
+                        onClick={() => setIsExpanded(true)}
+                        className="pointer-events-auto bg-transparent border-0 text-[#D6CBBC] text-[10px] md:text-[11px] font-light uppercase tracking-[0.25em] border-b border-[#D6CBBC]/40 pb-1 hover:border-[#D6CBBC] transition-colors duration-300 cursor-pointer mb-2"
+                      >
+                        SHOW MORE
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
           </motion.div>
         </section>
 
@@ -302,11 +326,10 @@ export default function ProjectDetailClient({ project, images }) {
                     key={idx}
                     ref={(el) => (thumbRefs.current[idx] = el)}
                     onClick={() => setActiveIndex(idx)}
-                    className={`relative w-16 h-12 md:w-20 md:h-14 shrink-0 overflow-hidden border transition-all ${
-                      idx === activeIndex
-                        ? 'border-[#D6CBBC] scale-105 opacity-100'
-                        : 'border-transparent opacity-40 hover:opacity-85'
-                    }`}
+                    className={`relative w-16 h-12 md:w-20 md:h-14 shrink-0 overflow-hidden border transition-all ${idx === activeIndex
+                      ? 'border-[#D6CBBC] scale-105 opacity-100'
+                      : 'border-transparent opacity-40 hover:opacity-85'
+                      }`}
                   >
                     <img src={img} className="w-full h-full object-cover pointer-events-none" alt="" />
                   </button>

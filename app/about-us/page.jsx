@@ -1,8 +1,8 @@
 import AboutClient from "@/components/AboutClient";
 
 export const metadata = {
-  title: 'About Us - Arcca Group',
-  description: 'Learn about Arcca Group, our team, our vision, and our luxury residential developments in Miami.',
+  title: 'About Us - PKD Studio',
+  description: 'Learn about PKD Studio, our team, our vision.',
 };
 
 export default function AboutPage() {
