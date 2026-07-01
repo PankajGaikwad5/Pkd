@@ -5,7 +5,7 @@ export default function AboutCollaborativeSection() {
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <img
-        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1974&auto=format&fit=crop"
+        src="/projects/PKD OFFICE/_PAB8897-HDR.webp"
         alt="ARCCA Luxury Staircase"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -46,10 +46,6 @@ export default function AboutCollaborativeSection() {
         </div>
       </div>
 
-      {/* Side Circle Indicator */}
-      <div className="absolute right-8 sm:right-12 top-1/2 -translate-y-1/2 z-20 hidden md:block">
-        <div className="w-3 h-3 rounded-full border border-[#D6CBBC]/40" />
-      </div>
     </section>
   );
 }
