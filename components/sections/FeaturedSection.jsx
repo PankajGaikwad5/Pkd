@@ -11,7 +11,7 @@ const PROJECTS = [
     titleLine1: "GRAND",
     titleLine2: "CHÂTEAU",
     image: "/projects/GRAND CHATEAU/1.webp",
-    num: "1 / 3",
+    num: "1 / 4",
     href: "/projects/grand-chateau"
   },
   {
@@ -19,7 +19,7 @@ const PROJECTS = [
     titleLine1: "JADE",
     titleLine2: "",
     image: "/projects/JADE/1.webp",
-    num: "2 / 3",
+    num: "2 / 4",
     href: "/projects/jade"
   },
   {
@@ -27,14 +27,22 @@ const PROJECTS = [
     titleLine1: "LITHIC",
     titleLine2: "HOME",
     image: "/projects/LITHIC HOME/1.webp",
-    num: "3 / 3",
+    num: "3 / 4",
     href: "/projects/lithic-home"
+  },
+  {
+    id: 4,
+    titleLine1: "RENAISSANCE",
+    titleLine2: "86",
+    image: "/projects/RENAISSANCE 86/1.webp",
+    num: "4 / 4",
+    href: "/projects/renaissance-86"
   }
 ];
 
 function StackingCard({ project, index }) {
   const cardRef = useRef(null);
-  
+
   // Track scroll position of this card relative to the viewport
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -48,8 +56,8 @@ function StackingCard({ project, index }) {
   const topOffset = index * 60;
 
   return (
-    <div 
-      ref={cardRef} 
+    <div
+      ref={cardRef}
       className="sticky w-full h-[85vh] overflow-hidden flex items-center justify-center bg-[#1C1816] border-t border-[#E6DFD4]/10 shadow-[0_-30px_60px_rgba(0,0,0,0.5)]"
       style={{
         top: `${topOffset}px`,
@@ -58,8 +66,8 @@ function StackingCard({ project, index }) {
     >
       {/* Background Image with Parallax */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <motion.img 
-          src={project.image} 
+        <motion.img
+          src={project.image}
           alt={`${project.titleLine1} ${project.titleLine2}`}
           style={{ y, scale: 1.2 }}
           className="absolute inset-0 w-full h-full object-cover"
@@ -79,7 +87,7 @@ function StackingCard({ project, index }) {
             </span>
           </FadeIn>
           <FadeIn y={40} delay={0.2}>
-            <h2 className="font-heading text-5xl sm:text-8xl md:text-9xl leading-[0.85] tracking-tight font-light text-[#E6DFD4]">
+            <h2 className="font-heading text-5xl sm:text-8xl md:text-8xl leading-[0.85] tracking-tight font-light text-[#E6DFD4]">
               {project.titleLine1}
               <br />
               {project.titleLine2}
@@ -101,7 +109,7 @@ function StackingCard({ project, index }) {
           {/* View Button */}
           <div>
             <FadeIn y={20} delay={0.4}>
-              <Link 
+              <Link
                 href={project.href}
                 className="px-10 py-3.5 border border-[#E6DFD4]/30 rounded-full text-[#E6DFD4] text-xs sm:text-sm uppercase tracking-[0.2em] bg-black/20 backdrop-blur-sm hover:bg-[#E6DFD4] hover:text-[#2E2824] hover:border-white transition-all duration-500 block text-center"
               >
@@ -119,10 +127,10 @@ export default function FeaturedSection() {
   return (
     <section className="relative w-full bg-[#1C1816] flex flex-col">
       {PROJECTS.map((project, idx) => (
-        <StackingCard 
-          key={project.id} 
-          project={project} 
-          index={idx} 
+        <StackingCard
+          key={project.id}
+          project={project}
+          index={idx}
         />
       ))}
     </section>

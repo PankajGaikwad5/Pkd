@@ -72,7 +72,7 @@ export default function TeamSection() {
             </motion.p>
           </div>
 
-          <div className="overflow-hidden pb-1">
+          {/* <div className="overflow-hidden pb-1">
             <motion.div
               initial={{ clipPath: "inset(100% 0 0 0)", y: 20 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
@@ -83,7 +83,7 @@ export default function TeamSection() {
                 OUR TEAM
               </button>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { projects } from "../projectdata";
+import { gridProjects } from "../projectdata";
 
 const maskTransition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
 
@@ -11,6 +11,17 @@ export default function PortfolioSection() {
   const scrollRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const portfolioSlugs = ["grand-chateau", "jade", "the-canvas-home"];
+  const portfolioProjects = portfolioSlugs
+    .map(slug => gridProjects.find(p => p.slug === slug))
+    .filter(Boolean);
+
+  const getProjectTag = (slug) => {
+    if (slug === 'grand-chateau') return 'FEATURED PROJECT';
+    if (slug === 'the-canvas-home') return 'COMING SOON';
+    return 'COMPLETED PROJECTS';
+  };
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -217,7 +228,7 @@ export default function PortfolioSection() {
           className="flex gap-4 xl:gap-6 overflow-x-auto w-full snap-x snap-mandatory hide-scroll scroll-smooth pr-6 sm:pr-12 md:pr-16"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {projects.map((proj, i) => (
+          {portfolioProjects.map((proj, i) => (
             <motion.div
               key={i}
               initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
@@ -244,7 +255,7 @@ export default function PortfolioSection() {
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 pointer-events-none" />
 
                 <div className="absolute top-0 right-0 bg-[#352D26] text-[#E6DFD4] px-4 py-1.5 text-[11px] tracking-widest uppercase shadow-sm">
-                  COMPLETED PROJECTS
+                  {getProjectTag(proj.slug)}
                 </div>
 
                 <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 text-[#E6DFD4] pointer-events-none">
