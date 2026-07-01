@@ -125,7 +125,7 @@ export const gridProjects = [
   },
   {
     id: 11,
-    title: "NIRAJ OFFICE",
+    title: "Oculus",
     slug: "niraj-office",
     folder: "NIRAJ OFFICE",
     category: "Completed projects",
