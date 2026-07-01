@@ -46,7 +46,7 @@ export default function ProjectDetailClient({ project, images }) {
 
   const aspectRatios = ['3/2', '3/4', '1/1', '4/3', '2/3', '16/10'];
 
-  const renderCard = ({ img, idx }, isLast) => {
+  const renderCard = ({ img, idx }) => {
     const aspectRatio = aspectRatios[idx % aspectRatios.length];
     return (
       <div
@@ -57,7 +57,7 @@ export default function ProjectDetailClient({ project, images }) {
         }}
         style={{
           aspectRatio,
-          ...(isLast ? { flex: '1 1 auto' } : {})
+          flex: '1 1 auto'
         }}
         className="relative overflow-hidden bg-black/10 cursor-pointer border border-[#D6CBBC]/10 rounded-sm group"
       >
@@ -231,39 +231,39 @@ export default function ProjectDetailClient({ project, images }) {
                   {/* Mobile Layout (2 columns, aligned at top and bottom) */}
                   <div className="grid grid-cols-2 gap-4 sm:hidden items-stretch">
                     <div className="flex flex-col gap-4 h-full">
-                      {cols2[0].map((item, i) => renderCard(item, i === cols2[0].length - 1))}
+                      {cols2[0].map(renderCard)}
                     </div>
                     <div className="flex flex-col gap-4 h-full">
-                      {cols2[1].map((item, i) => renderCard(item, i === cols2[1].length - 1))}
+                      {cols2[1].map(renderCard)}
                     </div>
                   </div>
 
                   {/* Tablet Layout (3 columns, aligned at top and bottom) */}
                   <div className="hidden sm:grid md:hidden grid-cols-3 gap-6 items-stretch">
                     <div className="flex flex-col gap-6 h-full">
-                      {cols3[0].map((item, i) => renderCard(item, i === cols3[0].length - 1))}
+                      {cols3[0].map(renderCard)}
                     </div>
                     <div className="flex flex-col gap-6 h-full">
-                      {cols3[1].map((item, i) => renderCard(item, i === cols3[1].length - 1))}
+                      {cols3[1].map(renderCard)}
                     </div>
                     <div className="flex flex-col gap-6 h-full">
-                      {cols3[2].map((item, i) => renderCard(item, i === cols3[2].length - 1))}
+                      {cols3[2].map(renderCard)}
                     </div>
                   </div>
 
                   {/* Desktop Layout (4 columns, aligned at top and bottom) */}
                   <div className="hidden md:grid grid-cols-4 gap-6 items-stretch">
                     <div className="flex flex-col gap-6 h-full">
-                      {cols4[0].map((item, i) => renderCard(item, i === cols4[0].length - 1))}
+                      {cols4[0].map(renderCard)}
                     </div>
                     <div className="flex flex-col gap-6 h-full">
-                      {cols4[1].map((item, i) => renderCard(item, i === cols4[1].length - 1))}
+                      {cols4[1].map(renderCard)}
                     </div>
                     <div className="flex flex-col gap-6 h-full">
-                      {cols4[2].map((item, i) => renderCard(item, i === cols4[2].length - 1))}
+                      {cols4[2].map(renderCard)}
                     </div>
                     <div className="flex flex-col gap-6 h-full">
-                      {cols4[3].map((item, i) => renderCard(item, i === cols4[3].length - 1))}
+                      {cols4[3].map(renderCard)}
                     </div>
                   </div>
 
