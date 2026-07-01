@@ -16,6 +16,66 @@ export default function ProjectDetailClient({ project, images }) {
 
   const thumbRefs = useRef([]);
 
+  const hasMany = images.length > 12;
+  const shouldLimit = hasMany && !isExpanded;
+
+  // Distribute images with their original index to preserve fullscreen lightbox reference
+  const imagesWithIndex = images.map((img, idx) => ({ img, idx }));
+
+  const displayImages2 = shouldLimit ? imagesWithIndex.slice(0, 6) : imagesWithIndex;
+  const displayImages3 = shouldLimit ? imagesWithIndex.slice(0, 6) : imagesWithIndex;
+  const displayImages4 = shouldLimit ? imagesWithIndex.slice(0, 8) : imagesWithIndex;
+
+  const cols2 = [
+    displayImages2.filter((_, idx) => idx % 2 === 0),
+    displayImages2.filter((_, idx) => idx % 2 === 1)
+  ];
+
+  const cols3 = [
+    displayImages3.filter((_, idx) => idx % 3 === 0),
+    displayImages3.filter((_, idx) => idx % 3 === 1),
+    displayImages3.filter((_, idx) => idx % 3 === 2)
+  ];
+
+  const cols4 = [
+    displayImages4.filter((_, idx) => idx % 4 === 0),
+    displayImages4.filter((_, idx) => idx % 4 === 1),
+    displayImages4.filter((_, idx) => idx % 4 === 2),
+    displayImages4.filter((_, idx) => idx % 4 === 3)
+  ];
+
+  const aspectRatios = ['3/2', '3/4', '1/1', '4/3', '2/3', '16/10'];
+
+  const renderCard = ({ img, idx }, isLast) => {
+    const aspectRatio = aspectRatios[idx % aspectRatios.length];
+    return (
+      <div
+        key={idx}
+        onClick={() => {
+          setActiveIndex(idx);
+          setIsFullscreen(true);
+        }}
+        style={{
+          aspectRatio,
+          ...(isLast ? { flex: '1 1 auto' } : {})
+        }}
+        className="relative overflow-hidden bg-black/10 cursor-pointer border border-[#D6CBBC]/10 rounded-sm group"
+      >
+        <img
+          src={img}
+          alt={`${project.title} - Masonry ${idx + 1}`}
+          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 flex items-center justify-center">
+          <span className="text-[10px] tracking-widest text-[#D6CBBC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 uppercase border border-[#D6CBBC]/30 px-3 py-1.5 bg-black/25 backdrop-blur-sm">
+            VIEW FULL
+          </span>
+        </div>
+      </div>
+    );
+  };
+
   const nextImage = () => {
     setActiveIndex((prev) => (prev + 1) % images.length);
   };
@@ -166,34 +226,45 @@ export default function ProjectDetailClient({ project, images }) {
           >
             {/* Height-restricted wrapper for long galleries */}
             {(() => {
-              const hasMany = images.length > 12;
-              const shouldLimit = hasMany && !isExpanded;
-
               return (
-                <div className={`relative ${shouldLimit ? 'max-h-[1000px] overflow-hidden' : ''} transition-all duration-700 ease-in-out`}>
-                  <div className="columns-2 sm:columns-3 md:columns-4 gap-4 sm:gap-6">
-                    {images.map((img, idx) => (
-                      <div
-                        key={idx}
-                        onClick={() => {
-                          setActiveIndex(idx);
-                          setIsFullscreen(true);
-                        }}
-                        className="break-inside-avoid relative mb-4 sm:mb-6 overflow-hidden bg-black/10 cursor-pointer border border-[#D6CBBC]/10 rounded-sm group"
-                      >
-                        <img
-                          src={img}
-                          alt={`${project.title} - Masonry ${idx + 1}`}
-                          className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-103"
-                          loading="lazy"
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 flex items-center justify-center">
-                          <span className="text-[10px] tracking-widest text-[#D6CBBC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 uppercase border border-[#D6CBBC]/30 px-3 py-1.5 bg-black/25 backdrop-blur-sm">
-                            VIEW FULL
-                          </span>
-                        </div>
-                      </div>
-                    ))}
+                <div className={`relative ${shouldLimit ? 'overflow-hidden' : ''} transition-all duration-700 ease-in-out`}>
+                  {/* Mobile Layout (2 columns, aligned at top and bottom) */}
+                  <div className="grid grid-cols-2 gap-4 sm:hidden items-stretch">
+                    <div className="flex flex-col gap-4 h-full">
+                      {cols2[0].map((item, i) => renderCard(item, i === cols2[0].length - 1))}
+                    </div>
+                    <div className="flex flex-col gap-4 h-full">
+                      {cols2[1].map((item, i) => renderCard(item, i === cols2[1].length - 1))}
+                    </div>
+                  </div>
+
+                  {/* Tablet Layout (3 columns, aligned at top and bottom) */}
+                  <div className="hidden sm:grid md:hidden grid-cols-3 gap-6 items-stretch">
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols3[0].map((item, i) => renderCard(item, i === cols3[0].length - 1))}
+                    </div>
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols3[1].map((item, i) => renderCard(item, i === cols3[1].length - 1))}
+                    </div>
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols3[2].map((item, i) => renderCard(item, i === cols3[2].length - 1))}
+                    </div>
+                  </div>
+
+                  {/* Desktop Layout (4 columns, aligned at top and bottom) */}
+                  <div className="hidden md:grid grid-cols-4 gap-6 items-stretch">
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols4[0].map((item, i) => renderCard(item, i === cols4[0].length - 1))}
+                    </div>
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols4[1].map((item, i) => renderCard(item, i === cols4[1].length - 1))}
+                    </div>
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols4[2].map((item, i) => renderCard(item, i === cols4[2].length - 1))}
+                    </div>
+                    <div className="flex flex-col gap-6 h-full">
+                      {cols4[3].map((item, i) => renderCard(item, i === cols4[3].length - 1))}
+                    </div>
                   </div>
 
                   {/* Gradient Blur Overlay & Show More Button */}
