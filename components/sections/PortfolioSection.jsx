@@ -228,23 +228,16 @@ export default function PortfolioSection() {
           className="flex gap-4 xl:gap-6 overflow-x-auto w-full snap-x snap-mandatory hide-scroll scroll-smooth pr-6 sm:pr-12 md:pr-16"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
-          {portfolioProjects.map((proj, i) => (
-            <motion.div
-              key={i}
-              initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
-              whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 1.2,
-                ease: [0.76, 0, 0.24, 1],
-                delay: 0.1 + i * 0.1,
-              }}
-              className="w-[85vw] md:w-[60vw] xl:w-[32vw] 2xl:w-[28vw] aspect-[4/3] shrink-0 snap-start relative group overflow-hidden bg-black/10"
-            >
-              <Link href={proj.href} className="block w-full h-full relative">
+          {portfolioProjects.map((proj, i) => {
+            const isComingSoon = proj.categories?.includes("Coming Soon") || proj.slug === "the-canvas-home";
+
+            const CardContent = (
+              <>
                 <img
                   src={proj.img}
-                  className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
+                  className={`w-full h-full object-cover transition-transform duration-[1.5s] ease-out ${
+                    isComingSoon ? 'blur-2xl scale-110 pointer-events-none' : 'group-hover:scale-105'
+                  }`}
                   alt={proj.title}
                 />
 
@@ -266,9 +259,45 @@ export default function PortfolioSection() {
                     {proj.loc}
                   </p>
                 </div>
-              </Link>
-            </motion.div>
-          ))}
+
+                {/* Coming Soon Center Overlay */}
+                {isComingSoon && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/25 z-[5] pointer-events-none">
+                    <span className="text-[11.5px] tracking-[0.3em] font-medium uppercase text-[#E6DFD4] border border-[#E6DFD4]/30 px-6 py-2.5 bg-black/45 backdrop-blur-[4px]">
+                      COMING SOON
+                    </span>
+                  </div>
+                )}
+              </>
+            );
+
+            return (
+              <motion.div
+                key={i}
+                initial={{ clipPath: "inset(0% 50% 0% 50%)" }}
+                whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1.2,
+                  ease: [0.76, 0, 0.24, 1],
+                  delay: 0.1 + i * 0.1,
+                }}
+                className={`w-[85vw] md:w-[60vw] xl:w-[32vw] 2xl:w-[28vw] aspect-[4/3] shrink-0 snap-start relative group overflow-hidden bg-black/10 ${
+                  isComingSoon ? 'cursor-default' : 'cursor-pointer'
+                }`}
+              >
+                {isComingSoon ? (
+                  <div className="w-full h-full relative">
+                    {CardContent}
+                  </div>
+                ) : (
+                  <Link href={proj.href} className="block w-full h-full relative">
+                    {CardContent}
+                  </Link>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

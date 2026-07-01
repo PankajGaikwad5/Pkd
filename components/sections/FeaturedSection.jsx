@@ -12,7 +12,9 @@ const PROJECTS = [
     titleLine2: "CHÂTEAU",
     image: "/projects/GRAND CHATEAU/1.webp",
     num: "1 / 4",
-    href: "/projects/grand-chateau"
+    href: "/projects/grand-chateau",
+    logo: "/ft/elle-decor.png",
+    logoClass: "h-11 md:h-12 top-[6px]"
   },
   {
     id: 2,
@@ -20,7 +22,9 @@ const PROJECTS = [
     titleLine2: "",
     image: "/projects/JADE/1.webp",
     num: "2 / 4",
-    href: "/projects/jade"
+    href: "/projects/jade",
+    logo: "/ft/goodhomes.png",
+    logoClass: "h-7 md:h-8 top-[14px]"
   },
   {
     id: 3,
@@ -28,7 +32,9 @@ const PROJECTS = [
     titleLine2: "HOME",
     image: "/projects/LITHIC HOME/1.webp",
     num: "3 / 4",
-    href: "/projects/lithic-home"
+    href: "/projects/lithic-home",
+    logo: "/ft/goodhomes.png",
+    logoClass: "h-7 md:h-8 top-[14px]"
   },
   {
     id: 4,
@@ -36,7 +42,9 @@ const PROJECTS = [
     titleLine2: "86",
     image: "/projects/RENAISSANCE 86/1.webp",
     num: "4 / 4",
-    href: "/projects/renaissance-86"
+    href: "/projects/renaissance-86",
+    logo: "/ft/goodhomes.png",
+    logoClass: "h-7 md:h-8 top-[14px]"
   }
 ];
 
@@ -79,6 +87,16 @@ function StackingCard({ project, index }) {
 
       {/* Content Area */}
       <div className="relative w-full h-full max-w-7xl mx-auto px-6 sm:px-12 md:px-24 flex flex-col justify-between py-16 md:py-0 md:flex-row md:items-center text-[#E6DFD4] z-10">
+        {/* Publication logo overlay on top-left (visible when stacked) */}
+        {project.logo && (
+          <div className={`absolute left-6 sm:left-12 md:left-24 flex items-center ${project.logoClass}`}>
+            <img 
+              src={project.logo} 
+              alt="Featured Publication Logo" 
+              className="h-full w-auto object-contain opacity-85"
+            />
+          </div>
+        )}
         {/* Left Column: Title Info */}
         <div className="flex flex-col justify-center select-none pt-12 md:pt-0">
           <FadeIn y={30} delay={0.1}>
