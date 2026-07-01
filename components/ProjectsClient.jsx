@@ -9,17 +9,32 @@ import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ArrowDownRight } from 'lucide-react';
 
 import { projects, gridProjects } from './projectdata';
+import { useLenis } from 'lenis/react';
 
 export default function ProjectsClient() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const lenis = useLenis();
+
+  const handleAllProjectsClick = (e) => {
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo('#grid', { duration: 1.2 });
+    } else {
+      const element = document.getElementById('grid');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
   const [direction, setDirection] = useState(1); // 1 for next/right, -1 for prev/left
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeFilter, setActiveFilter] = useState('Completed projects');
+  const [activeFilter, setActiveFilter] = useState('All');
 
-  const filteredProjects = gridProjects.filter(
-    p => p.category.toLowerCase() === activeFilter.toLowerCase()
-  );
+  const filteredProjects = gridProjects.filter(p => {
+    if (activeFilter.toLowerCase() === 'all') return true;
+    return p.categories.some(cat => cat.toLowerCase() === activeFilter.toLowerCase());
+  });
 
   const containerRef = useRef(null);
 
@@ -182,7 +197,7 @@ export default function ProjectsClient() {
           </button>
 
           {/* Bottom Left Title Text Overlay - Stacked & GPU Translated */}
-          <div className="absolute bottom-16 left-6 md:bottom-20 md:left-16 z-20 text-[#D6CBBC] pointer-events-none w-[80vw] md:w-[320px] h-[160px] md:h-[180px] overflow-hidden">
+          <div className="absolute bottom-16 left-6 md:bottom-20 md:left-16 z-20 text-[#D6CBBC] pointer-events-none w-[80vw] md:w-[500px] h-[180px] md:h-[200px] overflow-hidden">
             {projects.map((proj, idx) => {
               const isActive = idx === activeIndex;
               return (
@@ -223,12 +238,13 @@ export default function ProjectsClient() {
                     >
                       VIEW PROJECT <ArrowDownRight size={10} className="inline-block" />
                     </a>
-                    <Link
+                    <a
                       href="#grid"
+                      onClick={handleAllProjectsClick}
                       className="pointer-events-auto text-[9px] tracking-[0.25em] font-light uppercase text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors duration-300"
                     >
                       ALL PROJECTS
-                    </Link>
+                    </a>
                   </div>
                 </motion.div>
               );
@@ -263,12 +279,13 @@ export default function ProjectsClient() {
                   >
                     VIEW PROJECT <ArrowDownRight size={11} className="inline-block" />
                   </a>
-                  <Link
+                  <a
                     href="#grid"
+                    onClick={handleAllProjectsClick}
                     className="pointer-events-auto text-[9px] md:text-[10px] xl:text-[11px] tracking-[0.25em] font-light uppercase text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors duration-300 mt-2"
                   >
                     ALL PROJECTS
-                  </Link>
+                  </a>
                 </motion.div>
               );
             })}
@@ -296,7 +313,7 @@ export default function ProjectsClient() {
 
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-2.5 md:gap-3 mb-12">
-              {['Completed projects', 'Coming Soon'].map((filter) => {
+              {['All', 'Featured', 'Completed', 'Coming Soon'].map((filter) => {
                 const isActive = activeFilter === filter;
                 return (
                   <button
@@ -316,13 +333,23 @@ export default function ProjectsClient() {
             {/* Projects Grid */}
             <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <AnimatePresence mode="popLayout">
-                {filteredProjects.map((proj) => {
+                {filteredProjects.map((proj, idx) => {
                   const isComingSoon = proj.category.toLowerCase() === 'coming soon';
+                  const isLastAndOdd = filteredProjects.length % 2 !== 0 && idx === filteredProjects.length - 1;
+                  
+                  const fallbackImages = [
+                    '/projects/GRAND CHATEAU/1.webp',
+                    '/projects/JADE/1.webp',
+                    '/projects/LITHIC HOME/1.webp',
+                    '/projects/RENAISSANCE 86/1.webp'
+                  ];
+                  const projectImage = proj.img || fallbackImages[idx % fallbackImages.length];
+
                   const CardContent = (
                     <>
                       {/* Image */}
                       <img
-                        src={proj.img}
+                        src={projectImage}
                         alt={proj.title}
                         className={`w-full h-full object-cover transition-transform duration-700 ease-out ${isComingSoon ? 'blur-2xl scale-110 pointer-events-none' : 'group-hover:scale-105'
                           }`}
@@ -369,8 +396,9 @@ export default function ProjectsClient() {
                       viewport={{ once: true }}
                       exit={{ opacity: 0, scale: 0.95 }}
                       transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                      className={`group relative aspect-[3/2] w-full overflow-hidden rounded-sm ${isComingSoon ? 'cursor-default' : 'cursor-pointer'
-                        }`}
+                      className={`group relative aspect-[3/2] w-full overflow-hidden rounded-sm ${isComingSoon ? 'cursor-default' : 'cursor-pointer'} ${
+                        isLastAndOdd ? 'md:col-span-2 md:w-[calc(50%-16px)] md:justify-self-center' : ''
+                      }`}
                     >
                       {isComingSoon ? (
                         <div className="w-full h-full relative">
