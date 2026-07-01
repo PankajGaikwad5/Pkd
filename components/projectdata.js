@@ -143,16 +143,16 @@ export const gridProjects = [
     img: "/projects/NOUVEAU HOME/1.webp",
     href: "/projects/nouveau-home"
   },
-  // {
-  //   id: 13,
-  //   title: "PKD OFFICE",
-  //   slug: "pkd-office",
-  //   folder: "PKD OFFICE",
-  //   category: "Completed projects",
-  //   loc: "Lower Parel, Mumbai",
-  //   img: "/projects/PKD OFFICE/1.webp",
-  //   href: "/projects/pkd-office"
-  // },
+  {
+    id: 13,
+    title: "RENAISSANCE 86",
+    slug: "renaissance-86",
+    folder: "RENAISSANCE 86",
+    category: "Completed projects",
+    loc: "Lower Parel, Mumbai",
+    img: "/projects/RENAISSANCE 86/1.webp",
+    href: "/projects/renaissance-86"
+  },
   {
     id: 14,
     title: "THE CANVAS HOME",
