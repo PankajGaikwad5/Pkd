@@ -71,7 +71,7 @@ export default function FooterSection() {
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">FOLLOW US</h4>
                 <ul className="space-y-2 text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
                   <li><a href="https://www.instagram.com/pkdstudio_/" className="hover:opacity-60 transition-opacity duration-300">Instagram</a></li>
-                  <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Facebook</a></li>
+                  {/* <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Facebook</a></li> */}
                   <li><a href="http://www.linkedin.com/in/prachiti-khanvilkar-412874114" className="hover:opacity-60 transition-opacity duration-300">LinkedIn</a></li>
                 </ul>
               </div>
