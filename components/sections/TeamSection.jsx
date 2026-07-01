@@ -5,7 +5,7 @@ export default function TeamSection() {
     <section className="w-full min-h-screen bg-[#D6CBBC] flex flex-col lg:flex-row items-center pt-20 lg:pt-0">
       {/* Left Content Area */}
       <div className="w-full lg:w-[45%] flex flex-col justify-center py-12 lg:py-24 px-6 sm:px-12 md:px-16 lg:px-0">
-        <div className="w-full lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[800px] ml-0 lg:ml-20 lg:mr-0 lg:pr-12 xl:pr-20 2xl:pr-28">
+        <div className="w-full lg:max-w-[400px] xl:max-w-[480px] 2xl:max-w-[750px] ml-0 lg:ml-20 lg:mr-0 lg:pr-12 xl:pr-20 2xl:pr-28">
           <div className="mb-6 lg:mb-8">
             {/* <div className="overflow-hidden">
               <motion.div
@@ -46,7 +46,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] text-[#332820] tracking-tight leading-[0.9] uppercase"
             >
-              OUR<br />TEAM
+              OUR TEAM
             </motion.h2>
           </div>
 
@@ -56,7 +56,7 @@ export default function TeamSection() {
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
-              className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light mb-4"
+              className="secondary-text tracking-wide text-[#332820]/80 font-light mb-4"
             >
               Behind every exceptional space is a team driven by passion, precision, and purpose.
               <br /> <br />At PKD Studio, our architects, designers, and project specialists work seamlessly together, combining diverse expertise to deliver thoughtful, detail-oriented interiors that elevate everyday living.
@@ -66,7 +66,7 @@ export default function TeamSection() {
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.3 }}
-              className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light"
+              className="secondary-text tracking-wide text-[#332820]/80 font-light"
             >
               With a collaborative approach and an unwavering commitment to craftsmanship, we ensure every project is executed with creativity, transparency, and care, creating homes that are as functional as they are beautiful.
             </motion.p>

@@ -40,7 +40,7 @@ export default function AboutJoinUsSection() {
             </h2>
 
             {/* Paragraph */}
-            <div className="text-sm md:text-[15px] leading-relaxed text-[#332820]/80 font-light max-w-[340px] mb-3">
+            <div className="secondary-text text-[#332820]/80 font-light max-w-[340px] mb-3">
               <p>
                 As we continue to set new standards in luxury real estate, creating living spaces that inspire and rejuvenate the senses while ensuring quality and satisfaction.
               </p>

@@ -15,8 +15,8 @@ export default function HeroSection() {
       </div>
 
       <div className="absolute bottom-8 left-6 right-6 md:bottom-12 md:left-12 md:right-12 z-10 flex flex-col md:flex-row items-start md:items-end justify-between text-[#E6DFD4]">
-        <FadeIn y={20} delay={3.2} className="max-w-2xl">
-          <p className="text-sm md:text-base lg:text-lg  font-light tracking-wider leading-[1.5]">
+        <FadeIn y={20} delay={3.2} className="w-full max-w-2xl">
+          <p className="secondary-text font-light tracking-wider">
             At PKD Studio, we craft more than spaces, we shape the
             essence of living. Our vision is to redefine high-end
             residential development by creating homes that seamlessly

@@ -19,14 +19,24 @@ export default function CraftingSection() {
 
 
         {/* Middle: Large heading */}
-        <div className="flex-1 flex flex-col justify-center">
+        <div className="flex-1 flex flex-col justify-end">
           <div className="overflow-hidden pb-1">
+            <motion.p
+              initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
+              whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
+              className="text-xs md:text-sm leading-relaxed text-amber-100/85 mb-4"
+            >
+              From concept to creation, we tailor every detail
+              to your lifestyle and vision.
+            </motion.p>
             <motion.h2
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
-              className="font-heading text-3xl sm:text-4xl md:text-5xl leading-[1.2] text-amber-100 uppercase max-w-3xl"
+              className="font-heading text-3xl sm:text-4xl md:text-5xl leading-[1.2] text-amber-100 uppercase max-w-4xl"
             >
               Crafting Exceptional Spaces With Unique And Luxurious Designs.
             </motion.h2>
@@ -34,7 +44,7 @@ export default function CraftingSection() {
         </div>
 
         {/* Bottom right: Description + Button */}
-        <div className="flex justify-end">
+        {/* <div className="flex justify-end">
           <div className="max-w-xs">
             <div className="overflow-hidden pb-1 mb-6">
               <motion.p
@@ -55,13 +65,11 @@ export default function CraftingSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.35 }}
               >
-                <button className="inline-flex items-center px-7 md:px-9 py-2.5 md:py-3 border border-amber-100/60 text-amber-100 rounded-full text-xs tracking-widest uppercase cursor-pointer hover:bg-amber-100/10 transition-all duration-300 whitespace-nowrap">
-                  See All Services
-                </button>
+
               </motion.div>
             </div>
           </div>
-        </div>
+        </div> */}
 
       </div>
     </section>

@@ -37,7 +37,7 @@ export default function AboutCollaborativeSection() {
                 whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
-                className="text-sm sm:text-[15px] leading-relaxed text-[#D6CBBC]/90 font-light"
+                className="secondary-text text-[#D6CBBC]/90 font-light"
               >
                 Our collaborative approach ensures open communication and transparency at every step of the process. We prioritize creating environments that offer an exceptional lifestyle, security, and a sense of community for families. From innovative amenities to serene green spaces, we strive to design living spaces that blend luxury with the charm of traditional city living and promote overall wellness.
               </motion.p>

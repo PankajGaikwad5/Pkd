@@ -41,7 +41,7 @@ export default function AboutHeroSection() {
         </div>
 
         {/* Bottom Text Area */}
-        <div className="mt-auto lg:max-w-[480px] xl:max-w-[560px]">
+        <div className="mt-auto lg:max-w-[480px] xl:max-w-[460px]">
           <div className="overflow-hidden pb-1">
             <motion.h2
               initial={{ clipPath: "inset(100% 0 0 0)", y: 40 }}

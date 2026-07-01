@@ -6,10 +6,10 @@ export default function AboutMiamiSection() {
     <section className="w-full min-h-screen bg-[#332820] flex flex-col lg:flex-row items-center py-20 lg:py-28 px-8 sm:px-12 md:px-16 lg:px-0">
       {/* Left Content Area */}
       <div className="w-full lg:w-[45%] flex flex-col justify-center lg:py-12 lg:pl-20 lg:pr-12 xl:pr-20">
-        <div className="w-full lg:max-w-[420px] xl:max-w-[500px]">
+        <div className="w-full lg:max-w-[420px] xl:max-w-[400px]">
 
           {/* Heading */}
-          <div className="overflow-hidden pb-1 mb-2">
+          <div className="overflow-hidden pb-1 mb-8">
             <motion.h2
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
@@ -28,7 +28,7 @@ export default function AboutMiamiSection() {
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
-              className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light mb-4"
+              className="secondary-text text-[#D6CBBC]/80 font-light mb-4"
             >
               With a thoughtful approach to design and execution, we craft bespoke residential and commercial spaces that balance timeless aesthetics with everyday functionality.
             </motion.p>
@@ -37,7 +37,7 @@ export default function AboutMiamiSection() {
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
-              className="text-sm md:text-[15px] leading-relaxed text-[#D6CBBC]/80 font-light"
+              className="secondary-text text-[#D6CBBC]/80 font-light"
             >
               Led by Prachiti Khanvilkar, bringing over 25 years of excellence, our studio delivers refined interiors through meticulous planning, premium materials, and uncompromising attention to detail.
             </motion.p>

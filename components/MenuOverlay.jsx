@@ -142,7 +142,7 @@ export default function MenuOverlay({
                   </div>
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Address</p>
-                    <p className="opacity-70 font-light leading-relaxed">
+                    <p className="opacity-70 font-light leading-relaxed text-justify">
                       317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
                     </p>
                   </div>
@@ -150,17 +150,17 @@ export default function MenuOverlay({
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Phone</p>
                     <p className="opacity-70 font-light">786 901 1622</p>
                   </div> */}
-                  <div>
+                  {/* <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Monday to Friday:</p>
                     <p className="opacity-70 font-light leading-relaxed">
                       10:00 AM - 6:30 PM
                     </p>
-                  </div>
+                  </div> */}
                   <div className="col-span-2">
-                    <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Social</p>
-                    <ul className="space-y-3 opacity-70 font-light">
+                    <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Follow Us </p>
+                    <ul className="space-y-2 opacity-70 font-light">
                       <li><a href="https://www.instagram.com/pkdstudio_/" className="hover:opacity-100 transition-opacity">Instagram</a></li>
-                      <li><a href="#" className="hover:opacity-100 transition-opacity">Facebook</a></li>
+                      {/* <li><a href="#" className="hover:opacity-100 transition-opacity">Facebook</a></li> */}
                       <li><a href="http://www.linkedin.com/in/prachiti-khanvilkar-412874114" className="hover:opacity-100 transition-opacity">LinkedIn</a></li>
                     </ul>
                   </div>
@@ -171,8 +171,8 @@ export default function MenuOverlay({
               <div className="w-full relative mt-auto">
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-[#D6CBBC]/20" />
                 <div className="pt-8 pb-12 px-24 text-[10px] tracking-widest uppercase opacity-70 flex justify-between font-light">
-                  <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
-                  <p>&copy; 2025 ARCCA</p>
+                  {/* <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a> */}
+                  <p>&copy; 2026 PKD STUDIO</p>
                 </div>
               </div>
             </div>

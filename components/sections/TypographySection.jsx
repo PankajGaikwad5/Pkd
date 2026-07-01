@@ -8,7 +8,7 @@ export default function TypographySection() {
 
             {/* Left paragraph text */}
             <FadeIn delay={0.1}>
-               <p className="text-[13px] max-w-[220px] mb-10 md:mb-0 md:absolute md:top-0 md:left-0 z-10 text-center mx-auto md:text-left md:mx-0">
+             <p className="secondary-text max-w-[220px] mb-10 md:mb-0 md:absolute md:top-0 md:left-0 z-10 mx-auto md:mx-0">
                   At PKD Studio, every project is
                   conceived as a creation
                   that transcends architecture a
@@ -21,7 +21,7 @@ export default function TypographySection() {
             </FadeIn>
 
             {/* Big typography */}
-            <div className="font-heading w-full">
+            <div className=" w-full">
 
                {/* Line 1: INSPIRED + dining image — centered on mobile, right aligned on desktop */}
                <FadeIn delay={0.2}>

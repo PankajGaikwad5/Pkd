@@ -60,7 +60,7 @@ export default function WhyFloridaSection() {
               whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
-              className="text-sm md:text-[15px] leading-tight tracking-wide text-[#332820]/80 font-light"
+              className="secondary-text tracking-wide text-[#332820]/80 font-light"
             >
               We envision spaces that are not just lived in, but felt where every element has been curated to inspire connection, serenity, and a profound sense of belonging.
               <br /><br /> Each project reflects a deep understanding of our clients&apos; evolving lifestyles, blending timeless aesthetics with intelligent innovation and sustainable craftsmanship.

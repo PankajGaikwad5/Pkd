@@ -113,7 +113,7 @@ export default function PortfolioSection() {
                   delay: 0.1,
                 }}
               >
-                DESIGN,
+                SPACES
               </motion.div>
             </div>
             <div className="overflow-hidden pb-1">
@@ -127,7 +127,7 @@ export default function PortfolioSection() {
                   delay: 0.15,
                 }}
               >
-                ARCHITECTURE,
+                ARCHITECTURE
               </motion.div>
             </div>
             <div className="overflow-hidden pb-1">
@@ -164,83 +164,24 @@ export default function PortfolioSection() {
           </div>
         </h2>
 
-        {/* Paragraph description for mobile/tablet */}
-        <p className="block xl:hidden mb-10 text-sm md:text-[14px] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light animate-fade-in">
-          We create refined, functional spaces where aesthetics meet purpose. Each project is a dialogue between form and feeling crafted with precision, shaped by context, and inspired by timeless design principles.
-        </p>
-
-        {/* Paragraph description for desktop (retains line-by-line animations) */}
-        <div className="hidden xl:flex flex-col gap-0 mb-10 text-sm md:text-[14px] tracking-wide text-[#2E2824]/80 max-w-[360px] font-light">
-          <div className="overflow-hidden ">
-            <motion.div
-              initial={{ clipPath: "inset(100% 0 0 0)" }}
-              whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                ease: [0.76, 0, 0.24, 1],
-                delay: 0.35,
-              }}
-            >
-              We create refined, functional spaces where
-            </motion.div>
-          </div>
-          <div className="overflow-hidden ">
-            <motion.div
-              initial={{ clipPath: "inset(100% 0 0 0)" }}
-              whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                ease: [0.76, 0, 0.24, 1],
-                delay: 0.4,
-              }}
-            >
-              aesthetics meet purpose. Each project is a
-            </motion.div>
-          </div>
-          <div className="overflow-hidden ">
-            <motion.div
-              initial={{ clipPath: "inset(100% 0 0 0)" }}
-              whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                ease: [0.76, 0, 0.24, 1],
-                delay: 0.45,
-              }}
-            >
-              dialogue between form and feeling
-            </motion.div>
-          </div>
-          <div className="overflow-hidden ">
-            <motion.div
-              initial={{ clipPath: "inset(100% 0 0 0)" }}
-              whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                ease: [0.76, 0, 0.24, 1],
-                delay: 0.5,
-              }}
-            >
-              crafted with precision, shaped by context,
-            </motion.div>
-          </div>
-          <div className="overflow-hidden ">
-            <motion.div
-              initial={{ clipPath: "inset(100% 0 0 0)" }}
-              whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                ease: [0.76, 0, 0.24, 1],
-                delay: 0.55,
-              }}
-            >
-              and inspired by timeless design principles.
-            </motion.div>
-          </div>
+        {/* Paragraph description */}
+        <div className="overflow-hidden mb-10 max-w-[360px]">
+          <motion.p
+            initial={{ clipPath: "inset(100% 0 0 0)", y: 20 }}
+            whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: [0.76, 0, 0.24, 1],
+              delay: 0.3,
+            }}
+            className="secondary-text tracking-wide text-[#2E2824]/80 font-light"
+          >
+            We create refined, functional spaces where aesthetics meet purpose.
+            Each project is a dialogue between form and feeling crafted with
+            precision, shaped by context, and inspired by timeless design
+            principles.
+          </motion.p>
         </div>
 
         <div>

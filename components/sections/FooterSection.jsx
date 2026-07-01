@@ -43,9 +43,9 @@ export default function FooterSection() {
       </div>
 
       {/* Middle Separator - Vertical centering circle */}
-      <div className="hidden lg:flex items-center justify-center px-4 self-stretch">
+      {/* <div className="hidden lg:flex items-center justify-center px-4 self-stretch">
         <div className="w-2 h-2 rounded-full border border-[#D6CBBC]/30" />
-      </div>
+      </div> */}
 
       {/* Right container - Brand & Columns */}
       <div className="w-full lg:w-[60%] flex flex-col justify-start pt-2">
@@ -58,7 +58,7 @@ export default function FooterSection() {
             <FadeIn delay={0.4}>
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">ADDRESS</h4>
-                <p className="text-[13px] text-[#D6CBBC]/90 font-light leading-relaxed normal-case font-sans">
+                <p className="text-[16px] text-[#D6CBBC]/90 font-light leading-relaxed normal-case font-sans">
                   317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
                 </p>
               </div>
@@ -69,7 +69,7 @@ export default function FooterSection() {
             <FadeIn delay={0.6}>
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">FOLLOW US</h4>
-                <ul className="space-y-2 text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
+                <ul className="space-y-2 text-[16px] text-[#D6CBBC]/90 font-light normal-case font-sans">
                   <li><a href="https://www.instagram.com/pkdstudio_/" className="hover:opacity-60 transition-opacity duration-300">Instagram</a></li>
                   {/* <li><a href="#" className="hover:opacity-60 transition-opacity duration-300">Facebook</a></li> */}
                   <li><a href="http://www.linkedin.com/in/prachiti-khanvilkar-412874114" className="hover:opacity-60 transition-opacity duration-300">LinkedIn</a></li>
@@ -83,20 +83,20 @@ export default function FooterSection() {
             <FadeIn delay={0.45}>
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">EMAIL</h4>
-                <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case font-sans">
+                <p className="text-[16px] text-[#D6CBBC]/90 font-light normal-case font-sans">
                   <a href="mailto:enquires@teampkd.in" className="hover:opacity-60 transition-opacity duration-300">enquires@teampkd.in</a>
                 </p>
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.55}>
+            {/* <FadeIn delay={0.55}>
               <div>
                 <p className="text-[13px] text-[#D6CBBC]/90 font-light normal-case leading-relaxed font-sans">
                   Monday to Friday:<br />
                   10:00 AM - 6:30 PM
                 </p>
               </div>
-            </FadeIn>
+            </FadeIn> */}
 
             {/* <FadeIn delay={0.65}>
               <div>
