@@ -76,13 +76,19 @@ export default function ProjectDetailClient({ project, images }) {
         {/* Hero Header Section */}
         <section className="w-full pt-32 px-6 sm:px-12 md:px-16 lg:px-24 max-w-[1400px] mx-auto">
           {/* Back button */}
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-light text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors mb-8 group"
-          >
-            <ArrowLeft size={14} className="transition-transform group-hover:-translate-x-1" />
-            BACK TO PROJECTS
-          </Link>
+          <div className='w-full flex justify-between'>
+
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-light text-[#D6CBBC]/70 hover:text-[#D6CBBC] transition-colors mb-8 group"
+            >
+              <ArrowLeft size={14} className="transition-transform group-hover:-translate-x-1" />
+              BACK TO PROJECTS
+            </Link>
+            <p className="text-xs md:text-sm tracking-[0.25em] font-light uppercase text-[#D6CBBC]/60">
+              {project.category}
+            </p>
+          </div>
 
           {/* Title and Metadata */}
           <motion.div
@@ -94,7 +100,7 @@ export default function ProjectDetailClient({ project, images }) {
               {project.title}
             </h1>
             <p className="text-xs md:text-sm tracking-[0.25em] font-light uppercase text-[#D6CBBC]/60">
-              {project.loc} — {project.category}
+              {project.loc}
             </p>
           </motion.div>
         </section>
