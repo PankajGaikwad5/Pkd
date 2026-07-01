@@ -44,27 +44,10 @@ export default function ContactSection() {
   return (
     <section className="w-full min-h-screen bg-[#332820] text-[#D6CBBC] pt-32 pb-24 px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_1.4fr] gap-12 lg:gap-20 items-start">
-        
+
         {/* Left Column */}
         <div className="flex flex-col justify-between h-auto py-2">
           <div>
-            {/* Logo */}
-            <motion.div
-              initial={{ clipPath: "inset(100% 0 0 0)", y: 15 }}
-              whileInView={{ clipPath: "inset(0% 0 0 0)", y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            >
-              <svg width="36" height="36" viewBox="0 0 48 48" fill="none" stroke="#D6CBBC" strokeWidth="1.2" className="mb-6 lg:mb-12">
-                <rect x="0.6" y="0.6" width="46.8" height="46.8" />
-                <path d="M0 24H48 M24 0V48 M0 0L48 48 M48 0L0 48" />
-                <text x="6" y="18" fontSize="11" fontFamily="sans-serif" fill="#D6CBBC" stroke="none">A</text>
-                <text x="33" y="18" fontSize="11" fontFamily="sans-serif" fill="#D6CBBC" stroke="none">R</text>
-                <text x="6" y="42" fontSize="11" fontFamily="sans-serif" fill="#D6CBBC" stroke="none">C</text>
-                <text x="33" y="42" fontSize="11" fontFamily="sans-serif" fill="#D6CBBC" stroke="none">A</text>
-              </svg>
-            </motion.div>
-
             {/* Title */}
             <div className="overflow-hidden pb-1 mb-8 lg:mb-12">
               <motion.h2
@@ -82,7 +65,7 @@ export default function ContactSection() {
               </motion.h2>
             </div>
 
-            {/* Paragraph Description & Circle Indicator Split */}
+            {/* Paragraph Description */}
             <div className="flex items-center justify-between gap-8 max-w-md border-t border-[#D6CBBC]/10 pt-6">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -93,7 +76,7 @@ export default function ContactSection() {
               >
                 INTERESTED IN WORKING TOGETHER? FILL OUT SOME INFO AND WE WILL BE IN TOUCH SHORTLY! WE CAN&apos;T WAIT TO HEAR FROM YOU!
               </motion.p>
-              <div className="w-3 h-3 rounded-full border border-[#D6CBBC]/40 flex-shrink-0" />
+
             </div>
           </div>
         </div>
@@ -101,7 +84,7 @@ export default function ContactSection() {
         {/* Right Column (Form) */}
         <div className="w-full max-w-xl">
           <form onSubmit={handleSubmit} className="flex flex-col gap-10 md:gap-12">
-            
+
             {/* Full Name */}
             <div className="flex flex-col">
               <label htmlFor="fullName" className="text-[10px] tracking-[0.2em] font-medium text-[#D6CBBC]/65 uppercase mb-2">
