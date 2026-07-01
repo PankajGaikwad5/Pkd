@@ -213,13 +213,13 @@ export const gridProjects = [
     folder: "NIVARAAH",
     category: "Coming Soon",
     categories: ["Coming Soon"],
-    loc: "Mumbai",
+    loc: "Nagpur",
     img: "",
     href: "#"
   },
   {
     id: 18,
-    title: "KAZEHOME",
+    title: "KAZE HOME",
     slug: "kazehome",
     folder: "KAZEHOME",
     category: "Coming Soon",
@@ -246,7 +246,7 @@ export const gridProjects = [
     folder: "PUSHKAR",
     category: "Coming Soon",
     categories: ["Coming Soon"],
-    loc: "Mumbai",
+    loc: "Pushkar",
     img: "",
     href: "#"
   },
