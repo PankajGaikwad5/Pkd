@@ -6,7 +6,7 @@ export default function HeroSection() {
     <section className="relative w-full h-screen overflow-hidden">
       <div className="absolute inset-0 z-0 bg-[#E6DFD4]">
         <img
-          src="/home/heroimage.webp"
+          src="/projects/JADE/1.webp"
           alt="Luxury Home"
           className="w-full h-full object-cover"
         />
