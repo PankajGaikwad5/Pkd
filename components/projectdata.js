@@ -76,6 +76,17 @@ export const gridProjects = [
   },
   {
     id: 5,
+    title: "17 ALTAMOUNT",
+    slug: "17-altamount",
+    folder: "17 ALTAMOUNT",
+    category: "Completed",
+    categories: ["Completed"],
+    loc: "Mumbai",
+    img: "/projects/17 ALTAMOUNT/1.webp",
+    href: "/projects/17-altamount"
+  },
+  {
+    id: 6,
     title: "NOUVEAU HOME",
     slug: "nouveau-home",
     folder: "NOUVEAU HOME",
@@ -86,7 +97,7 @@ export const gridProjects = [
     href: "/projects/nouveau-home"
   },
   {
-    id: 6,
+    id: 7,
     title: "Oculus",
     slug: "niraj-office",
     folder: "NIRAJ OFFICE",
@@ -97,7 +108,7 @@ export const gridProjects = [
     href: "/projects/niraj-office"
   },
   {
-    id: 7,
+    id: 8,
     title: "RENAISSANCE 86",
     slug: "renaissance-86",
     folder: "RENAISSANCE 86",
@@ -106,17 +117,6 @@ export const gridProjects = [
     loc: "Lower Parel, Mumbai",
     img: "/projects/RENAISSANCE 86/1.webp",
     href: "/projects/renaissance-86"
-  },
-  {
-    id: 8,
-    title: "JIMIT SHAH",
-    slug: "jimit-shah",
-    folder: "JIMIT SHAH",
-    category: "Completed",
-    categories: ["Completed"],
-    loc: "Mumbai",
-    img: "/projects/JIMIT SHAH/1.webp",
-    href: "/projects/jimit-shah"
   },
   {
     id: 9,
@@ -153,26 +153,37 @@ export const gridProjects = [
   },
   {
     id: 12,
-    title: "AMRAVATI",
+    title: "ANIL BAJAJ",
     slug: "anil-bajaj",
     folder: "ANIL BAJAJ",
     category: "Completed",
     categories: ["Completed"],
-    loc: "Mumbai",
+    loc: "Amravati",
     img: "/projects/ANIL BAJAJ/1.webp",
     href: "/projects/anil-bajaj"
   },
   {
     id: 13,
-    title: "17 ALTAMOUNT",
-    slug: "17-altamount",
-    folder: "17 ALTAMOUNT",
+    title: "JIMIT SHAH",
+    slug: "jimit-shah",
+    folder: "JIMIT SHAH",
     category: "Completed",
     categories: ["Completed"],
     loc: "Mumbai",
-    img: "/projects/17 ALTAMOUNT/1.webp",
-    href: "/projects/17-altamount"
+    img: "/projects/JIMIT SHAH/1.webp",
+    href: "/projects/jimit-shah"
   },
+  // {
+  //   id: 13,
+  //   title: "17 ALTAMOUNT",
+  //   slug: "17-altamount",
+  //   folder: "17 ALTAMOUNT",
+  //   category: "Completed",
+  //   categories: ["Completed"],
+  //   loc: "Mumbai",
+  //   img: "/projects/17 ALTAMOUNT/1.webp",
+  //   href: "/projects/17-altamount"
+  // },
   {
     id: 14,
     title: "THE CANVAS HOME",
@@ -197,7 +208,7 @@ export const gridProjects = [
   },
   {
     id: 16,
-    title: "ALLOY",
+    title: "ALLOY WORKSPACES",
     slug: "alloy",
     folder: "ALLOY",
     category: "Project Underway",
@@ -235,7 +246,7 @@ export const gridProjects = [
     folder: "TROPICAL TAN",
     category: "Project Underway",
     categories: ["Project Underway"],
-    loc: "Mumbai",
+    loc: "Nagpur",
     img: "",
     href: "#"
   },
