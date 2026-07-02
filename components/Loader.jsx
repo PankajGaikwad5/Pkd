@@ -85,16 +85,13 @@ function LogoContent() {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.2, ease, delay: 0.6 }}
-      className="w-[5.5rem] h-[5.5rem] border border-[#2E2824] bg-[#E6DFD4] relative flex flex-col font-heading text-[#2E2824] leading-none"
+      className="flex justify-center items-center"
     >
-      <div className="flex w-full h-1/2 border-b border-[#2E2824]">
-        <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[1.5rem] pt-1">P</div>
-        <div className="w-1/2 h-full flex justify-center items-center text-[1.5rem] pt-1">K</div>
-      </div>
-      <div className="flex w-full h-1/2">
-        <div className="w-1/2 h-full border-r border-[#2E2824] flex justify-center items-center text-[1.5rem] pt-1">D</div>
-        <div className="w-1/2 h-full flex justify-center items-center text-[1.5rem] pt-1">S</div>
-      </div>
+      <img
+        src="/logobrown.png"
+        alt="Logo"
+        className="w-48 md:w-56 h-auto object-contain"
+      />
     </motion.div>
   );
 }

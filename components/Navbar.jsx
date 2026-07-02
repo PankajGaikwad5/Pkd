@@ -101,7 +101,7 @@ export default function Navbar({ onMenuClick }) {
         <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 flex justify-center">
           {/* <h1 className="font-heading text-4xl md:text-5xl tracking-[0.3em] font-light">ARCCA</h1> */}
           <Link href={'/'}>
-            <img src="/logo.png" alt="logo" className="w-40 " />
+            <img src="/logowhite.png" alt="logo" className="w-48 " />
           </Link>
         </div>
 
