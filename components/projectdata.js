@@ -121,8 +121,8 @@ export const gridProjects = [
   {
     id: 9,
     title: "DHAVAL SHAH",
-    slug: "dhaval-shah",
-    folder: "DHAVAL SHAH",
+    slug: "dhaval-shah-ghatkopar",
+    folder: "DHAVAL SHAH GHATKOPAR",
     category: "Completed",
     categories: ["Completed"],
     loc: "Mumbai",
