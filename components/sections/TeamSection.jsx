@@ -46,7 +46,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] text-[#332820] tracking-tight leading-[0.9] uppercase"
             >
-              PRINCIPLE DESIGNER
+              PRINCIPAL DESIGNER
             </motion.h2>
           </div>
 
