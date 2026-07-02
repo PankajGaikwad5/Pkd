@@ -313,7 +313,7 @@ export default function ProjectsClient() {
 
             {/* Filter Pills */}
             <div className="flex flex-wrap gap-2.5 md:gap-3 mb-12">
-              {['All', 'Featured', 'Completed', 'Coming Soon'].map((filter) => {
+              {['All', 'Featured', 'Completed', 'Project Underway'].map((filter) => {
                 const isActive = activeFilter === filter;
                 return (
                   <button
@@ -334,7 +334,7 @@ export default function ProjectsClient() {
             <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <AnimatePresence mode="popLayout">
                 {filteredProjects.map((proj, idx) => {
-                  const isComingSoon = proj.category.toLowerCase() === 'coming soon';
+                  const isComingSoon = proj.category.toLowerCase() === 'project underway';
                   const isLastAndOdd = filteredProjects.length % 2 !== 0 && idx === filteredProjects.length - 1;
                   
                   const fallbackImages = [
@@ -375,15 +375,6 @@ export default function ProjectsClient() {
                           {proj.loc}
                         </p>
                       </div>
-
-                      {/* Coming Soon Overlay */}
-                      {isComingSoon && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/25 z-[5] pointer-events-none">
-                          <span className="text-[11.5px] tracking-[0.3em] font-medium uppercase text-[#D6CBBC] border border-[#D6CBBC]/30 px-6 py-2.5 bg-black/45 backdrop-blur-[4px]">
-                            COMING SOON
-                          </span>
-                        </div>
-                      )}
                     </>
                   );
 

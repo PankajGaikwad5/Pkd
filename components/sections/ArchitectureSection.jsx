@@ -31,9 +31,9 @@ export default function ArchitectureSection() {
             </svg> */}
 
             {/* Subtitle */}
-            <h3 className="text-xs md:text-sm uppercase tracking-[0.3em] font-light text-[#2E2824]/90 mb-6">
+            {/* <h3 className="text-xs md:text-sm uppercase tracking-[0.3em] font-light text-[#2E2824]/90 mb-6">
               ARCHITECTURE
-            </h3>
+            </h3> */}
 
             {/* Title */}
             <h2 className="font-heading text-5xl sm:text-6xl lg:text-[3.5rem] xl:text-[4.2rem] 2xl:text-[4.8rem] leading-[0.95] tracking-tight font-light text-[#2E2824] mb-8">

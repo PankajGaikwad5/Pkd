@@ -19,7 +19,7 @@ export default function PortfolioSection() {
 
   const getProjectTag = (slug) => {
     if (slug === 'grand-chateau') return 'FEATURED PROJECT';
-    if (slug === 'the-canvas-home') return 'COMING SOON';
+    if (slug === 'the-canvas-home') return 'PROJECT UNDERWAY';
     return 'COMPLETED PROJECTS';
   };
 
@@ -127,7 +127,7 @@ export default function PortfolioSection() {
                 SPACES
               </motion.div>
             </div>
-            <div className="overflow-hidden pb-1">
+            {/* <div className="overflow-hidden pb-1">
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)" }}
                 whileInView={{ clipPath: "inset(0% 0 0 0)" }}
@@ -140,7 +140,7 @@ export default function PortfolioSection() {
               >
                 ARCHITECTURE
               </motion.div>
-            </div>
+            </div> */}
             <div className="overflow-hidden pb-1">
               <motion.div
                 initial={{ clipPath: "inset(100% 0 0 0)" }}
@@ -170,7 +170,7 @@ export default function PortfolioSection() {
                 delay: 0.25,
               }}
             >
-              PORTFOLIO
+              CRAFTED SPACES
             </motion.div>
           </div>
         </h2>
@@ -229,15 +229,14 @@ export default function PortfolioSection() {
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {portfolioProjects.map((proj, i) => {
-            const isComingSoon = proj.categories?.includes("Coming Soon") || proj.slug === "the-canvas-home";
+            const isComingSoon = proj.categories?.includes("Project Underway") || proj.slug === "the-canvas-home";
 
             const CardContent = (
               <>
                 <img
                   src={proj.img}
-                  className={`w-full h-full object-cover transition-transform duration-[1.5s] ease-out ${
-                    isComingSoon ? 'blur-2xl scale-110 pointer-events-none' : 'group-hover:scale-105'
-                  }`}
+                  className={`w-full h-full object-cover transition-transform duration-[1.5s] ease-out ${isComingSoon ? 'blur-2xl scale-110 pointer-events-none' : 'group-hover:scale-105'
+                    }`}
                   alt={proj.title}
                 />
 
@@ -259,15 +258,6 @@ export default function PortfolioSection() {
                     {proj.loc}
                   </p>
                 </div>
-
-                {/* Coming Soon Center Overlay */}
-                {isComingSoon && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/25 z-[5] pointer-events-none">
-                    <span className="text-[11.5px] tracking-[0.3em] font-medium uppercase text-[#E6DFD4] border border-[#E6DFD4]/30 px-6 py-2.5 bg-black/45 backdrop-blur-[4px]">
-                      COMING SOON
-                    </span>
-                  </div>
-                )}
               </>
             );
 
@@ -282,9 +272,8 @@ export default function PortfolioSection() {
                   ease: [0.76, 0, 0.24, 1],
                   delay: 0.1 + i * 0.1,
                 }}
-                className={`w-[85vw] md:w-[60vw] xl:w-[32vw] 2xl:w-[28vw] aspect-[4/3] shrink-0 snap-start relative group overflow-hidden bg-black/10 ${
-                  isComingSoon ? 'cursor-default' : 'cursor-pointer'
-                }`}
+                className={`w-[85vw] md:w-[60vw] xl:w-[32vw] 2xl:w-[28vw] aspect-[4/3] shrink-0 snap-start relative group overflow-hidden bg-black/10 ${isComingSoon ? 'cursor-default' : 'cursor-pointer'
+                  }`}
               >
                 {isComingSoon ? (
                   <div className="w-full h-full relative">

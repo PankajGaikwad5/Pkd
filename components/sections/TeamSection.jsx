@@ -46,7 +46,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="font-heading text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] text-[#332820] tracking-tight leading-[0.9] uppercase"
             >
-              OUR TEAM
+              PRINCIPLE DESIGNER
             </motion.h2>
           </div>
 
@@ -97,7 +97,7 @@ export default function TeamSection() {
           className="w-full h-full lg:h-[85vh]"
         >
           <img
-            src="/images/team.png"
+            src="/principledesigner.webp"
             alt="Arcca Group Team"
             className="w-full h-full object-cover object-center"
           />

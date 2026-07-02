@@ -94,7 +94,7 @@ export default function Navbar({ onMenuClick }) {
             </span>
           )} */}
           <Link href="/projects" className="hidden md:block px-6 py-2 border border-current rounded-full text-[11px] tracking-widest hover:bg-[#D6CBBC] hover:text-[#332820] transition-colors duration-300">
-            OUR PORTFOLIO
+            PROJECT GALLERY
           </Link>
         </div>
 

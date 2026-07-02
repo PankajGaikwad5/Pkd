@@ -6,7 +6,7 @@ import ProjectDetailClient from '@/components/ProjectDetailClient';
 
 export async function generateStaticParams() {
   return gridProjects
-    .filter(p => p.category.toLowerCase() !== 'coming soon')
+    .filter(p => p.category.toLowerCase() !== 'project underway')
     .map(p => ({
       slug: p.slug,
     }));
@@ -16,7 +16,7 @@ export default async function ProjectDetailPage({ params }) {
   const { slug } = await params;
 
   const project = gridProjects.find(p => p.slug === slug);
-  if (!project || project.category.toLowerCase() === 'coming soon') {
+  if (!project || project.category.toLowerCase() === 'project underway') {
     notFound();
   }
 
