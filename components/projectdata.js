@@ -14,13 +14,6 @@ export const projects = [
     slug: "jade"
   },
   {
-    title: "LITHIC HOME",
-    loc: "Mumbai",
-    img: "/projects/LITHIC HOME/1.webp",
-    href: "/projects/lithic-home",
-    slug: "lithic-home"
-  },
-  {
     title: "RENAISSANCE 86",
     loc: "Mumbai",
     img: "/projects/RENAISSANCE 86/1.webp",
@@ -57,8 +50,8 @@ export const gridProjects = [
     title: "LITHIC HOME",
     slug: "lithic-home",
     folder: "LITHIC HOME",
-    category: "Featured",
-    categories: ["Featured", "Completed"],
+    category: "Completed",
+    categories: ["Completed"],
     loc: "Mumbai",
     img: "/projects/LITHIC HOME/1.webp",
     href: "/projects/lithic-home"

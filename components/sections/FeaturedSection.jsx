@@ -11,7 +11,7 @@ const PROJECTS = [
     titleLine1: "GRAND",
     titleLine2: "CHÂTEAU",
     image: "/projects/GRAND CHATEAU/1.webp",
-    num: "1 / 4",
+    num: "1 / 3",
     href: "/projects/grand-chateau",
     logo: "/ft/elle-decor.png",
     logoClass: "h-11 md:h-12 top-[6px]"
@@ -21,27 +21,17 @@ const PROJECTS = [
     titleLine1: "JADE",
     titleLine2: "",
     image: "/projects/JADE/1.webp",
-    num: "2 / 4",
+    num: "2 / 3",
     href: "/projects/jade",
     logo: "/ft/goodhomes.png",
     logoClass: "h-7 md:h-8 top-[14px]"
   },
   {
     id: 3,
-    titleLine1: "LITHIC",
-    titleLine2: "HOME",
-    image: "/projects/LITHIC HOME/1.webp",
-    num: "3 / 4",
-    href: "/projects/lithic-home",
-    logo: "/ft/goodhomes.png",
-    logoClass: "h-7 md:h-8 top-[14px]"
-  },
-  {
-    id: 4,
     titleLine1: "RENAISSANCE",
     titleLine2: "86",
     image: "/projects/RENAISSANCE 86/1.webp",
-    num: "4 / 4",
+    num: "3 / 3",
     href: "/projects/renaissance-86",
     logo: "/ft/goodhomes.png",
     logoClass: "h-7 md:h-8 top-[14px]"
