@@ -73,7 +73,7 @@ export default function AboutMiamiSection() {
           className="w-full h-full lg:h-[75vh] overflow-hidden rounded-sm"
         >
           <img
-            src="/projects/PKD OFFICE/_PAB8984-HDR.webp"
+            src="/sections/basedin.webp"
             alt="ARCCA Luxury Home Pool"
             className="w-full h-full object-cover object-center"
           />
