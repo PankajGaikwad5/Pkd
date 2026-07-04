@@ -58,8 +58,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.25 }}
               className="secondary-text tracking-wide text-[#332820]/80 font-light mb-4"
             >
-              Behind every exceptional space is a team driven by passion, precision, and purpose.
-              <br /> <br />At PKD Studio, our architects, designers, and project specialists work seamlessly together, combining diverse expertise to deliver thoughtful, detail-oriented interiors that elevate everyday living.
+              With over 27 years of experience, Prachiti Khanvilkar is the Founder and Principal Designer of PKD Studio. Since establishing the practice in 2017, she has led the design of over 75 bespoke residential, hospitality, commercial, and workplace projects across India, creating spaces that balance timeless elegance with everyday functionality.
             </motion.p>
             <motion.p
               initial={{ clipPath: "inset(100% 0 0 0)", y: 30 }}
@@ -68,7 +67,7 @@ export default function TeamSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.3 }}
               className="secondary-text tracking-wide text-[#332820]/80 font-light"
             >
-              With a collaborative approach and an unwavering commitment to craftsmanship, we ensure every project is executed with creativity, transparency, and care, creating homes that are as functional as they are beautiful.
+              Driven by a deeply collaborative approach, Prachiti believes great design is rooted in people, context, and craftsmanship rather than trends.
             </motion.p>
           </div>
 
