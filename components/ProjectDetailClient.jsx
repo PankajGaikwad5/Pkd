@@ -14,6 +14,18 @@ export default function ProjectDetailClient({ project, images }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
+  const defaultParagraphs = [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae hendrerit tellus. Single-minded dedication to architectural excellence guides every phase of this design process.",
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+    "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+  ];
+
+  const paragraphs = project.description || defaultParagraphs;
+  const splitIndex = Math.ceil(paragraphs.length / 2);
+  const leftColParagraphs = paragraphs.slice(0, splitIndex);
+  const rightColParagraphs = paragraphs.slice(splitIndex);
+
   const thumbRefs = useRef([]);
 
   const hasMany = images.length > 12;
@@ -310,26 +322,24 @@ export default function ProjectDetailClient({ project, images }) {
               </div>
             </div>
 
-            {/* Lorem Ipsum paragraphs in editorial layout */}
+            {/* Dynamic paragraphs in editorial layout */}
             <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-justify">
               <div className="flex flex-col gap-6 font-light tracking-wide text-[#332820]/80 font-sans">
                 <p className="text-lg md:text-xl lg:text-[22px] font-light leading-relaxed text-[#332820] font-serif italic mb-2">
                   &ldquo;This design is a synthesis of contextual geometry and material clarity, establishing a serene sanctuary structured by daylight.&rdquo;
                 </p>
-                <p className="secondary-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <p className="secondary-text">
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae hendrerit tellus. Single-minded dedication to architectural excellence guides every phase of this design process.
-                </p>
+                {leftColParagraphs.map((para, idx) => (
+                  <p key={idx} className="secondary-text">
+                    {para}
+                  </p>
+                ))}
               </div>
               <div className="flex flex-col gap-6 font-light tracking-wide text-[#332820]/80">
-                <p className="secondary-text">
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                </p>
-                <p className="secondary-text">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                </p>
+                {rightColParagraphs.map((para, idx) => (
+                  <p key={idx} className="secondary-text">
+                    {para}
+                  </p>
+                ))}
               </div>
             </div>
           </div>
