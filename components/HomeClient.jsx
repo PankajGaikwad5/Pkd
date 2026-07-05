@@ -49,7 +49,7 @@ export default function HomeClient() {
         <PortfolioSection />
         <FeaturedSection />
         <ArchitectureSection />
-        <TypographySection />
+        {/* <TypographySection /> */}
         <CraftingSection />
         <TeamSection />
         {/* <TeamCarouselSection /> */}
