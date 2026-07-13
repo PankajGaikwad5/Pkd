@@ -303,22 +303,52 @@ export default function ProjectDetailClient({ project, images }) {
             <div className="lg:col-span-4 flex flex-col gap-6">
               <h2 className="font-heading text-2xl md:text-3xl uppercase tracking-wider font-light mb-1">PROJECT PROFILE</h2>
               <div className="flex flex-col gap-4 border-t border-[#332820]/25 pt-6">
+                {/* Project Name */}
+                <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                  <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">PROJECT NAME</span>
+                  <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">{project.projectName || project.title}</span>
+                </div>
+                {/* Location */}
                 <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
                   <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">LOCATION</span>
-                  <span className="text-xs tracking-wider uppercase font-light">{project.loc}</span>
+                  <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">{project.loc}</span>
                 </div>
-                <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
-                  <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">TYPOLOGY</span>
-                  <span className="text-xs tracking-wider uppercase font-light">Residential Architecture</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
-                  <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">SCOPE</span>
-                  <span className="text-xs tracking-wider uppercase font-light">Architecture & Interior Design</span>
-                </div>
-                <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
-                  <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">STATUS</span>
-                  <span className="text-xs tracking-wider uppercase font-light">Completed</span>
-                </div>
+                {/* Project Type */}
+                {project.projectType ? (
+                  <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                    <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">PROJECT TYPE</span>
+                    <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">{project.projectType}</span>
+                  </div>
+                ) : (
+                  <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                    <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">TYPOLOGY</span>
+                    <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">Residential Architecture</span>
+                  </div>
+                )}
+                {/* Area */}
+                {project.area ? (
+                  <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                    <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">SQ. FT. AREA</span>
+                    <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">{project.area}</span>
+                  </div>
+                ) : (
+                  <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                    <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">SCOPE</span>
+                    <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">Architecture & Interior Design</span>
+                  </div>
+                )}
+                {/* Year of Completion */}
+                {project.year ? (
+                  <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                    <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">YEAR OF COMPLETION</span>
+                    <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">{project.year}</span>
+                  </div>
+                ) : (
+                  <div className="flex justify-between items-baseline border-b border-[#332820]/10 pb-3">
+                    <span className="text-[10px] tracking-widest font-medium uppercase text-[#332820]/60">STATUS</span>
+                    <span className="text-xs tracking-wider uppercase font-light text-right max-w-[220px]">Completed</span>
+                  </div>
+                )}
               </div>
             </div>
 
