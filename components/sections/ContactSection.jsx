@@ -1,6 +1,7 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -8,10 +9,16 @@ export default function ContactSection() {
     email: '',
     phone: '',
     message: '',
-    agreeSms: false,
+    agreeTerms: false,
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [formLoadTime, setFormLoadTime] = useState(null);
+  const [honeypot, setHoneypot] = useState('');
+
+  useEffect(() => {
+    setFormLoadTime(Date.now());
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -21,24 +28,58 @@ export default function ContactSection() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.fullName || !formData.email || !formData.phone) {
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.message) {
       alert('Please fill out all required fields.');
       return;
     }
+    if (!formData.agreeTerms) {
+      alert('Please agree to the Privacy Policy and Terms & Conditions to submit.');
+      return;
+    }
     setSubmitted(true);
-    setTimeout(() => {
-      alert('Thank you for your message! We will be in touch shortly.');
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        message: '',
-        agreeSms: false,
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          values: {
+            name: formData.fullName,
+            email: formData.email,
+            number: formData.phone,
+            message: formData.message,
+            subject: 'PKD Studio Contact Form Submission',
+          },
+          honeypot,
+          timestamp: formLoadTime,
+        }),
       });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert('Thank you for your message! We will be in touch shortly.');
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          message: '',
+          agreeTerms: false,
+        });
+        setHoneypot('');
+      } else {
+        alert(data.error || 'Failed to send the message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('An unexpected error occurred. Please try again later.');
+    } finally {
       setSubmitted(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -84,6 +125,24 @@ export default function ContactSection() {
         {/* Right Column (Form) */}
         <div className="w-full max-w-xl">
           <form onSubmit={handleSubmit} className="flex flex-col gap-10 md:gap-12">
+            {/* Honeypot field - hidden from users, bots will fill it */}
+            <input
+              type="text"
+              name="website"
+              value={honeypot}
+              onChange={(e) => setHoneypot(e.target.value)}
+              style={{
+                position: 'absolute',
+                left: '-9999px',
+                width: '1px',
+                height: '1px',
+                opacity: 0,
+                pointerEvents: 'none',
+              }}
+              tabIndex="-1"
+              autoComplete="off"
+              aria-hidden="true"
+            />
 
             {/* Full Name */}
             <div className="flex flex-col">
@@ -136,11 +195,12 @@ export default function ContactSection() {
             {/* Message */}
             <div className="flex flex-col">
               <label htmlFor="message" className="text-[10px] tracking-[0.2em] font-medium text-[#D6CBBC]/65 uppercase mb-2">
-                MESSAGE
+                MESSAGE <span className="text-red-500 ml-1 font-sans">*</span>
               </label>
               <textarea
                 id="message"
                 name="message"
+                required
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
@@ -153,12 +213,22 @@ export default function ContactSection() {
               <label className="flex items-center gap-3 cursor-pointer select-none text-[11px] tracking-widest text-[#D6CBBC]/80 font-sans leading-tight">
                 <input
                   type="checkbox"
-                  name="agreeSms"
-                  checked={formData.agreeSms}
+                  name="agreeTerms"
+                  checked={formData.agreeTerms}
                   onChange={handleChange}
                   className="rounded border-[#D6CBBC]/30 bg-transparent text-[#332820] focus:ring-0 focus:ring-offset-0 size-4 cursor-pointer"
                 />
-                <span>Yes, I agree to receive SMS updates from Arcca Group.</span>
+                <span>
+                  I AGREE TO THE{' '}
+                  <Link href="/privacy-policy" className="underline hover:text-white transition-colors duration-300">
+                    PRIVACY POLICY
+                  </Link>{' '}
+                  AND{' '}
+                  <Link href="/terms-and-conditions" className="underline hover:text-white transition-colors duration-300">
+                    TERMS & CONDITIONS
+                  </Link>{' '}
+                  REGARDING THE COLLECTION AND PROCESSING OF MY DATA.
+                </span>
               </label>
 
               <button
