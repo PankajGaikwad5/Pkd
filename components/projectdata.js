@@ -46,6 +46,26 @@ export const projects = [
       "A refined palette of marble, wood, and premium finishes, combined with softened edges and fluid transitions, creates an environment that feels both luxurious and inviting.",
       "Renaissance 86 is a celebration of Italian craftsmanship and contemporary design—a showroom where every detail contributes to an experience that is immersive, elegant, and unforgettable."
     ]
+  },
+  {
+    title: "THE CANVAS HOME",
+    loc: "Mumbai",
+    img: "/projects/THE CANVAS HOME/1.webp",
+    href: "/projects/the-canvas-home",
+    slug: "the-canvas-home",
+    description: [
+      "The Canvas Home is a deeply personal retreat crafted for a couple entering a new, well-earned chapter of life. Having fulfilled their responsibilities and seen their daughters married, they envisioned a home that was unapologetically their own — expansive, indulgent, yet profoundly serene.",
+      "Originally a generous 4BHK apartment in the suburbs of Mumbai, the residence was thoughtfully reimagined into a sprawling 2BHK. The transformation allowed nearly 40% of the home to be dedicated entirely to an opulent master suite — a private sanctuary designed around comfort, scale, and seamless functionality.",
+      "The master domain unfolds as a suite rather than a room: a grand bedroom flowing into an expansive walk-in wardrobe and an indulgent bath. The master bathroom is intelligently zoned into two independent sections — separate WC and bathing areas — enabling simultaneous use without intrusion. Additionally, a discreet powder bathroom closer to the sleeping area ensures ease during rushed mornings. It is luxury not just in materiality, but in planning.",
+      "The material palette across the home is deliberately restrained. Understated luxury defines the narrative — rich yet quiet. Light grey marble floors run uninterrupted, creating a seamless visual field. Living room walls are articulated with rounded-edge stone frame details, subtly floating across surfaces in marble. Wallpaper is used sparingly and intentionally, only to accentuate specific moments. The rest of the home rests in muted beige tones with gentle textural finishes — calm, layered, and timeless.",
+      "Furniture selections echo this philosophy of quiet sophistication. Clean lines, soft forms, and muted upholstery create cohesion. Several bespoke pieces have been thoughtfully sourced and imported from Europe & China , contributing to the home’s refined yet globally inspired character. Nothing shouts; everything belongs.",
+      "The living space unfolds generously, extending into a large balcony that overlooks the Mumbai skyline. The dining area sits fluidly within this open plan, connected yet defined. Over the dining table, blown glass matte-finish pendant lights introduce a sculptural softness, while the feature wall hosts a poetic installation of a flock of birds — symbolic of journey, freedom, and family taking flight.",
+      "The home consciously omits a television from the formal living room, preserving it as a space for conversation, art, and pause. Instead, a cozy den — finished in warm parquet wooden flooring — serves as the entertainment retreat. This intimate enclave houses a large screen and plush seating, offering a snug setting for the couple and their daughters’ families to gather for weekend films.",
+      "Art is the soul of The Canvas Home.",
+      "The restrained palette serves as a canvas — allowing each artwork to breathe and command presence. A striking black and red totem punctuates the calm, introducing contrast and depth. Travel memorabilia find their place within a rotating bookshelf installation in the living room — an interactive piece that adds movement and curiosity to the otherwise composed environment.",
+      "Every corner of The Canvas Home reflects balance — scale with softness, luxury with humility, planning with poetry. It is a home that speaks in hushed tones yet leaves a lasting impression.",
+      "A canvas made serene — so life, memory, and art can paint it bold."
+    ]
   }
 ];
 
@@ -366,11 +386,13 @@ export const gridProjects = [
     title: "THE CANVAS HOME",
     slug: "the-canvas-home",
     folder: "THE CANVAS HOME",
-    category: "Project Underway",
-    categories: ["Project Underway"],
+    category: "Featured",
+    categories: ["Featured", "Completed"],
     loc: "Mumbai",
     img: "/projects/THE CANVAS HOME/1.webp",
-    href: "#",
+    href: "/projects/the-canvas-home",
+    projectName: "The Canvas Home",
+    projectType: "Luxury Residential Interior Design",
     description: [
       "The Canvas Home is a deeply personal retreat crafted for a couple entering a new, well-earned chapter of life. Having fulfilled their responsibilities and seen their daughters married, they envisioned a home that was unapologetically their own — expansive, indulgent, yet profoundly serene.",
       "Originally a generous 4BHK apartment in the suburbs of Mumbai, the residence was thoughtfully reimagined into a sprawling 2BHK. The transformation allowed nearly 40% of the home to be dedicated entirely to an opulent master suite — a private sanctuary designed around comfort, scale, and seamless functionality.",
