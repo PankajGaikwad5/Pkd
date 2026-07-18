@@ -54,17 +54,10 @@ export const projects = [
     href: "/projects/the-canvas-home",
     slug: "the-canvas-home",
     description: [
-      "The Canvas Home is a deeply personal retreat crafted for a couple entering a new, well-earned chapter of life. Having fulfilled their responsibilities and seen their daughters married, they envisioned a home that was unapologetically their own — expansive, indulgent, yet profoundly serene.",
-      "Originally a generous 4BHK apartment in the suburbs of Mumbai, the residence was thoughtfully reimagined into a sprawling 2BHK. The transformation allowed nearly 40% of the home to be dedicated entirely to an opulent master suite — a private sanctuary designed around comfort, scale, and seamless functionality.",
-      "The master domain unfolds as a suite rather than a room: a grand bedroom flowing into an expansive walk-in wardrobe and an indulgent bath. The master bathroom is intelligently zoned into two independent sections — separate WC and bathing areas — enabling simultaneous use without intrusion. Additionally, a discreet powder bathroom closer to the sleeping area ensures ease during rushed mornings. It is luxury not just in materiality, but in planning.",
-      "The material palette across the home is deliberately restrained. Understated luxury defines the narrative — rich yet quiet. Light grey marble floors run uninterrupted, creating a seamless visual field. Living room walls are articulated with rounded-edge stone frame details, subtly floating across surfaces in marble. Wallpaper is used sparingly and intentionally, only to accentuate specific moments. The rest of the home rests in muted beige tones with gentle textural finishes — calm, layered, and timeless.",
-      "Furniture selections echo this philosophy of quiet sophistication. Clean lines, soft forms, and muted upholstery create cohesion. Several bespoke pieces have been thoughtfully sourced and imported from Europe & China , contributing to the home’s refined yet globally inspired character. Nothing shouts; everything belongs.",
-      "The living space unfolds generously, extending into a large balcony that overlooks the Mumbai skyline. The dining area sits fluidly within this open plan, connected yet defined. Over the dining table, blown glass matte-finish pendant lights introduce a sculptural softness, while the feature wall hosts a poetic installation of a flock of birds — symbolic of journey, freedom, and family taking flight.",
-      "The home consciously omits a television from the formal living room, preserving it as a space for conversation, art, and pause. Instead, a cozy den — finished in warm parquet wooden flooring — serves as the entertainment retreat. This intimate enclave houses a large screen and plush seating, offering a snug setting for the couple and their daughters’ families to gather for weekend films.",
-      "Art is the soul of The Canvas Home.",
-      "The restrained palette serves as a canvas — allowing each artwork to breathe and command presence. A striking black and red totem punctuates the calm, introducing contrast and depth. Travel memorabilia find their place within a rotating bookshelf installation in the living room — an interactive piece that adds movement and curiosity to the otherwise composed environment.",
-      "Every corner of The Canvas Home reflects balance — scale with softness, luxury with humility, planning with poetry. It is a home that speaks in hushed tones yet leaves a lasting impression.",
-      "A canvas made serene — so life, memory, and art can paint it bold."
+      "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
+      "Originally a 4BHK apartment, the residence was thoughtfully reimagined into a spacious 2BHK, allowing nearly half the home to be dedicated to an opulent master suite complete with a walk-in wardrobe, a carefully zoned bathroom, and thoughtfully planned conveniences that elevate everyday living.",
+      "The interiors are defined by understated luxury, where light grey marble, soft beige tones, sculptural details, and bespoke furnishings create a calm, timeless backdrop. The formal living and dining areas open onto sweeping city views, while a warm, wood-finished den serves as a private retreat for family gatherings and movie nights.",
+      "Art forms the heart of the home. A restrained material palette allows curated artworks, travel memorabilia, and statement installations to become focal points, giving the residence depth, personality, and a sense of discovery. Every space balances scale with intimacy, creating a home that feels refined, inviting, and deeply lived in."
     ]
   }
 ];
@@ -151,10 +144,16 @@ export const gridProjects = [
     loc: "Mumbai",
     img: "/projects/VAAYU/1.webp",
     href: "/projects/vaayu",
-    projectName: "Lorem Ipsum",
-    projectType: "Lorem Ipsum",
-    area: "Lorem Ipsum",
-    year: "Lorem Ipsum"
+    projectName: "Vaayu Home",
+    projectType: "Luxury Residential Interior Design",
+    year: "2024",
+    description: [
+      "Some homes are designed to impress. Others are designed to breathe. Vaayu Home does both.",
+      "Derived from the Sanskrit word Vaayu, meaning air, the home is shaped by generous cross ventilation, expansive east-west openings, and abundant natural light, creating spaces that feel open, effortless, and deeply connected to nature.",
+      "Designed for a dear friend and long-standing client whose first home was also envisioned by PKD Studio, this residence marks the fulfilment of a lifelong dream. The design balances understated luxury with warmth, expressed through refined materiality, thoughtful detailing, sculptural elements, and a calm, cohesive palette.",
+      "A seamless formal living and dining area flows into an open kitchen centred around a striking natural stone island, while four individually tailored bedrooms reflect the personalities and lifestyles of each family member. Carefully crafted wardrobes and timeless, spa-like bathrooms further elevate the experience.",
+      "More than a luxurious residence, Vaayu Home is a celebration of light, air, family, and enduring relationships, a home designed to evolve with its people, where true luxury is found in spaces that feel as beautiful as they are lived in."
+    ]
   },
   {
     id: 5,
@@ -168,7 +167,7 @@ export const gridProjects = [
     href: "/projects/17-altamount",
     projectName: "17 Altamount",
     projectType: "Luxury Residential Renovation & Interior Design",
-    area: "1,800 sq. ft.",
+    area: "1800",
     year: "2024",
     description: [
       "Perched on one of South Mumbai's most coveted addresses, 17 Altamount is a thoughtful renovation that transforms a once dark and compartmentalised apartment into a light-filled home defined by breathtaking views of the Arabian Sea and the city's Coastal Road.",
@@ -232,12 +231,12 @@ export const gridProjects = [
     folder: "RENAISSANCE 86",
     category: "Featured",
     categories: ["Featured", "Completed"],
-    loc: "Lower Parel, Mumbai",
+    loc: "Mumbai",
     img: "/projects/RENAISSANCE 86/1.webp",
     href: "/projects/renaissance-86",
     projectName: "Renaissance 86 by Collins",
     projectType: "Luxury Retail Showroom Interior Design",
-    area: "3,000 SFT",
+    area: "3000 SFT",
     year: "2026",
     description: [
       "Renaissance 86 by Collins is more than a retail showroom—it's an immersive experience inspired by the timeless elegance of Italian design. Conceived by PKD Studio, the space invites visitors into a world where luxury kitchens and wardrobes are experienced through architecture, materials, and storytelling.",
@@ -393,18 +392,12 @@ export const gridProjects = [
     href: "/projects/the-canvas-home",
     projectName: "The Canvas Home",
     projectType: "Luxury Residential Interior Design",
+    year: "2025",
     description: [
-      "The Canvas Home is a deeply personal retreat crafted for a couple entering a new, well-earned chapter of life. Having fulfilled their responsibilities and seen their daughters married, they envisioned a home that was unapologetically their own — expansive, indulgent, yet profoundly serene.",
-      "Originally a generous 4BHK apartment in the suburbs of Mumbai, the residence was thoughtfully reimagined into a sprawling 2BHK. The transformation allowed nearly 40% of the home to be dedicated entirely to an opulent master suite — a private sanctuary designed around comfort, scale, and seamless functionality.",
-      "The master domain unfolds as a suite rather than a room: a grand bedroom flowing into an expansive walk-in wardrobe and an indulgent bath. The master bathroom is intelligently zoned into two independent sections — separate WC and bathing areas — enabling simultaneous use without intrusion. Additionally, a discreet powder bathroom closer to the sleeping area ensures ease during rushed mornings. It is luxury not just in materiality, but in planning.",
-      "The material palette across the home is deliberately restrained. Understated luxury defines the narrative — rich yet quiet. Light grey marble floors run uninterrupted, creating a seamless visual field. Living room walls are articulated with rounded-edge stone frame details, subtly floating across surfaces in marble. Wallpaper is used sparingly and intentionally, only to accentuate specific moments. The rest of the home rests in muted beige tones with gentle textural finishes — calm, layered, and timeless.",
-      "Furniture selections echo this philosophy of quiet sophistication. Clean lines, soft forms, and muted upholstery create cohesion. Several bespoke pieces have been thoughtfully sourced and imported from Europe & China , contributing to the home’s refined yet globally inspired character. Nothing shouts; everything belongs.",
-      "The living space unfolds generously, extending into a large balcony that overlooks the Mumbai skyline. The dining area sits fluidly within this open plan, connected yet defined. Over the dining table, blown glass matte-finish pendant lights introduce a sculptural softness, while the feature wall hosts a poetic installation of a flock of birds — symbolic of journey, freedom, and family taking flight.",
-      "The home consciously omits a television from the formal living room, preserving it as a space for conversation, art, and pause. Instead, a cozy den — finished in warm parquet wooden flooring — serves as the entertainment retreat. This intimate enclave houses a large screen and plush seating, offering a snug setting for the couple and their daughters’ families to gather for weekend films.",
-      "Art is the soul of The Canvas Home.",
-      "The restrained palette serves as a canvas — allowing each artwork to breathe and command presence. A striking black and red totem punctuates the calm, introducing contrast and depth. Travel memorabilia find their place within a rotating bookshelf installation in the living room — an interactive piece that adds movement and curiosity to the otherwise composed environment.",
-      "Every corner of The Canvas Home reflects balance — scale with softness, luxury with humility, planning with poetry. It is a home that speaks in hushed tones yet leaves a lasting impression.",
-      "A canvas made serene — so life, memory, and art can paint it bold."
+      "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
+      "Originally a 4BHK apartment, the residence was thoughtfully reimagined into a spacious 2BHK, allowing nearly half the home to be dedicated to an opulent master suite complete with a walk-in wardrobe, a carefully zoned bathroom, and thoughtfully planned conveniences that elevate everyday living.",
+      "The interiors are defined by understated luxury, where light grey marble, soft beige tones, sculptural details, and bespoke furnishings create a calm, timeless backdrop. The formal living and dining areas open onto sweeping city views, while a warm, wood-finished den serves as a private retreat for family gatherings and movie nights.",
+      "Art forms the heart of the home. A restrained material palette allows curated artworks, travel memorabilia, and statement installations to become focal points, giving the residence depth, personality, and a sense of discovery. Every space balances scale with intimacy, creating a home that feels refined, inviting, and deeply lived in."
     ]
   },
   {
