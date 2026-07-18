@@ -146,6 +146,7 @@ export const gridProjects = [
     href: "/projects/vaayu",
     projectName: "Vaayu Home",
     projectType: "Luxury Residential Interior Design",
+    area: "3,000 sq. ft.",
     year: "2024",
     description: [
       "Some homes are designed to impress. Others are designed to breathe. Vaayu Home does both.",
@@ -392,6 +393,7 @@ export const gridProjects = [
     href: "/projects/the-canvas-home",
     projectName: "The Canvas Home",
     projectType: "Luxury Residential Interior Design",
+    area: "3,500 sq. ft.",
     year: "2025",
     description: [
       "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
