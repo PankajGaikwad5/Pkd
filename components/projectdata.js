@@ -16,6 +16,22 @@ export const projects = [
     ]
   },
   {
+    title: "RENAISSANCE 86",
+    loc: "Mumbai",
+    img: "/projects/RENAISSANCE 86/1.webp",
+    href: "/projects/renaissance-86",
+    slug: "renaissance-86",
+    description: [
+      "Renaissance 86 by Collins is more than a retail showroom—it's an immersive experience inspired by the timeless elegance of Italian design. Conceived by PKD Studio, the space invites visitors into a world where luxury kitchens and wardrobes are experienced through architecture, materials, and storytelling.",
+      "A warm, living room-inspired entrance gradually unfolds into a series of curated kitchen and wardrobe displays, creating a seamless journey of discovery. A bold green ceiling ties the entire showroom together, complemented by rich wooden flooring and designer lighting that enhances the atmosphere with subtle sophistication.",
+      "The design draws inspiration from the iconic Ola Kitchen by Pininfarina, translating its signature flowing curves into architectural elements across the ceiling and floor, giving the showroom a sculptural and cohesive identity.",
+      "At its heart sits a bespoke Brazilian quartz island featuring intricate hand-fluted stone detailing—an artisanal masterpiece crafted entirely by hand, celebrating precision and craftsmanship.",
+      "Styling plays an equally important role in shaping the experience. Inspired by the ruins of historic Italian palaces, classical columns, sculptural busts, curated artefacts, olives, and wine create layered vignettes that blur the line between retail and residence. These thoughtful details bring warmth, authenticity, and a sense of timelessness to the space.",
+      "A refined palette of marble, wood, and premium finishes, combined with softened edges and fluid transitions, creates an environment that feels both luxurious and inviting.",
+      "Renaissance 86 is a celebration of Italian craftsmanship and contemporary design—a showroom where every detail contributes to an experience that is immersive, elegant, and unforgettable."
+    ]
+  },
+  {
     title: "THE CANVAS HOME",
     loc: "Mumbai",
     img: "/projects/THE CANVAS HOME/1.webp",
@@ -42,22 +58,6 @@ export const projects = [
       "Designed for entertaining, the warm and inviting living room extends onto a flexible deck that accommodates larger gatherings. A custom bar, inspired by the client's love for travel and curated spirits, features bespoke storage, integrated appliances, and statement lighting.",
       "A defining aspect of the project is its commitment to Indian craftsmanship, with every piece of furniture, lighting fixture, and accessory custom-designed and made in India.",
       "Jade is a home shaped by collaboration, craftsmanship, and thoughtful design—a timeless space that reflects the personalities, passions, and lifestyle of the family it was created for."
-    ]
-  },
-  {
-    title: "RENAISSANCE 86",
-    loc: "Mumbai",
-    img: "/projects/RENAISSANCE 86/1.webp",
-    href: "/projects/renaissance-86",
-    slug: "renaissance-86",
-    description: [
-      "Renaissance 86 by Collins is more than a retail showroom—it's an immersive experience inspired by the timeless elegance of Italian design. Conceived by PKD Studio, the space invites visitors into a world where luxury kitchens and wardrobes are experienced through architecture, materials, and storytelling.",
-      "A warm, living room-inspired entrance gradually unfolds into a series of curated kitchen and wardrobe displays, creating a seamless journey of discovery. A bold green ceiling ties the entire showroom together, complemented by rich wooden flooring and designer lighting that enhances the atmosphere with subtle sophistication.",
-      "The design draws inspiration from the iconic Ola Kitchen by Pininfarina, translating its signature flowing curves into architectural elements across the ceiling and floor, giving the showroom a sculptural and cohesive identity.",
-      "At its heart sits a bespoke Brazilian quartz island featuring intricate hand-fluted stone detailing—an artisanal masterpiece crafted entirely by hand, celebrating precision and craftsmanship.",
-      "Styling plays an equally important role in shaping the experience. Inspired by the ruins of historic Italian palaces, classical columns, sculptural busts, curated artefacts, olives, and wine create layered vignettes that blur the line between retail and residence. These thoughtful details bring warmth, authenticity, and a sense of timelessness to the space.",
-      "A refined palette of marble, wood, and premium finishes, combined with softened edges and fluid transitions, creates an environment that feels both luxurious and inviting.",
-      "Renaissance 86 is a celebration of Italian craftsmanship and contemporary design—a showroom where every detail contributes to an experience that is immersive, elegant, and unforgettable."
     ]
   }
 ];

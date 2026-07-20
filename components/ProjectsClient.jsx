@@ -197,7 +197,7 @@ export default function ProjectsClient() {
           </button>
 
           {/* Bottom Left Title Text Overlay - Stacked & GPU Translated */}
-          <div className="absolute bottom-16 left-6 md:bottom-20 md:left-16 z-20 text-[#D6CBBC] pointer-events-none w-[80vw] md:w-[500px] h-[180px] md:h-[200px] overflow-hidden">
+          <div className="absolute bottom-16 left-6 md:bottom-20 md:left-16 z-20 text-[#D6CBBC] pointer-events-none w-[80vw] md:w-[500px] h-[220px] md:h-[300px] overflow-hidden">
             {projects.map((proj, idx) => {
               const isActive = idx === activeIndex;
               return (
