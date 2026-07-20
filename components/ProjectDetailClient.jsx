@@ -355,9 +355,9 @@ export default function ProjectDetailClient({ project, images }) {
             {/* Dynamic paragraphs in editorial layout */}
             <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-justify">
               <div className="flex flex-col gap-6 font-light tracking-wide text-[#332820]/80 font-sans">
-                <p className="text-lg md:text-xl lg:text-[22px] font-light leading-relaxed text-[#332820] font-serif italic mb-2">
+                {/* <p className="text-lg md:text-xl lg:text-[22px] font-light leading-relaxed text-[#332820] font-serif italic mb-2">
                   &ldquo;This design is a synthesis of contextual geometry and material clarity, establishing a serene sanctuary structured by daylight.&rdquo;
-                </p>
+                </p> */}
                 {leftColParagraphs.map((para, idx) => (
                   <p key={idx} className="secondary-text">
                     {para}

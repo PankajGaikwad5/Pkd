@@ -12,13 +12,13 @@ export default function PortfolioSection() {
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const portfolioSlugs = ["grand-chateau", "jade", "asit-thakkar"];
+  const portfolioSlugs = ["grand-chateau", "vaayu", "asit-thakkar"];
   const portfolioProjects = portfolioSlugs
     .map(slug => gridProjects.find(p => p.slug === slug))
     .filter(Boolean);
 
   const getProjectTag = (slug) => {
-    if (slug === 'grand-chateau' || slug === 'asit-thakkar') return 'FEATURED PROJECT';
+    if (slug === 'grand-chateau' || slug === 'vaayu') return 'FEATURED PROJECT';
     return 'COMPLETED PROJECTS';
   };
 
