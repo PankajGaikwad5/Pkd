@@ -11,7 +11,7 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Dark gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
 
       <div className="absolute bottom-8 left-6 right-6 md:bottom-12 md:left-12 md:right-12 z-10 flex flex-col md:flex-row items-start md:items-end justify-between text-[#E6DFD4]">
