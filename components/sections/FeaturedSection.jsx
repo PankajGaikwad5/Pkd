@@ -17,11 +17,21 @@ const PROJECTS = [
     logoClass: "h-11 md:h-12 top-[6px]"
   },
   {
+    id: 4,
+    titleLine1: "THE CANVAS",
+    titleLine2: "HOME",
+    image: "/projects/THE CANVAS HOME/1.webp",
+    num: "2 / 4",
+    href: "/projects/the-canvas-home",
+    logo: "/ft/goodhomes.png",
+    logoClass: "h-7 md:h-8 top-[14px]"
+  },
+  {
     id: 2,
     titleLine1: "JADE",
     titleLine2: "",
     image: "/projects/JADE/1.webp",
-    num: "2 / 4",
+    num: "3 / 4",
     href: "/projects/jade",
     logo: "/ft/goodhomes.png",
     logoClass: "h-7 md:h-8 top-[14px]"
@@ -31,18 +41,8 @@ const PROJECTS = [
     titleLine1: "RENAISSANCE",
     titleLine2: "86",
     image: "/projects/RENAISSANCE 86/1.webp",
-    num: "3 / 4",
-    href: "/projects/renaissance-86",
-    logo: "/ft/goodhomes.png",
-    logoClass: "h-7 md:h-8 top-[14px]"
-  },
-  {
-    id: 4,
-    titleLine1: "THE CANVAS",
-    titleLine2: "HOME",
-    image: "/projects/THE CANVAS HOME/1.webp",
     num: "4 / 4",
-    href: "/projects/the-canvas-home",
+    href: "/projects/renaissance-86",
     logo: "/ft/goodhomes.png",
     logoClass: "h-7 md:h-8 top-[14px]"
   }

@@ -16,6 +16,19 @@ export const projects = [
     ]
   },
   {
+    title: "THE CANVAS HOME",
+    loc: "Mumbai",
+    img: "/projects/THE CANVAS HOME/1.webp",
+    href: "/projects/the-canvas-home",
+    slug: "the-canvas-home",
+    description: [
+      "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
+      "Originally a 4BHK apartment, the residence was thoughtfully reimagined into a spacious 2BHK, allowing nearly half the home to be dedicated to an opulent master suite complete with a walk-in wardrobe, a carefully zoned bathroom, and thoughtfully planned conveniences that elevate everyday living.",
+      "The interiors are defined by understated luxury, where light grey marble, soft beige tones, sculptural details, and bespoke furnishings create a calm, timeless backdrop. The formal living and dining areas open onto sweeping city views, while a warm, wood-finished den serves as a private retreat for family gatherings and movie nights.",
+      "Art forms the heart of the home. A restrained material palette allows curated artworks, travel memorabilia, and statement installations to become focal points, giving the residence depth, personality, and a sense of discovery. Every space balances scale with intimacy, creating a home that feels refined, inviting, and deeply lived in."
+    ]
+  },
+  {
     title: "JADE",
     loc: "Mumbai",
     img: "/projects/JADE/1.webp",
@@ -45,19 +58,6 @@ export const projects = [
       "Styling plays an equally important role in shaping the experience. Inspired by the ruins of historic Italian palaces, classical columns, sculptural busts, curated artefacts, olives, and wine create layered vignettes that blur the line between retail and residence. These thoughtful details bring warmth, authenticity, and a sense of timelessness to the space.",
       "A refined palette of marble, wood, and premium finishes, combined with softened edges and fluid transitions, creates an environment that feels both luxurious and inviting.",
       "Renaissance 86 is a celebration of Italian craftsmanship and contemporary design—a showroom where every detail contributes to an experience that is immersive, elegant, and unforgettable."
-    ]
-  },
-  {
-    title: "THE CANVAS HOME",
-    loc: "Mumbai",
-    img: "/projects/THE CANVAS HOME/1.webp",
-    href: "/projects/the-canvas-home",
-    slug: "the-canvas-home",
-    description: [
-      "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
-      "Originally a 4BHK apartment, the residence was thoughtfully reimagined into a spacious 2BHK, allowing nearly half the home to be dedicated to an opulent master suite complete with a walk-in wardrobe, a carefully zoned bathroom, and thoughtfully planned conveniences that elevate everyday living.",
-      "The interiors are defined by understated luxury, where light grey marble, soft beige tones, sculptural details, and bespoke furnishings create a calm, timeless backdrop. The formal living and dining areas open onto sweeping city views, while a warm, wood-finished den serves as a private retreat for family gatherings and movie nights.",
-      "Art forms the heart of the home. A restrained material palette allows curated artworks, travel memorabilia, and statement installations to become focal points, giving the residence depth, personality, and a sense of discovery. Every space balances scale with intimacy, creating a home that feels refined, inviting, and deeply lived in."
     ]
   }
 ];
@@ -88,27 +88,27 @@ export const gridProjects = [
     ]
   },
   {
-    id: 2,
-    title: "JADE",
-    slug: "jade",
-    folder: "JADE",
-    category: "Featured",
-    categories: ["Featured", "Completed"],
+    id: 6,
+    title: "NOUVEAU HOME",
+    slug: "nouveau-home",
+    folder: "NOUVEAU HOME",
+    category: "Completed",
+    categories: ["Completed"],
     loc: "Mumbai",
-    img: "/projects/JADE/1.webp",
-    href: "/projects/jade",
-    projectName: "Jade",
+    img: "/projects/NOUVEAU HOME/1.webp",
+    href: "/projects/nouveau-home",
+    projectName: "Nouveau Home",
     projectType: "Luxury Residential Interior Design",
-    area: "1,700–1,800 sq. ft.",
-    year: "2025",
+    area: "5,000 sq. ft.",
+    year: "2024",
     description: [
-      "At PKD, every home is designed with the belief that it should feel lived in from the very beginning. Jade is a reflection of this philosophy—a deeply personal home created for a couple in their 40s building their first home together.",
-      "Spread across approximately 1,800 sq. ft., the residence seamlessly combines two apartments into a thoughtfully planned layout, balancing private spaces for the parents with contemporary living areas for the homeowners.",
-      "The heart of the home is a unique dual-function kitchen, designed as both a family kitchen and a fully equipped bakery studio, celebrating the client's passion for dessert-making. The master suite enjoys panoramic views of Mumbai Harbour, with a concealed projector thoughtfully integrated to preserve uninterrupted sunrise views.",
-      "An expansive walk-in wardrobe connects effortlessly to the master bathroom, where a sculptural stone basin, glass mosaic detailing, and marble finishes create a refined spa-like experience. The powder room continues this language with a bespoke fluted marble vanity and handcrafted glass basin.",
-      "Designed for entertaining, the warm and inviting living room extends onto a flexible deck that accommodates larger gatherings. A custom bar, inspired by the client's love for travel and curated spirits, features bespoke storage, integrated appliances, and statement lighting.",
-      "A defining aspect of the project is its commitment to Indian craftsmanship, with every piece of furniture, lighting fixture, and accessory custom-designed and made in India.",
-      "Jade is a home shaped by collaboration, craftsmanship, and thoughtful design—a timeless space that reflects the personalities, passions, and lifestyle of the family it was created for."
+      "Spread across 5,000 sq. ft., Nouveau Home is a celebration of thoughtful design, where simplicity, functionality, and personal expression come together to create a warm, contemporary residence.",
+      "Having designed the family's previous home over a decade ago, this project marked an evolution of their lifestyle and aspirations. While the earlier brief embraced minimalism and muted tones, the new home introduces carefully curated colours, textures, and bespoke details that reflect the family's journey while remaining rooted in practicality.",
+      "Originally planned as four separate 3BHK apartments, the residence was seamlessly transformed into one expansive 4BHK home. The upper level is dedicated to private spaces, while the lower floor brings together the living, dining, kitchen, study, guest suite, and utility areas around a sculptural staircase that connects both levels with elegance.",
+      "The 1,200 sq. ft. living area is thoughtfully zoned into formal and informal seating, a bar, and dining spaces, all opening towards panoramic views of the lush hills surrounding suburban Mumbai. At the heart of the home, a contemporary kitchen with striking stone surfaces and mirror-finish cabinetry is designed for a family that loves cooking and entertaining.",
+      "A key architectural feature is the staircase, reimagined within the builder's fixed structural constraints to become a fluid sculptural centerpiece that anchors the home.",
+      "Each bedroom is tailored to its occupant, while the master suite offers a luxurious retreat complete with dual walk-in wardrobes and a spacious, spa-like bathroom featuring twin vanities, a mosaic-clad shower, and sweeping hill views.",
+      "A restrained material palette, layered textures, bespoke detailing, and carefully curated lighting come together to create a home that is timeless, functional, and deeply personal—an expression of understated luxury designed for modern family living."
     ]
   },
   {
@@ -135,25 +135,24 @@ export const gridProjects = [
     ]
   },
   {
-    id: 4,
-    title: "VAAYU",
-    slug: "vaayu",
-    folder: "VAAYU",
-    category: "Completed",
-    categories: ["Completed"],
+    id: 15,
+    title: "THE CANVAS HOME",
+    slug: "the-canvas-home",
+    folder: "THE CANVAS HOME",
+    category: "Featured",
+    categories: ["Featured", "Completed"],
     loc: "Mumbai",
-    img: "/projects/VAAYU/1.webp",
-    href: "/projects/vaayu",
-    projectName: "Vaayu Home",
+    img: "/projects/THE CANVAS HOME/1.webp",
+    href: "/projects/the-canvas-home",
+    projectName: "The Canvas Home",
     projectType: "Luxury Residential Interior Design",
-    area: "3,000 sq. ft.",
-    year: "2024",
+    area: "3,500 sq. ft.",
+    year: "2025",
     description: [
-      "Some homes are designed to impress. Others are designed to breathe. Vaayu Home does both.",
-      "Derived from the Sanskrit word Vaayu, meaning air, the home is shaped by generous cross ventilation, expansive east-west openings, and abundant natural light, creating spaces that feel open, effortless, and deeply connected to nature.",
-      "Designed for a dear friend and long-standing client whose first home was also envisioned by PKD Studio, this residence marks the fulfilment of a lifelong dream. The design balances understated luxury with warmth, expressed through refined materiality, thoughtful detailing, sculptural elements, and a calm, cohesive palette.",
-      "A seamless formal living and dining area flows into an open kitchen centred around a striking natural stone island, while four individually tailored bedrooms reflect the personalities and lifestyles of each family member. Carefully crafted wardrobes and timeless, spa-like bathrooms further elevate the experience.",
-      "More than a luxurious residence, Vaayu Home is a celebration of light, air, family, and enduring relationships, a home designed to evolve with its people, where true luxury is found in spaces that feel as beautiful as they are lived in."
+      "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
+      "Originally a 4BHK apartment, the residence was thoughtfully reimagined into a spacious 2BHK, allowing nearly half the home to be dedicated to an opulent master suite complete with a walk-in wardrobe, a carefully zoned bathroom, and thoughtfully planned conveniences that elevate everyday living.",
+      "The interiors are defined by understated luxury, where light grey marble, soft beige tones, sculptural details, and bespoke furnishings create a calm, timeless backdrop. The formal living and dining areas open onto sweeping city views, while a warm, wood-finished den serves as a private retreat for family gatherings and movie nights.",
+      "Art forms the heart of the home. A restrained material palette allows curated artworks, travel memorabilia, and statement installations to become focal points, giving the residence depth, personality, and a sense of discovery. Every space balances scale with intimacy, creating a home that feels refined, inviting, and deeply lived in."
     ]
   },
   {
@@ -179,74 +178,49 @@ export const gridProjects = [
     ]
   },
   {
-    id: 6,
-    title: "NOUVEAU HOME",
-    slug: "nouveau-home",
-    folder: "NOUVEAU HOME",
-    category: "Completed",
-    categories: ["Completed"],
-    loc: "Mumbai",
-    img: "/projects/NOUVEAU HOME/1.webp",
-    href: "/projects/nouveau-home",
-    projectName: "Nouveau Home",
-    projectType: "Luxury Residential Interior Design",
-    area: "5,000 sq. ft.",
-    year: "2024",
-    description: [
-      "Spread across 5,000 sq. ft., Nouveau Home is a celebration of thoughtful design, where simplicity, functionality, and personal expression come together to create a warm, contemporary residence.",
-      "Having designed the family's previous home over a decade ago, this project marked an evolution of their lifestyle and aspirations. While the earlier brief embraced minimalism and muted tones, the new home introduces carefully curated colours, textures, and bespoke details that reflect the family's journey while remaining rooted in practicality.",
-      "Originally planned as four separate 3BHK apartments, the residence was seamlessly transformed into one expansive 4BHK home. The upper level is dedicated to private spaces, while the lower floor brings together the living, dining, kitchen, study, guest suite, and utility areas around a sculptural staircase that connects both levels with elegance.",
-      "The 1,200 sq. ft. living area is thoughtfully zoned into formal and informal seating, a bar, and dining spaces, all opening towards panoramic views of the lush hills surrounding suburban Mumbai. At the heart of the home, a contemporary kitchen with striking stone surfaces and mirror-finish cabinetry is designed for a family that loves cooking and entertaining.",
-      "A key architectural feature is the staircase, reimagined within the builder's fixed structural constraints to become a fluid sculptural centerpiece that anchors the home.",
-      "Each bedroom is tailored to its occupant, while the master suite offers a luxurious retreat complete with dual walk-in wardrobes and a spacious, spa-like bathroom featuring twin vanities, a mosaic-clad shower, and sweeping hill views.",
-      "A restrained material palette, layered textures, bespoke detailing, and carefully curated lighting come together to create a home that is timeless, functional, and deeply personal—an expression of understated luxury designed for modern family living."
-    ]
-  },
-  {
-    id: 7,
-    title: "Oculus",
-    slug: "niraj-office",
-    folder: "NIRAJ OFFICE",
-    category: "Completed",
-    categories: ["Completed"],
-    loc: "Mumbai",
-    img: "/projects/NIRAJ OFFICE/1.webp",
-    href: "/projects/niraj-office",
-    projectName: "Oculus",
-    projectType: "Corporate Office Interior Design",
-    area: "7,000 sq. ft.",
-    year: "2024",
-    description: [
-      "Designed for a multi-business infrastructure company serving an elite HNI clientele, this 7,000 sq. ft. corporate headquarters embodies sophistication, precision, and timeless luxury.",
-      "A rich palette of marble, engineered stone, veneer, and leather creates an atmosphere of understated elegance, while a custom gypsum and wooden baffle ceiling seamlessly integrates lighting and air-conditioning. Linear lighting enhances the rhythm of the workspace, becoming a defining design feature.",
-      "The Director's cabin is the focal point of the office, featuring leather-clad walls, metal detailing, bespoke shelving, curated artwork, and a striking Brazilian marble desk that reflects authority and refinement.",
-      "Custom-designed workstations in premium laminates and veneers ensure both functionality and comfort, while curved storage partitions subtly organize circulation throughout the office. Strategic planning maximizes natural light by positioning executive cabins along the glazed façade, with textured glass doors allowing daylight to flow into interior spaces.",
-      "The reception overcomes limited daylight through a luminous backlit ceiling, creating a bright, welcoming arrival experience. A warm 30-seater cafeteria with lounge seating, a coffee station, and dining space serves as both a staff breakout area and an informal client hospitality zone.",
-      "The result is a microcosm of a workspace that balances luxury, functionality, and brand identity—an environment designed to leave a lasting impression."
-    ]
-  },
-  {
-    id: 8,
-    title: "RENAISSANCE 86",
-    slug: "renaissance-86",
-    folder: "RENAISSANCE 86",
+    id: 2,
+    title: "JADE",
+    slug: "jade",
+    folder: "JADE",
     category: "Featured",
     categories: ["Featured", "Completed"],
     loc: "Mumbai",
-    img: "/projects/RENAISSANCE 86/1.webp",
-    href: "/projects/renaissance-86",
-    projectName: "Renaissance 86 by Collins",
-    projectType: "Luxury Retail Showroom Interior Design",
-    area: "3000 SFT",
-    year: "2026",
+    img: "/projects/JADE/1.webp",
+    href: "/projects/jade",
+    projectName: "Jade",
+    projectType: "Luxury Residential Interior Design",
+    area: "1,700–1,800 sq. ft.",
+    year: "2025",
     description: [
-      "Renaissance 86 by Collins is more than a retail showroom—it's an immersive experience inspired by the timeless elegance of Italian design. Conceived by PKD Studio, the space invites visitors into a world where luxury kitchens and wardrobes are experienced through architecture, materials, and storytelling.",
-      "A warm, living room-inspired entrance gradually unfolds into a series of curated kitchen and wardrobe displays, creating a seamless journey of discovery. A bold green ceiling ties the entire showroom together, complemented by rich wooden flooring and designer lighting that enhances the atmosphere with subtle sophistication.",
-      "The design draws inspiration from the iconic Ola Kitchen by Pininfarina, translating its signature flowing curves into architectural elements across the ceiling and floor, giving the showroom a sculptural and cohesive identity.",
-      "At its heart sits a bespoke Brazilian quartz island featuring intricate hand-fluted stone detailing—an artisanal masterpiece crafted entirely by hand, celebrating precision and craftsmanship.",
-      "Styling plays an equally important role in shaping the experience. Inspired by the ruins of historic Italian palaces, classical columns, sculptural busts, curated artefacts, olives, and wine create layered vignettes that blur the line between retail and residence. These thoughtful details bring warmth, authenticity, and a sense of timelessness to the space.",
-      "A refined palette of marble, wood, and premium finishes, combined with softened edges and fluid transitions, creates an environment that feels both luxurious and inviting.",
-      "Renaissance 86 is a celebration of Italian craftsmanship and contemporary design—a showroom where every detail contributes to an experience that is immersive, elegant, and unforgettable."
+      "At PKD, every home is designed with the belief that it should feel lived in from the very beginning. Jade is a reflection of this philosophy—a deeply personal home created for a couple in their 40s building their first home together.",
+      "Spread across approximately 1,800 sq. ft., the residence seamlessly combines two apartments into a thoughtfully planned layout, balancing private spaces for the parents with contemporary living areas for the homeowners.",
+      "The heart of the home is a unique dual-function kitchen, designed as both a family kitchen and a fully equipped bakery studio, celebrating the client's passion for dessert-making. The master suite enjoys panoramic views of Mumbai Harbour, with a concealed projector thoughtfully integrated to preserve uninterrupted sunrise views.",
+      "An expansive walk-in wardrobe connects effortlessly to the master bathroom, where a sculptural stone basin, glass mosaic detailing, and marble finishes create a refined spa-like experience. The powder room continues this language with a bespoke fluted marble vanity and handcrafted glass basin.",
+      "Designed for entertaining, the warm and inviting living room extends onto a flexible deck that accommodates larger gatherings. A custom bar, inspired by the client's love for travel and curated spirits, features bespoke storage, integrated appliances, and statement lighting.",
+      "A defining aspect of the project is its commitment to Indian craftsmanship, with every piece of furniture, lighting fixture, and accessory custom-designed and made in India.",
+      "Jade is a home shaped by collaboration, craftsmanship, and thoughtful design—a timeless space that reflects the personalities, passions, and lifestyle of the family it was created for."
+    ]
+  },
+  {
+    id: 4,
+    title: "VAAYU",
+    slug: "vaayu",
+    folder: "VAAYU",
+    category: "Completed",
+    categories: ["Completed"],
+    loc: "Mumbai",
+    img: "/projects/VAAYU/1.webp",
+    href: "/projects/vaayu",
+    projectName: "Vaayu Home",
+    projectType: "Luxury Residential Interior Design",
+    area: "3,000 sq. ft.",
+    year: "2024",
+    description: [
+      "Some homes are designed to impress. Others are designed to breathe. Vaayu Home does both.",
+      "Derived from the Sanskrit word Vaayu, meaning air, the home is shaped by generous cross ventilation, expansive east-west openings, and abundant natural light, creating spaces that feel open, effortless, and deeply connected to nature.",
+      "Designed for a dear friend and long-standing client whose first home was also envisioned by PKD Studio, this residence marks the fulfilment of a lifelong dream. The design balances understated luxury with warmth, expressed through refined materiality, thoughtful detailing, sculptural elements, and a calm, cohesive palette.",
+      "A seamless formal living and dining area flows into an open kitchen centred around a striking natural stone island, while four individually tailored bedrooms reflect the personalities and lifestyles of each family member. Carefully crafted wardrobes and timeless, spa-like bathrooms further elevate the experience.",
+      "More than a luxurious residence, Vaayu Home is a celebration of light, air, family, and enduring relationships, a home designed to evolve with its people, where true luxury is found in spaces that feel as beautiful as they are lived in."
     ]
   },
   {
@@ -360,6 +334,53 @@ export const gridProjects = [
     ]
   },
   {
+    id: 8,
+    title: "RENAISSANCE 86",
+    slug: "renaissance-86",
+    folder: "RENAISSANCE 86",
+    category: "Featured",
+    categories: ["Featured", "Completed"],
+    loc: "Mumbai",
+    img: "/projects/RENAISSANCE 86/1.webp",
+    href: "/projects/renaissance-86",
+    projectName: "Renaissance 86 by Collins",
+    projectType: "Luxury Retail Showroom Interior Design",
+    area: "3000 SFT",
+    year: "2026",
+    description: [
+      "Renaissance 86 by Collins is more than a retail showroom—it's an immersive experience inspired by the timeless elegance of Italian design. Conceived by PKD Studio, the space invites visitors into a world where luxury kitchens and wardrobes are experienced through architecture, materials, and storytelling.",
+      "A warm, living room-inspired entrance gradually unfolds into a series of curated kitchen and wardrobe displays, creating a seamless journey of discovery. A bold green ceiling ties the entire showroom together, complemented by rich wooden flooring and designer lighting that enhances the atmosphere with subtle sophistication.",
+      "The design draws inspiration from the iconic Ola Kitchen by Pininfarina, translating its signature flowing curves into architectural elements across the ceiling and floor, giving the showroom a sculptural and cohesive identity.",
+      "At its heart sits a bespoke Brazilian quartz island featuring intricate hand-fluted stone detailing—an artisanal masterpiece crafted entirely by hand, celebrating precision and craftsmanship.",
+      "Styling plays an equally important role in shaping the experience. Inspired by the ruins of historic Italian palaces, classical columns, sculptural busts, curated artefacts, olives, and wine create layered vignettes that blur the line between retail and residence. These thoughtful details bring warmth, authenticity, and a sense of timelessness to the space.",
+      "A refined palette of marble, wood, and premium finishes, combined with softened edges and fluid transitions, creates an environment that feels both luxurious and inviting.",
+      "Renaissance 86 is a celebration of Italian craftsmanship and contemporary design—a showroom where every detail contributes to an experience that is immersive, elegant, and unforgettable."
+    ]
+  },
+  {
+    id: 7,
+    title: "Oculus",
+    slug: "niraj-office",
+    folder: "NIRAJ OFFICE",
+    category: "Completed",
+    categories: ["Completed"],
+    loc: "Mumbai",
+    img: "/projects/NIRAJ OFFICE/1.webp",
+    href: "/projects/niraj-office",
+    projectName: "Oculus",
+    projectType: "Corporate Office Interior Design",
+    area: "7,000 sq. ft.",
+    year: "2024",
+    description: [
+      "Designed for a multi-business infrastructure company serving an elite HNI clientele, this 7,000 sq. ft. corporate headquarters embodies sophistication, precision, and timeless luxury.",
+      "A rich palette of marble, engineered stone, veneer, and leather creates an atmosphere of understated elegance, while a custom gypsum and wooden baffle ceiling seamlessly integrates lighting and air-conditioning. Linear lighting enhances the rhythm of the workspace, becoming a defining design feature.",
+      "The Director's cabin is the focal point of the office, featuring leather-clad walls, metal detailing, bespoke shelving, curated artwork, and a striking Brazilian marble desk that reflects authority and refinement.",
+      "Custom-designed workstations in premium laminates and veneers ensure both functionality and comfort, while curved storage partitions subtly organize circulation throughout the office. Strategic planning maximizes natural light by positioning executive cabins along the glazed façade, with textured glass doors allowing daylight to flow into interior spaces.",
+      "The reception overcomes limited daylight through a luminous backlit ceiling, creating a bright, welcoming arrival experience. A warm 30-seater cafeteria with lounge seating, a coffee station, and dining space serves as both a staff breakout area and an informal client hospitality zone.",
+      "The result is a microcosm of a workspace that balances luxury, functionality, and brand identity—an environment designed to leave a lasting impression."
+    ]
+  },
+  {
     id: 14,
     title: "ALLOY WORKSPACES",
     slug: "alloy",
@@ -379,27 +400,6 @@ export const gridProjects = [
       "A contemporary material palette, layered textures, and refined detailing create an environment that feels warm, sophisticated, and approachable. Every element is designed with purpose, allowing form and function to work in harmony while appealing to a young, design-conscious community.",
       "One of the defining features of Alloy is its bespoke lighting design. Suspended fabric installations diffuse light softly across the interiors, adding warmth and creating a distinctive visual identity that ties the entire workspace together.",
       "Designed with understated luxury and adaptability at its core, Alloy is more than a workplace—it's a community-driven environment where productivity, innovation, and meaningful connections thrive."
-    ]
-  },
-  {
-    id: 15,
-    title: "THE CANVAS HOME",
-    slug: "the-canvas-home",
-    folder: "THE CANVAS HOME",
-    category: "Featured",
-    categories: ["Featured", "Completed"],
-    loc: "Mumbai",
-    img: "/projects/THE CANVAS HOME/1.webp",
-    href: "/projects/the-canvas-home",
-    projectName: "The Canvas Home",
-    projectType: "Luxury Residential Interior Design",
-    area: "3,500 sq. ft.",
-    year: "2025",
-    description: [
-      "A celebration of stillness, scale, and subtle luxury, The Canvas Home was designed for a couple embracing a new chapter of life. Their vision was simple yet ambitious: an expansive home that felt deeply personal, indulgent, and effortlessly serene.",
-      "Originally a 4BHK apartment, the residence was thoughtfully reimagined into a spacious 2BHK, allowing nearly half the home to be dedicated to an opulent master suite complete with a walk-in wardrobe, a carefully zoned bathroom, and thoughtfully planned conveniences that elevate everyday living.",
-      "The interiors are defined by understated luxury, where light grey marble, soft beige tones, sculptural details, and bespoke furnishings create a calm, timeless backdrop. The formal living and dining areas open onto sweeping city views, while a warm, wood-finished den serves as a private retreat for family gatherings and movie nights.",
-      "Art forms the heart of the home. A restrained material palette allows curated artworks, travel memorabilia, and statement installations to become focal points, giving the residence depth, personality, and a sense of discovery. Every space balances scale with intimacy, creating a home that feels refined, inviting, and deeply lived in."
     ]
   },
   {
