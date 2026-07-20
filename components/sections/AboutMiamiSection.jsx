@@ -39,7 +39,7 @@ export default function AboutMiamiSection() {
               transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.15 }}
               className="secondary-text text-[#D6CBBC]/80 font-light"
             >
-              Led by Prachiti Khanvilkar, bringing over 25 years of excellence, our studio delivers refined interiors through meticulous planning, premium materials, and uncompromising attention to detail.
+              Led by Prachiti Khanvilkar, bringing over 27 years of excellence, our studio delivers refined interiors through meticulous planning, premium materials, and uncompromising attention to detail.
             </motion.p>
           </div>
 
