@@ -74,7 +74,7 @@ export default function ArchitectureSection() {
             className="w-full h-full"
           >
             <img
-              src="/sections/ourinsp1.webp"
+              src="/sections/ourinsp2.webp"
               alt="Luxury Architectural Staircase"
               className="w-full h-full object-cover"
             />
@@ -96,7 +96,7 @@ export default function ArchitectureSection() {
             className="w-full h-full"
           >
             <img
-              src="/sections/ourinsp2.webp"
+              src="/sections/inspired3.webp"
               alt="Luxury Modern Pantry and Wine Cellar"
               className="w-full h-full object-cover"
             />

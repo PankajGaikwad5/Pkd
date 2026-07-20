@@ -97,7 +97,7 @@ export default function WhyFloridaSection() {
           className="w-full h-full lg:h-[85vh]"
         >
           <img
-            src="/sections/whypkd2.webp"
+            src="/sections/secondsec.webp"
             alt="Luxury Home"
             className="w-full h-full object-cover object-center"
           />
