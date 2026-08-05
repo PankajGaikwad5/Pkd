@@ -310,29 +310,29 @@ export const gridProjects = [
       "More than a planning approach, the vertical organisation creates a natural progression from public to private and from everyday living to recreation. The Vertical Home is a contemporary residence that celebrates thoughtful design, offering a harmonious balance of openness, privacy, and meaningful family experiences."
     ]
   },
-  {
-    id: 13,
-    title: "URBAN EASE",
-    slug: "jimit-shah",
-    folder: "JIMIT SHAH",
-    category: "Completed",
-    categories: ["Completed"],
-    loc: "Mumbai Suburbs",
-    img: "/projects/JIMIT SHAH/1.webp",
-    href: "/projects/jimit-shah",
-    projectName: "Urban Ease",
-    projectType: "Smart Home Interior Design | Residential",
-    area: "1,500 SFT",
-    year: "2022",
-    description: [
-      "Nestled in the suburbs of Mumbai, Urban Ease redefines the idea of luxury by proving that a home’s value lies not in its size, but in the quality of experience it creates.",
-      "Designed for homeowners who specialise in home automation, this intelligent residence seamlessly integrates technology into everyday living. Lighting, climate control, entertainment, and security systems work quietly in harmony, creating a home that feels intuitive, connected, and effortless.",
-      "Originally planned as a three-bedroom apartment, the layout was thoughtfully transformed into a spacious two-bedroom residence. This conscious reconfiguration prioritised openness, allowing every square foot to serve a purpose while creating a sense of freedom and expansiveness.",
-      "A unified colour palette, refined material selection, and carefully layered textures establish a calm and timeless atmosphere. With a focus on enhancing natural light and visual continuity, the design overcomes the challenge of low ceiling heights through seamless detailing, concealed services, and intelligent proportions.",
-      "The son's bedroom adds a playful dimension to the home, reflecting his love for automobiles through a custom step-up bed and interactive design elements that combine imagination with functionality.",
-      "Urban Ease is a celebration of thoughtful design—where intelligent planning, advanced technology, and personalised details come together to create a compact home that feels luxurious, warm, and deeply connected to the lifestyle of its residents."
-    ]
-  },
+  // {
+  //   id: 13,
+  //   title: "URBAN EASE",
+  //   slug: "jimit-shah",
+  //   folder: "JIMIT SHAH",
+  //   category: "Completed",
+  //   categories: ["Completed"],
+  //   loc: "Mumbai Suburbs",
+  //   img: "/projects/JIMIT SHAH/1.webp",
+  //   href: "/projects/jimit-shah",
+  //   projectName: "Urban Ease",
+  //   projectType: "Smart Home Interior Design | Residential",
+  //   area: "1,500 SFT",
+  //   year: "2022",
+  //   description: [
+  //     "Nestled in the suburbs of Mumbai, Urban Ease redefines the idea of luxury by proving that a home’s value lies not in its size, but in the quality of experience it creates.",
+  //     "Designed for homeowners who specialise in home automation, this intelligent residence seamlessly integrates technology into everyday living. Lighting, climate control, entertainment, and security systems work quietly in harmony, creating a home that feels intuitive, connected, and effortless.",
+  //     "Originally planned as a three-bedroom apartment, the layout was thoughtfully transformed into a spacious two-bedroom residence. This conscious reconfiguration prioritised openness, allowing every square foot to serve a purpose while creating a sense of freedom and expansiveness.",
+  //     "A unified colour palette, refined material selection, and carefully layered textures establish a calm and timeless atmosphere. With a focus on enhancing natural light and visual continuity, the design overcomes the challenge of low ceiling heights through seamless detailing, concealed services, and intelligent proportions.",
+  //     "The son's bedroom adds a playful dimension to the home, reflecting his love for automobiles through a custom step-up bed and interactive design elements that combine imagination with functionality.",
+  //     "Urban Ease is a celebration of thoughtful design—where intelligent planning, advanced technology, and personalised details come together to create a compact home that feels luxurious, warm, and deeply connected to the lifestyle of its residents."
+  //   ]
+  // },
   {
     id: 8,
     title: "RENAISSANCE 86",
