@@ -223,28 +223,28 @@ export const gridProjects = [
       "More than a luxurious residence, Vaayu Home is a celebration of light, air, family, and enduring relationships, a home designed to evolve with its people, where true luxury is found in spaces that feel as beautiful as they are lived in."
     ]
   },
-  {
-    id: 9,
-    title: "ALCHEMY",
-    slug: "dhaval-shah-ghatkopar",
-    folder: "DHAVAL SHAH GHATKOPAR",
-    category: "Completed",
-    categories: ["Completed"],
-    loc: "Mumbai",
-    img: "/projects/DHAVAL SHAH GHATKOPAR/1.webp",
-    href: "/projects/dhaval-shah-ghatkopar",
-    projectName: "ALCHEMY",
-    projectType: "Luxury Residential Interior Design",
-    area: "3,000 SFT",
-    year: "2023",
-    description: [
-      "In a city where space is one of the greatest luxuries, Alchemy is a testament to the power of thoughtful planning and timeless design. Created by seamlessly merging two adjoining apartments, the home was envisioned as a warm and expansive residence for a large, close-knit family.",
-      "The journey begins at a private lift lobby that opens into a grand entrance, where a sculptural sliding partition elegantly defines the living and dining areas. More than a visual element, the partition enhances the way the home functions—opening to connect the dining space with the kitchen and creating an effortless setting for family gatherings and entertaining.",
-      "Generous living spaces flow into thoughtfully designed bedrooms that balance comfort, privacy, and natural light. A serene prayer alcove within the parents' suite adds a spiritual dimension to the home, blending tradition and architecture with understated elegance.",
-      "Reflecting the family's Gujarati heritage, a traditional swing in the living area becomes a cherished gathering spot, bringing cultural familiarity into a contemporary setting. A dedicated media room, functional bedrooms, and a guest suite opening into a landscaped outdoor pocket further enrich the living experience.",
-      "Alchemy is a celebration of connection—where scale is balanced with intimacy, and every detail is designed to create a home that feels luxurious, personal, and deeply rooted in family."
-    ]
-  },
+  // {
+  //   id: 9,
+  //   title: "ALCHEMY",
+  //   slug: "dhaval-shah-ghatkopar",
+  //   folder: "DHAVAL SHAH GHATKOPAR",
+  //   category: "Completed",
+  //   categories: ["Completed"],
+  //   loc: "Mumbai",
+  //   img: "/projects/DHAVAL SHAH GHATKOPAR/1.webp",
+  //   href: "/projects/dhaval-shah-ghatkopar",
+  //   projectName: "ALCHEMY",
+  //   projectType: "Luxury Residential Interior Design",
+  //   area: "3,000 SFT",
+  //   year: "2023",
+  //   description: [
+  //     "In a city where space is one of the greatest luxuries, Alchemy is a testament to the power of thoughtful planning and timeless design. Created by seamlessly merging two adjoining apartments, the home was envisioned as a warm and expansive residence for a large, close-knit family.",
+  //     "The journey begins at a private lift lobby that opens into a grand entrance, where a sculptural sliding partition elegantly defines the living and dining areas. More than a visual element, the partition enhances the way the home functions—opening to connect the dining space with the kitchen and creating an effortless setting for family gatherings and entertaining.",
+  //     "Generous living spaces flow into thoughtfully designed bedrooms that balance comfort, privacy, and natural light. A serene prayer alcove within the parents' suite adds a spiritual dimension to the home, blending tradition and architecture with understated elegance.",
+  //     "Reflecting the family's Gujarati heritage, a traditional swing in the living area becomes a cherished gathering spot, bringing cultural familiarity into a contemporary setting. A dedicated media room, functional bedrooms, and a guest suite opening into a landscaped outdoor pocket further enrich the living experience.",
+  //     "Alchemy is a celebration of connection—where scale is balanced with intimacy, and every detail is designed to create a home that feels luxurious, personal, and deeply rooted in family."
+  //   ]
+  // },
   {
     id: 10,
     title: "SAVANNAH",
