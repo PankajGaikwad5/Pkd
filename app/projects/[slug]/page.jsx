@@ -76,9 +76,6 @@ function resolveProjectImages(folder, defaultCoverImg) {
   if (updFolderName) {
     const updDirPath = path.join(process.cwd(), 'public', 'projects_updated', updFolderName);
     if (fs.existsSync(updDirPath)) {
-      // 1st image from original project cover image (kept as is)
-      images.push(defaultCoverImg || `/projects/${folder}/1.webp`);
-
       const updatedEntries = [];
 
       function collect(dirPath, relativeDir) {
@@ -146,7 +143,8 @@ function resolveProjectImages(folder, defaultCoverImg) {
     const files = fs.readdirSync(projectDir);
     images = files
       .filter(file => /\.(webp|jpg|jpeg|png)$/i.test(file))
-      .map(file => `/projects/${folder}/${file}`);
+      .map(file => `/projects/${folder}/${file}`)
+      .filter(img => img !== defaultCoverImg && img !== `/projects/${folder}/1.webp`);
 
     images.sort((a, b) => {
       const nameA = path.basename(a, path.extname(a));
@@ -169,7 +167,7 @@ function resolveProjectImages(folder, defaultCoverImg) {
     });
   }
 
-  return images.length > 0 ? images : [defaultCoverImg];
+  return images.length > 0 ? images : (defaultCoverImg ? [defaultCoverImg] : []);
 }
 
 export async function generateStaticParams() {
