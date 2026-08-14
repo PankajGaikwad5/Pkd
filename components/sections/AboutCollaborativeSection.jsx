@@ -5,7 +5,7 @@ export default function AboutCollaborativeSection() {
     <section className="relative w-full h-screen overflow-hidden">
       {/* Background Image */}
       <img
-        src="/projects/PKD OFFICE/_PAB8897-HDR.webp"
+        src="/sections/aboutcollab.webp"
         alt="ARCCA Luxury Staircase"
         className="absolute inset-0 w-full h-full object-cover"
       />
