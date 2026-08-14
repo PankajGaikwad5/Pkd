@@ -18,8 +18,9 @@ export default function PortfolioSection() {
     .filter(Boolean);
 
   const getProjectTag = (slug) => {
-    if (slug === 'grand-chateau' || slug === 'vaayu') return 'FEATURED PROJECT';
-    return 'COMPLETED PROJECTS';
+    if (slug === 'grand-chateau' ) return 'FEATURED PROJECT';
+    if (slug === 'vaayu' ) return 'COMPLETED PROJECT';
+    return 'PROJECT UNDERWAY';
   };
 
   const handleScroll = () => {
