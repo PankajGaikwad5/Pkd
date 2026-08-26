@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "npm run clean && next dev",
+    "prebuild": "node scripts/generate-manifest.js",
     "build": "next build",
+    "generate-manifest": "node scripts/generate-manifest.js",
     "start": "next start",
     "lint": "eslint .",
     "clean": "npx rimraf .next"

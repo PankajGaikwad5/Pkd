@@ -20,6 +20,9 @@ const nextConfig: NextConfig = {
     ],
   },
   output: 'standalone',
+  outputFileTracingExcludes: {
+    '*': ['public/projects-aug26/**/*', 'public/projects_updated/**/*', 'public/projects/**/*'],
+  },
   webpack: (config, {dev}) => {
     // Disable Webpack cache in development to prevent "__webpack_modules__[moduleId] is not a function" HMR errors.
     if (dev) {
