@@ -4,6 +4,26 @@ import { notFound } from 'next/navigation';
 import { gridProjects } from '@/components/projectdata';
 import ProjectDetailClient from '@/components/ProjectDetailClient';
 
+const projectToAug26Map = {
+  '17 ALTAMOUNT': '17 ALTAMOUNT',
+  'ALLOY': 'ALLOY WORKSPACES',
+  'ANIL BAJAJ': 'THE VERTICAL HOME - ANIL BAJAJ',
+  'ASIT THAKKAR': 'ASIT THAKKAR',
+  'BINOY SHAH': 'THE GRAND HORIZON - BINOY SHAH',
+  'CHETAN SHAH': 'CHETAN SHAH',
+  'DHAVAL SHAH GHATKOPAR': 'DHAVAL SHAH - GHATKOPAR',
+  'JADE': 'JADE - UNADKAT',
+  'JIMIT SHAH': 'JIMIT SHAH',
+  'LITHIC HOME': 'LITHIC HOME - VIRAL SHAH',
+  'GRAND CHATEAU': 'GRAND CHATEAU - NIRAJ HOUSE',
+  'NIRAJ OFFICE': 'OCULUS - NIRAJ OFFICE',
+  'NOUVEAU HOME': 'NOUVEAU HOME - JAGRUT GANDHI',
+  'PKD OFFICE': 'PKD OFFICE',
+  'RENAISSANCE 86': 'RENAISSANCE 86',
+  'THE CANVAS HOME': 'THE CANVAS HOME - DARSHANA DOSHI',
+  'NIKET RANE': 'NIKET RANE'
+};
+
 const projectToUpdatedMap = {
   '17 ALTAMOUNT': '17 ALTAMOUNT',
   'ALLOY': 'ALLOY WORKSPACES',
@@ -70,9 +90,80 @@ function getCategoryRank(folderName) {
 }
 
 function resolveProjectImages(folder, defaultCoverImg) {
-  const updFolderName = projectToUpdatedMap[folder];
   let images = [];
 
+  // Check 1: public/projects-aug26 (or public/projects_aug26)
+  const aug26FolderName = projectToAug26Map[folder];
+  if (aug26FolderName) {
+    const aug26SubDir = ['projects-aug26', 'projects_aug26'].find(dir => 
+      fs.existsSync(path.join(process.cwd(), 'public', dir, aug26FolderName))
+    );
+
+    if (aug26SubDir) {
+      const aug26DirPath = path.join(process.cwd(), 'public', aug26SubDir, aug26FolderName);
+      const entries = [];
+
+      function collectAug26(dirPath, relativeDir) {
+        const items = fs.readdirSync(dirPath);
+        items.forEach(item => {
+          const fullPath = path.join(dirPath, item);
+          const stat = fs.statSync(fullPath);
+          if (stat.isDirectory()) {
+            collectAug26(fullPath, path.join(relativeDir, item));
+          } else if (/\.(webp|jpg|jpeg|png)$/i.test(item)) {
+            const parts = relativeDir.split(path.sep);
+            let rank = 7;
+            for (let i = parts.length - 1; i >= 0; i--) {
+              const r = getCategoryRank(parts[i]);
+              if (r !== 7 || i === 0) {
+                rank = r;
+                break;
+              }
+            }
+
+            const relativeWebSegments = relativeDir ? relativeDir.split(path.sep) : [];
+            const webPath = [`/${aug26SubDir}`, aug26FolderName, ...relativeWebSegments, item]
+              .map(seg => encodeURIComponent(seg))
+              .join('/')
+              .replace(/%2F/g, '/');
+
+            entries.push({
+              webPath,
+              file: item,
+              relativeDir,
+              rank
+            });
+          }
+        });
+      }
+
+      collectAug26(aug26DirPath, '');
+
+      entries.sort((a, b) => {
+        if (a.rank !== b.rank) return a.rank - b.rank;
+        const dirCompare = a.relativeDir.localeCompare(b.relativeDir);
+        if (dirCompare !== 0) return dirCompare;
+
+        const nameA = path.basename(a.file, path.extname(a.file));
+        const nameB = path.basename(b.file, path.extname(b.file));
+        const numA = parseInt(nameA, 10);
+        const numB = parseInt(nameB, 10);
+        if (!isNaN(numA) && !isNaN(numB)) {
+          return numA - numB;
+        }
+        return nameA.localeCompare(nameB);
+      });
+
+      entries.forEach(e => {
+        images.push(e.webPath);
+      });
+
+      if (images.length > 0) return images;
+    }
+  }
+
+  // Check 2: public/projects_updated
+  const updFolderName = projectToUpdatedMap[folder];
   if (updFolderName) {
     const updDirPath = path.join(process.cwd(), 'public', 'projects_updated', updFolderName);
     if (fs.existsSync(updDirPath)) {
@@ -133,11 +224,11 @@ function resolveProjectImages(folder, defaultCoverImg) {
         images.push(e.webPath);
       });
 
-      return images;
+      if (images.length > 0) return images;
     }
   }
 
-  // Fallback to original public/projects/${folder} directory
+  // Fallback 3: original public/projects/${folder} directory
   const projectDir = path.join(process.cwd(), 'public', 'projects', folder);
   if (fs.existsSync(projectDir)) {
     const files = fs.readdirSync(projectDir);
