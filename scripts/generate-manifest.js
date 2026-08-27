@@ -68,19 +68,52 @@ const projectToUpdatedMap = {
 
 function getCategoryRank(folderName) {
   const norm = folderName.toUpperCase();
-  if (norm.includes('ENTRANCE') || norm.includes('LOBBY') || norm.includes('FOYER') || norm.includes('PASSAGE') || norm.includes('RECEPTION') || norm.includes('WAITING AREA') || norm.includes('OPEN AREA')) return 1;
+  
+  // 1. Entrance
+  if (norm.includes('ENTRANCE') || norm.includes('LOBBY') || norm.includes('FOYER') || norm.includes('PASSAGE') || norm.includes('RECEPTION') || norm.includes('WAITING AREA') || norm.includes('OPEN AREA')) {
+    return 1;
+  }
+
+  // 9. Balcony / Outdoor
+  if (norm.includes('BALCONY') || norm.includes('DECK') || norm.includes('EXTERIOR') || norm.includes('TERRACE') || norm.includes('SIT OUT')) {
+    return 9;
+  }
+
+  // 6. Master bedroom and bathrooms
+  if (norm.includes('MASTER') || norm.includes('WALK IN WARDROBE')) {
+    return 6;
+  }
+
+  // 8. Last kids bedroom and bathrooms
+  if (norm.includes('KID') || norm.includes('DAUGHTER') || norm.includes('SON') || norm.includes('SMEET') || norm.includes('SOHAM')) {
+    return 8;
+  }
+
+  // 2. Living
   if (norm.includes('LIVING') || norm.includes('OPEN COLLABORATIVE') || norm.includes('FAMILY LOUNGE') || norm.includes('LOUNGE') || norm.includes('SOFA') || norm.includes('STAIRCASE')) {
-    if (norm.includes('MASTER LOUNGE')) return 6;
-    if (norm.includes('TERRACE LOUNGE')) return 9;
     return 2;
   }
-  if (norm.includes('DINING')) return 3;
-  if (norm.includes('POWDER') || norm.includes('WASHROOM') || (norm.includes('BATHROOM') && !norm.includes('BEDROOM') && !norm.includes('MASTER') && !norm.includes('GUEST') && !norm.includes('KID') && !norm.includes('DAUGHTER') && !norm.includes('SON') && !norm.includes('PARENT') && !norm.includes('MOTHER') && !norm.includes('GRANDMOTHER') && !norm.includes('SMEET') && !norm.includes('SOHAM') && !norm.includes('BATHROOM 1') && !norm.includes('BATHROOM 2') && !norm.includes('BATHROOM 3'))) return 4;
-  if (norm.includes('KITCHEN') || norm.includes('PANTRY')) return 5;
-  if (norm.includes('MASTER') || norm.includes('WALK IN WARDROBE')) return 6;
-  if (norm.includes('KID') || norm.includes('DAUGHTER') || norm.includes('SON') || norm.includes('SMEET') || norm.includes('SOHAM')) return 8;
-  if (norm.includes('GUEST') || norm.includes('PARENT') || norm.includes('GRANDMOTHER') || norm.includes('MOTHER') || norm.includes('BEDROOM') || norm.includes('BATHROOM') || norm.includes('MANDIR') || norm.includes('BAR') || norm.includes('ART') || norm.includes('CABIN') || norm.includes('CONFERENCE') || norm.includes('MEETING') || norm.includes('WORKING') || norm.includes('PODCAST') || norm.includes('PHONE') || norm.includes('LIBRARY') || norm.includes('ALF DAFRE') || norm.includes('CAFETERIA') || norm.includes('GYM') || norm.includes('MULTIPURPOSE')) return 7;
-  if (norm.includes('BALCONY') || norm.includes('DECK') || norm.includes('EXTERIOR') || norm.includes('TERRACE')) return 9;
+
+  // 3. Dining
+  if (norm.includes('DINING')) {
+    return 3;
+  }
+
+  // 4. Powder bathroom
+  if (norm.includes('POWDER') || norm.includes('WASHROOM') || (norm.includes('BATHROOM') && !norm.includes('GUEST') && !norm.includes('PARENT') && !norm.includes('MOTHER') && !norm.includes('FATHER') && !norm.includes('GRANDMOTHER'))) {
+    return 4;
+  }
+
+  // 5. Kitchen
+  if (norm.includes('KITCHEN') || norm.includes('PANTRY')) {
+    return 5;
+  }
+
+  // 7. Other bedroom and bathrooms
+  if (norm.includes('GUEST') || norm.includes('PARENT') || norm.includes('GRANDMOTHER') || norm.includes('MOTHER') || norm.includes('FATHER') || norm.includes('BEDROOM') || norm.includes('BATHROOM') || norm.includes('MANDIR') || norm.includes('BAR') || norm.includes('ART') || norm.includes('CABIN') || norm.includes('CONFERENCE') || norm.includes('MEETING') || norm.includes('WORKING') || norm.includes('PODCAST') || norm.includes('PHONE') || norm.includes('LIBRARY') || norm.includes('ALF DAFRE') || norm.includes('CAFETERIA') || norm.includes('GYM') || norm.includes('MULTIPURPOSE')) {
+    return 7;
+  }
+
   return 7;
 }
 
