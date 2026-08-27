@@ -51,8 +51,8 @@ body {
 }
 
 ::selection {
-  background-color: #332820;
-  color: #D6CBBC;
+  background-color: #FAF6F0;
+  color: #1A1410;
 }
 
 /* Lenis smooth scrolling helpers */
@@ -76,4 +76,3 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
-

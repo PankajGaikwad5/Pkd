@@ -66,9 +66,10 @@ const projectToUpdatedMap = {
   'NIKET RANE': 'NIKET RANE'
 };
 
-function getCategoryRank(folderName) {
-  const norm = folderName.toUpperCase();
-  
+function getCategoryRank(str) {
+  if (!str) return 7;
+  const norm = str.toUpperCase();
+
   // 1. Entrance
   if (norm.includes('ENTRANCE') || norm.includes('LOBBY') || norm.includes('FOYER') || norm.includes('PASSAGE') || norm.includes('RECEPTION') || norm.includes('WAITING AREA') || norm.includes('OPEN AREA')) {
     return 1;
@@ -80,7 +81,7 @@ function getCategoryRank(folderName) {
   }
 
   // 6. Master bedroom and bathrooms
-  if (norm.includes('MASTER') || norm.includes('WALK IN WARDROBE')) {
+  if (norm.includes('MASTER') || norm.includes('WALK IN WARDROBE') || norm.includes('WIW')) {
     return 6;
   }
 
@@ -100,7 +101,7 @@ function getCategoryRank(folderName) {
   }
 
   // 4. Powder bathroom
-  if (norm.includes('POWDER') || norm.includes('WASHROOM') || (norm.includes('BATHROOM') && !norm.includes('GUEST') && !norm.includes('PARENT') && !norm.includes('MOTHER') && !norm.includes('FATHER') && !norm.includes('GRANDMOTHER'))) {
+  if (norm.includes('POWDER') || norm.includes('WASHROOM') || (norm.includes('BATHROOM') && !norm.includes('GUEST') && !norm.includes('PARENT') && !norm.includes('MOTHER') && !norm.includes('FATHER') && !norm.includes('GRANDMOTHER')) || (norm.includes('TOILET') && !norm.includes('MASTER') && !norm.includes('GUEST') && !norm.includes('PARENT') && !norm.includes('MOTHER') && !norm.includes('DAUGHTER') && !norm.includes('SON'))) {
     return 4;
   }
 
@@ -110,10 +111,22 @@ function getCategoryRank(folderName) {
   }
 
   // 7. Other bedroom and bathrooms
-  if (norm.includes('GUEST') || norm.includes('PARENT') || norm.includes('GRANDMOTHER') || norm.includes('MOTHER') || norm.includes('FATHER') || norm.includes('BEDROOM') || norm.includes('BATHROOM') || norm.includes('MANDIR') || norm.includes('BAR') || norm.includes('ART') || norm.includes('CABIN') || norm.includes('CONFERENCE') || norm.includes('MEETING') || norm.includes('WORKING') || norm.includes('PODCAST') || norm.includes('PHONE') || norm.includes('LIBRARY') || norm.includes('ALF DAFRE') || norm.includes('CAFETERIA') || norm.includes('GYM') || norm.includes('MULTIPURPOSE')) {
+  if (norm.includes('GUEST') || norm.includes('PARENT') || norm.includes('GRANDMOTHER') || norm.includes('MOTHER') || norm.includes('FATHER') || norm.includes('BEDROOM') || norm.includes('BATHROOM') || norm.includes('TOILET') || norm.includes('MANDIR') || norm.includes('BAR') || norm.includes('ART') || norm.includes('CABIN') || norm.includes('CONFERENCE') || norm.includes('MEETING') || norm.includes('WORKING') || norm.includes('PODCAST') || norm.includes('PHONE') || norm.includes('LIBRARY') || norm.includes('ALF DAFRE') || norm.includes('CAFETERIA') || norm.includes('GYM') || norm.includes('MULTIPURPOSE')) {
     return 7;
   }
 
+  return 7;
+}
+
+function getEntryRank(relativeDir, fileName) {
+  const parts = relativeDir ? relativeDir.split(path.sep) : [];
+  for (let i = parts.length - 1; i >= 0; i--) {
+    const r = getCategoryRank(parts[i]);
+    if (r !== 7) return r;
+  }
+  const fileRank = getCategoryRank(fileName);
+  if (fileRank !== 7) return fileRank;
+  if (parts.length > 0) return getCategoryRank(parts[0]);
   return 7;
 }
 
@@ -138,16 +151,7 @@ function resolveProjectImages(folder, defaultCoverImg) {
           if (stat.isDirectory()) {
             collectAug26(fullPath, path.join(relativeDir, item));
           } else if (/\.(webp|jpg|jpeg|png)$/i.test(item)) {
-            const parts = relativeDir.split(path.sep);
-            let rank = 7;
-            for (let i = parts.length - 1; i >= 0; i--) {
-              const r = getCategoryRank(parts[i]);
-              if (r !== 7 || i === 0) {
-                rank = r;
-                break;
-              }
-            }
-
+            const rank = getEntryRank(relativeDir, item);
             const relativeWebSegments = relativeDir ? relativeDir.split(path.sep) : [];
             const webPath = [`/${aug26SubDir}`, aug26FolderName, ...relativeWebSegments, item]
               .map(seg => encodeURIComponent(seg))
@@ -192,16 +196,7 @@ function resolveProjectImages(folder, defaultCoverImg) {
           if (stat.isDirectory()) {
             collect(fullPath, path.join(relativeDir, item));
           } else if (/\.(webp|jpg|jpeg|png)$/i.test(item)) {
-            const parts = relativeDir.split(path.sep);
-            let rank = 7;
-            for (let i = parts.length - 1; i >= 0; i--) {
-              const r = getCategoryRank(parts[i]);
-              if (r !== 7 || i === 0) {
-                rank = r;
-                break;
-              }
-            }
-
+            const rank = getEntryRank(relativeDir, item);
             const relativeWebSegments = relativeDir ? relativeDir.split(path.sep) : [];
             const webPath = ['/projects_updated', updFolderName, ...relativeWebSegments, item]
               .map(seg => encodeURIComponent(seg))
@@ -234,24 +229,39 @@ function resolveProjectImages(folder, defaultCoverImg) {
 
   const projectDir = path.join(process.cwd(), 'public', 'projects', folder);
   if (fs.existsSync(projectDir)) {
-    const files = fs.readdirSync(projectDir);
-    images = files
-      .filter(file => /\.(webp|jpg|jpeg|png)$/i.test(file))
-      .map(file => `/projects/${folder}/${file}`)
-      .filter(img => img !== defaultCoverImg && img !== `/projects/${folder}/1.webp`);
+    const entries = [];
+    function collectProjects(dirPath, relativeDir) {
+      const items = fs.readdirSync(dirPath);
+      items.forEach(item => {
+        const fullPath = path.join(dirPath, item);
+        const stat = fs.statSync(fullPath);
+        if (stat.isDirectory()) {
+          collectProjects(fullPath, path.join(relativeDir, item));
+        } else if (/\.(webp|jpg|jpeg|png)$/i.test(item)) {
+          const webPath = `/projects/${folder}/${relativeDir ? relativeDir + '/' : ''}${item}`;
+          if (webPath !== defaultCoverImg && item !== '1.webp') {
+            const rank = getEntryRank(relativeDir, item);
+            entries.push({ webPath, file: item, relativeDir, rank });
+          }
+        }
+      });
+    }
 
-    images.sort((a, b) => {
-      const nameA = path.basename(a, path.extname(a));
-      const nameB = path.basename(b, path.extname(b));
+    collectProjects(projectDir, '');
+
+    entries.sort((a, b) => {
+      if (a.rank !== b.rank) return a.rank - b.rank;
+      const dirCompare = a.relativeDir.localeCompare(b.relativeDir);
+      if (dirCompare !== 0) return dirCompare;
+      const nameA = path.basename(a.file, path.extname(a.file));
+      const nameB = path.basename(b.file, path.extname(b.file));
       const numA = parseInt(nameA, 10);
       const numB = parseInt(nameB, 10);
-      const hasNumA = !isNaN(numA);
-      const hasNumB = !isNaN(numB);
-      if (hasNumA && hasNumB) return numA - numB;
-      if (hasNumA) return -1;
-      if (hasNumB) return 1;
+      if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
       return nameA.localeCompare(nameB);
     });
+
+    entries.forEach(e => images.push(e.webPath));
   }
 
   return images.length > 0 ? images : (defaultCoverImg ? [defaultCoverImg] : []);

@@ -142,45 +142,21 @@ export default function MenuOverlay({
                   </div>
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Address</p>
-                    <p
-                      onClick={() => {
-                        const selection = window.getSelection();
-                        if (!selection || selection.toString().trim().length === 0) {
-                          window.open(
-                            "https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D",
-                            "_blank",
-                            "noopener,noreferrer"
-                          );
-                        }
-                      }}
-                      className="opacity-70 hover:opacity-100 transition-opacity duration-300 font-light leading-relaxed text-justify select-text cursor-pointer"
-                    >
-                      317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                    <p className="opacity-70 font-light leading-relaxed text-justify">
+                      <a
+                        href="https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:underline hover:opacity-100 transition-opacity"
+                      >
+                        317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                      </a>
                     </p>
-                    <a
-                      href="https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block mt-2 text-[10px] tracking-widest opacity-60 hover:opacity-100 transition-opacity duration-300 uppercase underline underline-offset-4"
-                    >
-                      Get Directions ↗
-                    </a>
                   </div>
-                  {/* <div>
-                    <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Phone</p>
-                    <p className="opacity-70 font-light">786 901 1622</p>
-                  </div> */}
-                  {/* <div>
-                    <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Monday to Friday:</p>
-                    <p className="opacity-70 font-light leading-relaxed">
-                      10:00 AM - 6:30 PM
-                    </p>
-                  </div> */}
                   <div className="col-span-2">
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Follow Us </p>
                     <ul className="space-y-2 opacity-70 font-light">
                       <li><a href="https://www.instagram.com/pkdstudio_/" className="hover:opacity-100 transition-opacity">Instagram</a></li>
-                      {/* <li><a href="#" className="hover:opacity-100 transition-opacity">Facebook</a></li> */}
                       <li><a href="http://www.linkedin.com/in/prachiti-khanvilkar-412874114" className="hover:opacity-100 transition-opacity">LinkedIn</a></li>
                     </ul>
                   </div>
@@ -191,7 +167,6 @@ export default function MenuOverlay({
               <div className="w-full relative mt-auto">
                 <div className="absolute top-0 left-0 right-0 h-[1px] bg-[#D6CBBC]/20" />
                 <div className="pt-8 pb-12 px-24 text-[10px] tracking-widest uppercase opacity-70 flex justify-between font-light">
-                  {/* <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a> */}
                   <p>&copy; 2026 PKD STUDIO</p>
                 </div>
               </div>
