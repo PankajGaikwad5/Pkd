@@ -142,13 +142,28 @@ export default function MenuOverlay({
                   </div>
                   <div>
                     <p className="mb-4 opacity-100 font-medium tracking-[0.15em]">Address</p>
+                    <p
+                      onClick={() => {
+                        const selection = window.getSelection();
+                        if (!selection || selection.toString().trim().length === 0) {
+                          window.open(
+                            "https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D",
+                            "_blank",
+                            "noopener,noreferrer"
+                          );
+                        }
+                      }}
+                      className="opacity-70 hover:opacity-100 transition-opacity duration-300 font-light leading-relaxed text-justify select-text cursor-pointer"
+                    >
+                      317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                    </p>
                     <a
                       href="https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="opacity-70 hover:opacity-100 transition-opacity duration-300 font-light leading-relaxed text-justify block select-text cursor-pointer"
+                      className="inline-block mt-2 text-[10px] tracking-widest opacity-60 hover:opacity-100 transition-opacity duration-300 uppercase underline underline-offset-4"
                     >
-                      317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                      Get Directions ↗
                     </a>
                   </div>
                   {/* <div>
