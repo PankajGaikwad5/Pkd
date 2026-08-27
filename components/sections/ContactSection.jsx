@@ -117,8 +117,35 @@ export default function ContactSection() {
               >
                 INTERESTED IN WORKING TOGETHER? FILL OUT SOME INFO AND WE WILL BE IN TOUCH SHORTLY! WE CAN&apos;T WAIT TO HEAR FROM YOU!
               </motion.p>
-
             </div>
+
+            {/* Contact Details / Address */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-col gap-6 max-w-md border-t border-[#D6CBBC]/10 pt-6 mt-6 font-sans text-xs md:text-sm"
+            >
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-2 font-sans uppercase">ADDRESS</h4>
+                <a
+                  href="https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#D6CBBC]/90 font-light leading-relaxed block hover:opacity-60 transition-opacity duration-300 select-text cursor-pointer"
+                >
+                  317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+                </a>
+              </div>
+
+              <div>
+                <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-2 font-sans uppercase">EMAIL</h4>
+                <p className="text-[#D6CBBC]/90 font-light">
+                  <a href="mailto:enquires@teampkd.in" className="hover:opacity-60 transition-opacity duration-300">enquires@teampkd.in</a>
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
 

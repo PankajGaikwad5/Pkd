@@ -58,9 +58,14 @@ export default function FooterSection() {
             <FadeIn delay={0.4}>
               <div>
                 <h4 className="text-[10px] text-[#D6CBBC]/50 tracking-[0.2em] font-medium mb-3 font-sans">ADDRESS</h4>
-                <p className="text-[15px] text-[#D6CBBC]/90 text-justify font-light leading-relaxed normal-case font-sans">
+                <a
+                  href="https://www.google.com/maps/place/PKD+Studio/@18.9935285,72.8230772,773m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7cf0f2d18806f:0x26d426aa41189dc!8m2!3d18.9935234!4d72.8256521!16s%2Fg%2F11ts001zbx?entry=ttu&g_ep=EgoyMDI2MDgyNC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[15px] text-[#D6CBBC]/90 text-justify font-light leading-relaxed normal-case font-sans hover:opacity-60 transition-opacity duration-300 block select-text cursor-pointer"
+                >
                   317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
-                </p>
+                </a>
               </div>
             </FadeIn>
 
