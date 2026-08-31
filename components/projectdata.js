@@ -209,7 +209,7 @@ export const gridProjects = [
     category: "Completed",
     categories: ["Completed"],
     loc: "Mumbai",
-    img: "/projects/VAAYU/1.webp",
+    img: "/projects_updated/NIKET RANE/2 - LIVING ROOM/LIVING & DINING AREA (1).webp",
     href: "/projects/vaayu",
     projectName: "Vaayu Home",
     projectType: "Luxury Residential Interior Design",

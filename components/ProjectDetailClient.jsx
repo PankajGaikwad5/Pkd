@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import MenuOverlay from './MenuOverlay';
 import FooterSection from './sections/FooterSection';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Maximize, Minimize, X, ArrowLeft } from 'lucide-react';
 
 export default function ProjectDetailClient({ project, images }) {
@@ -60,6 +61,7 @@ export default function ProjectDetailClient({ project, images }) {
 
   const renderCard = ({ img, idx }) => {
     const aspectRatio = aspectRatios[idx % aspectRatios.length];
+    const cleanImg = typeof img === 'string' ? decodeURIComponent(img) : img;
     return (
       <div
         key={idx}
@@ -73,11 +75,13 @@ export default function ProjectDetailClient({ project, images }) {
         }}
         className="relative overflow-hidden bg-black/10 cursor-pointer border border-[#D6CBBC]/10 rounded-sm group"
       >
-        <img
-          src={img}
+        <Image
+          src={cleanImg}
           alt={`${project.title} - Masonry ${idx + 1}`}
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-103"
-          loading="lazy"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+          quality={95}
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] transform-gpu backface-hidden"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition-colors duration-500 flex items-center justify-center">
           <span className="text-[10px] tracking-widest text-[#D6CBBC] opacity-0 group-hover:opacity-100 transition-opacity duration-300 uppercase border border-[#D6CBBC]/30 px-3 py-1.5 bg-black/25 backdrop-blur-sm">
@@ -448,7 +452,7 @@ export default function ProjectDetailClient({ project, images }) {
                       : 'border-transparent opacity-40 hover:opacity-85'
                       }`}
                   >
-                    <img src={img} className="w-full h-full object-cover pointer-events-none" alt="" />
+                    <Image src={img} fill sizes="80px" quality={80} className="object-cover pointer-events-none" alt="" />
                   </button>
                 ))}
               </div>
