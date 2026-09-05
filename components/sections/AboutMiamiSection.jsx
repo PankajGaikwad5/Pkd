@@ -74,7 +74,7 @@ export default function AboutMiamiSection() {
         >
           <img
             src="/sections/basedin.webp"
-            alt="ARCCA Luxury Home Pool"
+            alt="PKD Studio Luxury Architecture & Interior Design"
             className="w-full h-full object-cover object-center"
           />
         </motion.div>

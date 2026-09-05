@@ -52,7 +52,7 @@ export default function AboutLivingExperienceSection() {
         >
           <img
             src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=2069&auto=format&fit=crop"
-            alt="ARCCA Luxury Arched Villa"
+            alt="PKD Studio Luxury Architectural Residence"
             className="w-full h-full object-cover object-center"
           />
         </motion.div>

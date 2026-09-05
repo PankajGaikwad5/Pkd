@@ -6,7 +6,7 @@ export default function AboutCollaborativeSection() {
       {/* Background Image */}
       <img
         src="/sections/aboutcollab.webp"
-        alt="ARCCA Luxury Staircase"
+        alt="PKD Studio Architectural Design"
         className="absolute inset-0 w-full h-full object-cover"
       />
 

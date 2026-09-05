@@ -65,7 +65,7 @@ export default function AboutHeroSection() {
             viewport={{ once: true }}
             transition={{ duration: 1.6, ease: [0.76, 0, 0.24, 1] }}
             src="/sections/aboutus.webp"
-            alt="ARCCA Luxury Architecture"
+            alt="PKD Studio Luxury Architecture"
             className="w-full h-full object-cover"
           />
         </div>

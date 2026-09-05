@@ -1,6 +1,6 @@
 {
-  "name": "Arcca Group Clone",
-  "description": "A luxury architecture and design portfolio clone built with Next.js and Framer Motion.",
+  "name": "PKD Studio",
+  "description": "Official luxury architecture and interior design portfolio website for PKD Studio.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

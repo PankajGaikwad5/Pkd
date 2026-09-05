@@ -1,0 +1,33 @@
+# PKD Studio
+
+> PKD Studio is a premier luxury interior design and architecture practice based in Mumbai, India. Founded by Principal Designer Prachiti Khanvilkar, the studio specializes in bespoke residential design, commercial spaces, adaptive reuse, and high-end hospitality interiors across India.
+
+## Business Summary
+- **Name**: PKD Studio
+- **Founder & Principal Designer**: Prachiti Khanvilkar (27+ years of experience)
+- **Established**: 2017
+- **Completed Projects**: 75+ residential, commercial, workplace, and hospitality projects
+- **Location**: 317, Vasan Udyog Bhavan, Senapati Bapat Marg, opposite Palladium Mall, Lower Parel West, Mumbai, Maharashtra 400013, India
+- **Website**: https://pkdstudio.in
+- **Email**: enquires@teampkd.in
+- **Instagram**: https://www.instagram.com/pkdstudio_/
+- **LinkedIn**: http://www.linkedin.com/in/prachiti-khanvilkar-412874114
+
+## Primary Expertise & Services
+- **Luxury Residential Interior Design**: Bespoke penthouses, sprawling multi-level residences, adaptive reuse homes, master suites, and custom furniture.
+- **Architectural & Spatial Design**: Structural reimagination, space planning, facade integration, and indoor-outdoor spatial flow.
+- **Commercial & Showroom Design**: Experiential retail spaces, luxury product showrooms, and executive workplace environments.
+- **Craftsmanship & Materiality**: Selection of Michelangelo Italian marble, hand-fluted stone, artisanal metalwork, bespoke lighting, and 100% custom Indian craftsmanship.
+
+## Featured Portfolio Projects
+- **Grand Chateau (Mumbai)**: 14,000 sq. ft. adaptive reuse transformation of an industrial building into a luxury multi-level family residence.
+- **Renaissance 86 (Mumbai)**: Immersive retail showroom inspired by Italian design and Italian palace architecture, featuring Pininfarina Ola curves and hand-fluted Brazilian quartz.
+- **The Canvas Home (Mumbai)**: Reimagining a 4BHK into a serene 2BHK featuring a 50% dedicated master suite, subtle luxury marble finishes, and curated art installations.
+- **Jade (Mumbai)**: 1,800 sq. ft. residence combining two apartments with a dual-function kitchen/bakery studio and panoramic views of Mumbai Harbour.
+- **Lithic Home, Nouveau Home, 17 Altamount, Vaayu, Chetan Shah, Binoy Shah, Anil Bajaj**: High-end luxury residential and workplace projects.
+
+## Contact Information
+- **Inquiries**: enquires@teampkd.in
+- **Address**: 317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
+
+For complete project details and detailed architectural case studies, see [llms-full.txt](https://pkdstudio.in/llms-full.txt).

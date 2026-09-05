@@ -69,7 +69,7 @@ export default function AboutJoinUsSection() {
           >
             <img
               src="/images/team.png"
-              alt="Arcca Group Team"
+              alt="PKD Studio Team"
               className="w-full h-full object-cover object-center"
             />
           </motion.div>

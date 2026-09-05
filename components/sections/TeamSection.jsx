@@ -97,7 +97,7 @@ export default function TeamSection() {
         >
           <img
             src="/principledesigner.webp"
-            alt="Arcca Group Team"
+            alt="Prachiti Khanvilkar - Founder and Principal Designer of PKD Studio"
             className="w-full h-full object-cover object-center"
           />
         </motion.div>
