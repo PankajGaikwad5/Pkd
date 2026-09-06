@@ -47,7 +47,7 @@ export default function TypographySection() {
                      <img
                         src="/sections/inspired2.webp"
                         alt="Luxury living room"
-                        className="w-8 h-8 sm:w-16 sm:h-16 lg:w-30 lg:h-30 object-cover mx-1.5 md:mx-2 rounded-sm flex-shrink-0"
+                        className="w-8 h-8 sm:w-16 sm:h-16 lg:w-32 lg:h-32 object-cover mx-1.5 md:mx-2 rounded-sm flex-shrink-0"
                      />
                      {/* <img
                         src="/images/typography_living.png"

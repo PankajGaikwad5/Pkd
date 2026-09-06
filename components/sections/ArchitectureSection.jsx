@@ -67,10 +67,10 @@ export default function ArchitectureSection() {
         {/* Column 2: Middle Image Column (Modern Stairs) */}
         <div className="w-full h-[50vh] lg:h-[80vh] overflow-hidden self-end">
           <motion.div
-            initial={{ clipPath: "inset(0 100% 0 0)" }}
-            whileInView={{ clipPath: "inset(0 0% 0 0)" }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1.0] }}
             className="w-full h-full"
           >
             <img
@@ -89,10 +89,10 @@ export default function ArchitectureSection() {
         {/* Column 3: Right Image Column (Pantry / Wine Bar) */}
         <div className="w-full h-[50vh] lg:h-[80vh] overflow-hidden self-end">
           <motion.div
-            initial={{ clipPath: "inset(100% 0 0 0)" }}
-            whileInView={{ clipPath: "inset(0% 0 0 0)" }}
-            viewport={{ once: true, margin: "-10%" }}
-            transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1] }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1.0], delay: 0.15 }}
             className="w-full h-full"
           >
             <img
