@@ -84,6 +84,11 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/logowhite.png',
+    shortcut: '/logowhite.png',
+    apple: '/logowhite.png',
+  },
 };
 
 const jsonLd = {
@@ -141,6 +146,8 @@ export default function RootLayout({
     <html lang="en" className={`${glacialIndifference.variable}`}>
       <head>
         <meta name="google-site-verification" content="suG1dF6A8rz6m50eHzkRm21n6uBqZSZPE8NcSGc9isc" />
+        <link rel="icon" href="/logowhite.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/logowhite.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
