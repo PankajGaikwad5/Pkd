@@ -25,7 +25,7 @@ export default function HeroSection() {
         </FadeIn>
 
         <FadeIn y={20} delay={3.4} className="mt-8 md:mt-0 pb-2">
-          <a href="#" className="flex items-center gap-2 text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
+          <a href="/projects" className="flex items-center gap-2 text-sm tracking-widest uppercase hover:opacity-70 transition-opacity">
             EXPLORE
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L11 11M11 11V1.5M11 11H1.5" stroke="currentColor" strokeWidth="1.5" />
