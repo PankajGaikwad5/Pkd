@@ -45,13 +45,13 @@ export default function HomeClient() {
 
       <main className="w-full relative">
         <HeroSection />
+        <TeamSection />
         <WhyFloridaSection />
         <PortfolioSection />
         <FeaturedSection />
         <ArchitectureSection />
         {/* <TypographySection /> */}
         <CraftingSection />
-        <TeamSection />
         {/* <TeamCarouselSection /> */}
       </main>
 
