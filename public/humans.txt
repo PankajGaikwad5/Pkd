@@ -1,0 +1,12 @@
+/* TEAM */
+Website Designer & Developer: Pankaj Gaikwad
+Personal Website: https://pankajgaikwad.online
+Agency: DesignNext
+Agency Website: https://designnext.co
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript, Next.js, React
+Components: Tailwind CSS, Motion, Lenis Smooth Scroll
+Software: Next.js App Router
+Language: English
+Location: Mumbai, India

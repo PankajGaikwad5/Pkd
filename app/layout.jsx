@@ -37,9 +37,17 @@ export const metadata = {
     'Grand Chateau Mumbai',
     'Renaissance 86',
   ],
-  authors: [{ name: 'Prachiti Khanvilkar', url: 'https://pkdstudio.in/about-us' }],
-  creator: 'PKD Studio',
+  authors: [
+    { name: 'Pankaj Gaikwad', url: 'https://pankajgaikwad.online' },
+    { name: 'DesignNext', url: 'https://designnext.co' },
+  ],
+  creator: 'Pankaj Gaikwad',
   publisher: 'PKD Studio',
+  other: {
+    designer: 'Pankaj Gaikwad | DesignNext (https://designnext.co)',
+    developer: 'Pankaj Gaikwad (https://pankajgaikwad.online)',
+    'web-author': 'Pankaj Gaikwad',
+  },
   formatDetection: {
     email: true,
     address: true,
@@ -93,49 +101,87 @@ export const metadata = {
 
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': ['InteriorDesigner', 'ArchitecturalFirm', 'LocalBusiness'],
-  '@id': 'https://pkdstudio.in/#organization',
-  name: 'PKD Studio',
-  legalName: 'PKD Studio',
-  url: 'https://pkdstudio.in',
-  logo: 'https://pkdstudio.in/logo.png',
-  image: 'https://pkdstudio.in/landinghero.webp',
-  description: 'PKD Studio is a luxury interior design and architecture practice based in Lower Parel, Mumbai. Led by Principal Designer Prachiti Khanvilkar with over 27 years of experience, specializing in bespoke residential, commercial, and hospitality design across India.',
-  founder: {
-    '@type': 'Person',
-    name: 'Prachiti Khanvilkar',
-    jobTitle: 'Founder & Principal Designer',
-    sameAs: 'http://www.linkedin.com/in/prachiti-khanvilkar-412874114',
-  },
-  foundingDate: '2017',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West',
-    addressLocality: 'Mumbai',
-    addressRegion: 'Maharashtra',
-    postalCode: '400013',
-    addressCountry: 'IN',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 18.9935234,
-    longitude: 72.8256521,
-  },
-  email: 'enquires@teampkd.in',
-  sameAs: [
-    'https://www.instagram.com/pkdstudio_/',
-    'http://www.linkedin.com/in/prachiti-khanvilkar-412874114',
-  ],
-  priceRange: '$$$$',
-  areaServed: ['Mumbai', 'Maharashtra', 'India', 'International'],
-  knowsAbout: [
-    'Interior Design',
-    'Architecture',
-    'Luxury Residential Design',
-    'Commercial Interiors',
-    'Adaptive Reuse Architecture',
-    'Furniture Design',
-    'Spatial Craftsmanship',
+  '@graph': [
+    {
+      '@type': ['InteriorDesigner', 'ArchitecturalFirm', 'LocalBusiness'],
+      '@id': 'https://pkdstudio.in/#organization',
+      name: 'PKD Studio',
+      legalName: 'PKD Studio',
+      url: 'https://pkdstudio.in',
+      logo: 'https://pkdstudio.in/logo.png',
+      image: 'https://pkdstudio.in/landinghero.webp',
+      description: 'PKD Studio is a luxury interior design and architecture practice based in Lower Parel, Mumbai. Led by Principal Designer Prachiti Khanvilkar with over 27 years of experience, specializing in bespoke residential, commercial, and hospitality design across India.',
+      founder: {
+        '@type': 'Person',
+        name: 'Prachiti Khanvilkar',
+        jobTitle: 'Founder & Principal Designer',
+        sameAs: 'http://www.linkedin.com/in/prachiti-khanvilkar-412874114',
+      },
+      foundingDate: '2017',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West',
+        addressLocality: 'Mumbai',
+        addressRegion: 'Maharashtra',
+        postalCode: '400013',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 18.9935234,
+        longitude: 72.8256521,
+      },
+      email: 'enquires@teampkd.in',
+      sameAs: [
+        'https://www.instagram.com/pkdstudio_/',
+        'http://www.linkedin.com/in/prachiti-khanvilkar-412874114',
+      ],
+      priceRange: '$$$$',
+      areaServed: ['Mumbai', 'Maharashtra', 'India', 'International'],
+      knowsAbout: [
+        'Interior Design',
+        'Architecture',
+        'Luxury Residential Design',
+        'Commercial Interiors',
+        'Adaptive Reuse Architecture',
+        'Furniture Design',
+        'Spatial Craftsmanship',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://pkdstudio.in/#website',
+      url: 'https://pkdstudio.in',
+      name: 'PKD Studio',
+      description: 'Official luxury interior design & architecture portfolio website for PKD Studio.',
+      publisher: {
+        '@id': 'https://pkdstudio.in/#organization',
+      },
+      author: {
+        '@type': 'Person',
+        name: 'Pankaj Gaikwad',
+        url: 'https://pankajgaikwad.online',
+        sameAs: [
+          'https://pankajgaikwad.online',
+          'https://designnext.co',
+        ],
+      },
+      creator: {
+        '@type': 'Organization',
+        name: 'DesignNext',
+        url: 'https://designnext.co',
+        founder: {
+          '@type': 'Person',
+          name: 'Pankaj Gaikwad',
+          url: 'https://pankajgaikwad.online',
+        },
+      },
+      provider: {
+        '@type': 'Person',
+        name: 'Pankaj Gaikwad',
+        url: 'https://pankajgaikwad.online',
+      },
+    },
   ],
 };
 
@@ -145,9 +191,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${glacialIndifference.variable}`}>
       <head>
+        <meta name="developer" content="Pankaj Gaikwad (https://pankajgaikwad.online) | DesignNext (https://designnext.co)" />
+        <meta name="designer" content="Pankaj Gaikwad | DesignNext" />
         <meta name="google-site-verification" content="suG1dF6A8rz6m50eHzkRm21n6uBqZSZPE8NcSGc9isc" />
         <link rel="icon" href="/logowhite.png" type="image/png" />
         <link rel="apple-touch-icon" href="/logowhite.png" />
+        <link rel="author" href="https://pankajgaikwad.online" />
+        <link rel="author" href="https://designnext.co" />
+        <link rel="author" href="/humans.txt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

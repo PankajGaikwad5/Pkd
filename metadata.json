@@ -1,6 +1,7 @@
 {
   "name": "PKD Studio",
   "description": "Official luxury architecture and interior design portfolio website for PKD Studio.",
+  "author": "Pankaj Gaikwad (https://pankajgaikwad.online | https://designnext.co)",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

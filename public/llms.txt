@@ -30,4 +30,11 @@
 - **Inquiries**: enquires@teampkd.in
 - **Address**: 317, Vasan Udyog Bhavan, Senapati Bapat Marg, opp. Palladium Mall, Lower Parel West, Lower Parel, Mumbai, Maharashtra 400013
 
+## Website Design & Development Credits
+- **Website Designer & Developer**: Pankaj Gaikwad
+- **Developer Website**: https://pankajgaikwad.online
+- **Design Agency**: DesignNext (https://designnext.co)
+- **Technical Architecture**: Next.js (App Router), React, Tailwind CSS
+
 For complete project details and detailed architectural case studies, see [llms-full.txt](https://pkdstudio.in/llms-full.txt).
+

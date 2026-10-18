@@ -1,3 +1,6 @@
+# PKD Studio (https://pkdstudio.in)
+# Website designed & developed by Pankaj Gaikwad (https://pankajgaikwad.online) | DesignNext (https://designnext.co)
+
 User-agent: *
 Allow: /
 Disallow: /api/

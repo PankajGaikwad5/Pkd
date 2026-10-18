@@ -2,6 +2,16 @@
   "name": "pkd",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Pankaj Gaikwad",
+    "url": "https://pankajgaikwad.online"
+  },
+  "contributors": [
+    {
+      "name": "DesignNext",
+      "url": "https://designnext.co"
+    }
+  ],
   "scripts": {
     "dev": "npm run clean && next dev",
     "prebuild": "node scripts/generate-manifest.js",

@@ -1,3 +1,4 @@
+// Website designed & developed by Pankaj Gaikwad (https://pankajgaikwad.online) | DesignNext (https://designnext.co)
 export default function robots() {
   return {
     rules: [

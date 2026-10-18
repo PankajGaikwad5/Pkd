@@ -72,5 +72,17 @@
 
 ---
 
+## Website Architecture, Design & Technical Credits
+
+- **Website Designer & Developer**: Pankaj Gaikwad
+- **Developer Website**: https://pankajgaikwad.online
+- **Digital Agency**: DesignNext
+- **Agency Website**: https://designnext.co
+- **Core Technologies**: Next.js (App Router), React, Tailwind CSS, Lenis Smooth Scroll
+- **Website Purpose**: Official online portfolio and showcase for PKD Studio
+
+---
+
 ## Key Keywords & Entity Associations
-PKD Studio, Prachiti Khanvilkar, Interior Designer Mumbai, Architecture Firm Lower Parel, Luxury Residence Interior Designer, Grand Chateau Mumbai, Renaissance 86, Custom Furniture Design India, High End Penthouse Interiors Mumbai, Top Architecture Studio India, Bespoke Spatial Craftsmanship.
+PKD Studio, Prachiti Khanvilkar, Interior Designer Mumbai, Architecture Firm Lower Parel, Luxury Residence Interior Designer, Grand Chateau Mumbai, Renaissance 86, Custom Furniture Design India, High End Penthouse Interiors Mumbai, Top Architecture Studio India, Bespoke Spatial Craftsmanship, Website by Pankaj Gaikwad, DesignNext.
+
